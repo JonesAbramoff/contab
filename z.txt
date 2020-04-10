@@ -1,0 +1,670 @@
+File CL0889~1.CLS:
+Private Const VALOR1 As String = "Valor_Baixar"
+        Case VALOR1
+File CL08DE~1.CLS:
+        lErro = Comando_Executar(lComando, "INSERT INTO RelPrecosLista (NumIntRel, Produto, Descricao, Valor1, Valor2, Valor3, Valor4, EmbPadrao, KGsOrcados) VALUES (?,?,?,?,?,?,?,?,?)", _
+            .lNumIntRel, .sProduto, .sDescricao, .dValor1, .dValor2, .dValor3, .dValor4, .dEmbPadrao, dQtde)
+                    objRelPrecosLista.dValor1 = dPreco
+Dim dValor1 As Double
+    dValor1 = objNFiscal.dValorTotal - dFrete - dINSSRetido - (objNFiscal.objTributacaoNF.dCOFINSRetido + objNFiscal.objTributacaoNF.dCSLLRetido + objNFiscal.objTributacaoNF.dIRRFValor + objNFiscal.objTributacaoNF.dPISRetido)
+    objNFiscal.ColParcelaPagar.Add 0, 0, 1, STATUS_ABERTO, dtVencimento, dtVencimento, dValor1, dValor1, PORTADOR_CARTEIRA_PR_CH1, 1, TIPO_COBRANCA_CARTEIRA, 0, "", ""
+File CL1A1E~1.CLS:
+            .dvalor1 = 1
+        lErro = Comando_Executar(alComando(8), "SELECT Item, PrevVendaMensal.Produto, Quantidade1, Valor1, DataAtualizacao1, Quantidade2, Valor2, DataAtualizacao2, Quantidade3, Valor3, DataAtualizacao3, Quantidade4, Valor4, DataAtualizacao4" & _
+            ", Quantidade10, Valor10, DataAtualizacao10, Quantidade11, Valor11, DataAtualizacao11, Quantidade12, Valor12, DataAtualizacao12" & _
+            dAcumBase1 = dAcumBase1 + (objCategoriaProdutoItem.dvalor1 * objCategoriaProdutoItem.dvalor3)
+            dAcumBase2 = dAcumBase2 + (objCategoriaProdutoItem.dvalor1 * objCategoriaProdutoItem.dvalor3)
+                objCategoriaProdutoItem.dvalorAux1 = (objCategoriaProdutoItem.dvalor1 * objCategoriaProdutoItem.dvalor3) / dAcumBase1
+                objCategoriaProdutoItem.dvalorAux1 = (objCategoriaProdutoItem.dvalor1 * objCategoriaProdutoItem.dvalor3) / dAcumBase2
+File CL2620~1.CLS:
+Dim sAuxValor1 As String, sAuxValor2 As String
+                            sAuxValor1 = left(objRelDREFormula.sFormula, 5)
+                            Select Case sAuxValor1
+Dim sAuxValor1 As String, sAuxValor2 As String
+                            sAuxValor1 = left(objRelDREFormula.sFormula, 5)
+                            Select Case sAuxValor1
+File CL2620~2.CLS:
+Function MvPerCta_Calcula_Valor1(ByVal iFilialEmpresa As Integer, ByVal iExercicio As Integer, ByVal sContaInicial As String, ByVal sContaFinal As String, dValorExercAtual As Double) As Long
+On Error GoTo Erro_MvPerCta_Calcula_Valor1
+    MvPerCta_Calcula_Valor1 = SUCESSO
+Erro_MvPerCta_Calcula_Valor1:
+    MvPerCta_Calcula_Valor1 = Err
+Function MvPerCta_Calcula_Valor1_Periodo(ByVal iFilialEmpresa As Integer, ByVal iExercicio As Integer, ByVal iPeriodo As Integer, ByVal sContaInicial As String, ByVal sContaFinal As String, dValorExercAtual As Double) As Long
+On Error GoTo Erro_MvPerCta_Calcula_Valor1_Periodo
+    MvPerCta_Calcula_Valor1_Periodo = SUCESSO
+Erro_MvPerCta_Calcula_Valor1_Periodo:
+    MvPerCta_Calcula_Valor1_Periodo = Err
+File CL289F~1.CLS:
+                "Numero1, Numero2, Numero3, Numero4, Numero5, Valor1, Valor2, " & _
+File CL2902~1.CLS:
+Private Const VALOR1 As String = "Valor_Liquido"
+        Case VALOR1
+File CL2DB9~1.CLS:
+Private Const VALOR1 As String = "Valor_da_Nota"
+        Case VALOR1
+File CL3678~1.CLS:
+Private Const VALOR1 As String = "Valor_da_Nota"
+        Case VALOR1
+File CL382C~1.CLS:
+                lErro = Comando_Executar(alComando(9), "SELECT Produto, Quantidade1, Valor1, DataAtualizacao1, Quantidade2, Valor2, DataAtualizacao2, Quantidade3, Valor3, DataAtualizacao3, Quantidade4, Valor4, DataAtualizacao4" & _
+                    ", Quantidade10, Valor10, DataAtualizacao10, Quantidade11, Valor11, DataAtualizacao11, Quantidade12, Valor12, DataAtualizacao12" & _
+                lErro = Comando_Executar(alComando(9), "SELECT Produto, Quantidade1, Valor1, DataAtualizacao1, Quantidade2, Valor2, DataAtualizacao2, Quantidade3, Valor3, DataAtualizacao3, Quantidade4, Valor4, DataAtualizacao4" & _
+                    ", Quantidade10, Valor10, DataAtualizacao10, Quantidade11, Valor11, DataAtualizacao11, Quantidade12, Valor12, DataAtualizacao12" & _
+                lErro = Comando_Executar(alComando(9), "SELECT Produto, Quantidade1, Valor1, DataAtualizacao1, Quantidade2, Valor2, DataAtualizacao2, Quantidade3, Valor3, DataAtualizacao3, Quantidade4, Valor4, DataAtualizacao4" & _
+                    ", Quantidade10, Valor10, DataAtualizacao10, Quantidade11, Valor11, DataAtualizacao11, Quantidade12, Valor12, DataAtualizacao12" & _
+                lErro = Comando_Executar(alComando(9), "SELECT Produto, Quantidade1, Valor1, DataAtualizacao1, Quantidade2, Valor2, DataAtualizacao2, Quantidade3, Valor3, DataAtualizacao3, Quantidade4, Valor4, DataAtualizacao4" & _
+                    ", Quantidade10, Valor10, DataAtualizacao10, Quantidade11, Valor11, DataAtualizacao11, Quantidade12, Valor12, DataAtualizacao12" & _
+File CL3837~1.CLS:
+        lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+    lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+    lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+        lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+    lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+        lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+            lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+            lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+            lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+                lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+File CL39A3~1.CLS:
+Dim lErro As Long, lComando As Long, sProduto As String, dValor As Double, dvalor1 As Double, dvalor2 As Double, dvalor3 As Double, sCategoria As String, iValor As Integer, adValor(1 To 8) As Double
+    lErro = Comando_Executar(lComando, "SELECT Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8 FROM produtocategoria, categoriaprodutoitem WHERE produtocategoria.categoria = categoriaprodutoitem.categoria AND produtocategoria.Item = categoriaprodutoitem.Item AND produtocategoria.Produto = ? AND produtocategoria.Categoria = ?", _
+File CL3FE0~1.CLS:
+        lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+    lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+    lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+        lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+    lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+        lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+                lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+            lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+            lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+                lErro = Comando_Executar(alComando(1), "INSERT INTO RelPosFinanc (NumIntRel, Seq, TipoGrupo, TextoGrupo, TextoDescricao, TextoValor1, TextoValor2, TextoValor3, Descricao, Valor1, Valor2, Valor3) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ", _
+        lErro = Comando_ExecutarPos(alComando(0), "SELECT Quantidade1, valor1, DataAtualizacao1, Quantidade2, valor2, DataAtualizacao2, Quantidade3 , valor3, DataAtualizacao3, Quantidade4, valor4, DataAtualizacao4, Quantidade5 , valor5, DataAtualizacao5, " & _
+        "Quantidade6, valor6, DataAtualizacao6, Quantidade7 , valor7, DataAtualizacao7, Quantidade8, valor8, DataAtualizacao8, Quantidade9 , valor9, DataAtualizacao9, Quantidade10, valor10, DataAtualizacao10, Quantidade11, valor11, DataAtualizacao11, " & _
+        "Quantidade12, valor12, DataAtualizacao12 FROM PrevVendaMensal  WHERE FilialEmpresa = ? AND Codigo = ? AND Ano = ? AND CodRegiao = ? AND Cliente = ? AND Filial = ? AND Produto = ? ", 0, _
+        tPrev.dQuantidade1, tPrev.dvalor1, tPrev.dtDataAtualizacao1, tPrev.dQuantidade2, tPrev.dvalor2, tPrev.dtDataAtualizacao2, tPrev.dQuantidade3, tPrev.dvalor3, tPrev.dtDataAtualizacao3, tPrev.dQuantidade4, tPrev.dValor4, tPrev.dtDataAtualizacao4, tPrev.dQuantidade5, tPrev.dValor5, tPrev.dtDataAtualizacao5, tPrev.dQuantidade6, tPrev.dValor6, tPrev.dtDataAtualizacao6, tPrev.dQuantidade7, tPrev.dValor7, tPrev.dtDataAtualizacao7, tPrev.dQuantidade8, tPrev.dValor8, tPrev.dtDataAtualizacao8, _
+        tPrev.dQuantidade9, tPrev.dValor9, tPrev.dtDataAtualizacao9, tPrev.dQuantidade10, tPrev.dValor10, tPrev.dtDataAtualizacao10, tPrev.dQuantidade11, tPrev.dValor11, tPrev.dtDataAtualizacao11, tPrev.dQuantidade12, tPrev.dValor12, tPrev.dtDataAtualizacao12, objPrev.iFilialEmpresa, objPrev.sCodigo, objPrev.iAno, objPrev.iCodRegiao, objPrev.lCliente, objPrev.iFilial, objPrev.sProduto)
+        If objPrev.dvalor1 = -1 Then objPrev.dvalor1 = tPrev.dvalor1
+        If objPrev.dValor10 = -1 Then objPrev.dValor10 = tPrev.dValor10
+        If objPrev.dValor11 = -1 Then objPrev.dValor11 = tPrev.dValor11
+        If objPrev.dValor12 = -1 Then objPrev.dValor12 = tPrev.dValor12
+            "Quantidade1 = ? , Valor1 = ? , DataAtualizacao1 = ? , Quantidade2 = ? , valor2 = ? , DataAtualizacao2 = ? , Quantidade3 = ? , valor3 = ? , DataAtualizacao3 = ? , " & _
+            "Quantidade10 = ? , valor10 = ?, DataAtualizacao10 = ? , Quantidade11 = ? , valor11 = ? , DataAtualizacao11 = ? , Quantidade12 = ?, valor12 = ? , DataAtualizacao12 = ?", _
+            alComando(0), objPrev.iCodRegiao, objPrev.dQuantidade1, objPrev.dvalor1, objPrev.dtDataAtualizacao1, _
+            objPrev.dQuantidade10, objPrev.dValor10, objPrev.dtDataAtualizacao10, _
+            objPrev.dQuantidade11, objPrev.dValor11, objPrev.dtDataAtualizacao11, _
+            objPrev.dQuantidade12, objPrev.dValor12, objPrev.dtDataAtualizacao12)
+            "Quantidade1, Valor1, DataAtualizacao1, Quantidade2, valor2, DataAtualizacao2, Quantidade3, valor3, DataAtualizacao3, " & _
+            "Quantidade10, valor10, DataAtualizacao10, Quantidade11, valor11, DataAtualizacao11, Quantidade12, valor12, DataAtualizacao12) " & _
+            objPrev.lCliente, objPrev.iFilial, objPrev.sProduto, objPrev.dQuantidade1, objPrev.dvalor1, objPrev.dtDataAtualizacao1, _
+            objPrev.dQuantidade10, objPrev.dValor10, objPrev.dtDataAtualizacao10, _
+            objPrev.dQuantidade11, objPrev.dValor11, objPrev.dtDataAtualizacao11, _
+            objPrev.dQuantidade12, objPrev.dValor12, objPrev.dtDataAtualizacao12)
+File CL4B7E~1.CLS:
+Private Const VALOR1 As String = "Valor_da_Nota"
+        Case VALOR1
+File CL5458~1.CLS:
+Function CCIMovDia_Grava(ByVal iCodConta As Integer, ByVal dtData As Date, ByVal dValor As Double, Optional ByVal vTipo As Variant, Optional ByVal vValor1 As Variant, Optional ByVal iCodConta1 As Integer) As Long
+'O parametro dValor1 quando usado conterá o valor resgatado menos os rendimentos
+                dAplic = dAplic - vValor1
+                dAplic = dAplic - vValor1
+Function CCIMov_Grava(ByVal iCodConta As Integer, ByVal iAno As Integer, ByVal iMes As Integer, ByVal dValor As Double, Optional ByVal vTipo As Variant, Optional ByVal vValor1 As Variant, Optional ByVal iCodConta1 As Integer) As Long
+                dAplic = dAplic - vValor1
+                dAplic = dAplic - vValor1
+Function CCIMovDia_Exclui(ByVal iCodConta As Integer, ByVal dtData As Date, ByVal dValor As Double, Optional ByVal vTipo As Variant, Optional ByVal vValor1 As Variant, Optional ByVal iCodConta1 As Integer) As Long
+                dAplic = dAplic + vValor1
+                dAplic = dAplic + vValor1
+Function CCIMov_Exclui(ByVal iCodConta As Integer, ByVal iAno As Integer, ByVal iMes As Integer, ByVal dValor As Double, Optional ByVal vTipo As Variant, Optional ByVal vValor1 As Variant, Optional ByVal iCodConta1 As Integer) As Long
+                dAplic = dAplic + vValor1
+                dAplic = dAplic + vValor1
+Dim dtDataMovimento1 As Date, dtDataMovimento2 As Date, dValor1 As Double, dValor2 As Double
+    lErro = Comando_ExecutarPos(lComando, "SELECT NumMovto, NumMovtoTransf, DataMovimento, Valor, Conciliado FROM MovimentosContaCorrente WHERE CodConta = ? AND Sequencial = ? AND Tipo = ?", 0, lNumMovtoOrigem, lNumMovtoTransfOrigAux, dtDataMovimento1, dValor1, iConciliado, objTransferencia.iCodContaOrigem, objTransferencia.lSeqOrigem, MOVCCI_SAIDA_TRANSFERENCIA)
+        colLog.Add "Valor: " & Format(dValor1, "STANDARD")
+    lErro = CF("CCIMovDia_Exclui", objTransferencia.iCodContaOrigem, dtDataMovimento1, -Abs(dValor1))
+    lErro = CF("CCIMov_Exclui", objTransferencia.iCodContaOrigem, Year(dtDataMovimento1), Month(dtDataMovimento1), -Abs(dValor1))
+    lErro = CF("CCIMovDia_Exclui", objTransferencia.iCodContaDestino, dtDataMovimento1, Abs(dValor1))
+    lErro = CF("CCIMov_Exclui", objTransferencia.iCodContaDestino, Year(dtDataMovimento1), Month(dtDataMovimento1), Abs(dValor1))
+                objTela.objCT.Total.Text = StrParaDbl(objTela.objCT.SubTotal.Caption) + StrParaDbl(objTela.objCT.ICMSSubstValor1.Caption) + StrParaDbl(objTela.objCT.IPIValor1.Caption) + StrParaDbl(objTela.objCT.ValorFrete.Text) + StrParaDbl(objTela.objCT.ValorSeguro.Text) + StrParaDbl(objTela.objCT.ValorDespesas.Text)
+                objTela.objCT.Total.Text = StrParaDbl(objTela.objCT.SubTotal.Caption) + StrParaDbl(objTela.objCT.ICMSSubstValor1.Caption) + StrParaDbl(objTela.objCT.IPIValor1.Caption) + StrParaDbl(objTela.objCT.ValorFrete.Text) + StrParaDbl(objTela.objCT.ValorSeguro.Text) + StrParaDbl(objTela.objCT.ValorDespesas.Text)
+File CL5BEC~1.CLS:
+            lErro = Comando_Executar(lComando, "INSERT INTO CategoriaProdutoItem (Categoria, Item, Ordem, Descricao, Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)", _
+                .sCategoria, .sItem, .iOrdem, .sDescricao, .dvalor1, .dvalor2, .dvalor3, .dValor4, .dValor5, .dValor6, .dValor7, .dValor8)
+            lErro = Comando_ExecutarPos(alComando(3), "SELECT Item, Ordem, Descricao, Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8 FROM CategoriaProdutoItem WHERE Categoria = ?", 0, _
+                .sItem, .iOrdem, .sDescricao, .dvalor1, .dvalor2, .dvalor3, .dValor4, .dValor5, .dValor6, .dValor7, .dValor8, objCategoriaProduto.sCategoria)
+        lErro = Comando_ExecutarPos(lComando2, "UPDATE CategoriaProdutoItem SET Ordem = ?, Descricao = ?, Valor1 = ?, Valor2 = ?, Valor3 = ?, Valor4 = ?, Valor5 = ?, Valor6 = ?, Valor7 = ?, Valor8 = ?", lComando1, _
+            .iOrdem, .sDescricao, .dvalor1, .dvalor2, .dvalor3, .dValor4, .dValor5, .dValor6, .dValor7, .dValor8)
+File CL5EB4~1.CLS:
+Private mvardValor1 As Double 'local copy
+Private mvardValor10 As Double 'local copy
+Private mvardValor11 As Double 'local copy
+Private mvardValor12 As Double 'local copy
+Public Property Let dValor12(ByVal vData As Double)
+'Syntax: X.dValor12 = 5
+    mvardValor12 = vData
+Public Property Get dValor12() As Double
+'Syntax: Debug.Print X.dValor12
+    dValor12 = mvardValor12
+Public Property Let dValor11(ByVal vData As Double)
+'Syntax: X.dValor11 = 5
+    mvardValor11 = vData
+Public Property Get dValor11() As Double
+'Syntax: Debug.Print X.dValor11
+    dValor11 = mvardValor11
+Public Property Let dValor10(ByVal vData As Double)
+'Syntax: X.dValor10 = 5
+    mvardValor10 = vData
+Public Property Get dValor10() As Double
+'Syntax: Debug.Print X.dValor10
+    dValor10 = mvardValor10
+Public Property Let dValor1(ByVal vData As Double)
+'Syntax: X.dValor1 = 5
+    mvardValor1 = vData
+Public Property Get dValor1() As Double
+'Syntax: Debug.Print X.dValor1
+    dValor1 = mvardValor1
+File CL5F1D~1.CLS:
+Private mvardValor1 As Double
+Public Property Let dvalor1(ByVal vData As Double)
+    mvardValor1 = vData
+Public Property Get dvalor1() As Double
+    dvalor1 = mvardValor1
+File CL60AC~1.CLS:
+    'Verifica se Valor1 está preenchida
+       'Critica a Valor1
+File CL6676~1.CLS:
+        lErro = Comando_Executar(lComando, "SELECT Quantidade1, Valor1, DataAtualizacao1, Quantidade2, Valor2, DataAtualizacao2, Quantidade3, Valor3, DataAtualizacao3, Quantidade4, Valor4, DataAtualizacao4" & _
+            ", Quantidade10, Valor10, DataAtualizacao10, Quantidade11, Valor11, DataAtualizacao11, Quantidade12, Valor12, DataAtualizacao12" & _
+Dim avValor1(1 To 100) As Variant
+        avValor1(iIndice) = vValor
+        lErro = Comando_BindVarInt(lComando, avValor1(iIndice))
+    lErro = Comando_Executar(lComando, "SELECT Codigo,Ano,CodRegiao,Cliente,Filial,Produto,DataAtualizacao,ValorPadrao,Quantidade1,Valor1,Quantidade2,Valor2,Quantidade3,Valor3,Quantidade4,Valor4,Quantidade5,Valor5,Quantidade6,Valor6,Quantidade7,Valor7,Quantidade8,Valor8,Quantidade9,Valor9,Quantidade10,Valor10,Quantidade11,Valor11,Quantidade12,Valor12 FROM ImportPrevVenda  WHERE FilialEmpresa = ? ", _
+    tPrev.sCodigo, tPrev.iAno, tPrev.iCodRegiao, tPrev.lCliente, tPrev.iFilial, tPrev.sProduto, dtDataAtualizacao, dValorPadrao, tPrev.dQuantidade1, tPrev.dvalor1, tPrev.dQuantidade2, tPrev.dvalor2, tPrev.dQuantidade3, tPrev.dvalor3, tPrev.dQuantidade4, tPrev.dValor4, tPrev.dQuantidade5, tPrev.dValor5, tPrev.dQuantidade6, tPrev.dValor6, tPrev.dQuantidade7, tPrev.dValor7, tPrev.dQuantidade8, tPrev.dValor8, tPrev.dQuantidade9, tPrev.dValor9, tPrev.dQuantidade10, tPrev.dValor10, tPrev.dQuantidade11, tPrev.dValor11, tPrev.dQuantidade12, tPrev.dValor12, giFilialEmpresa)
+        objPrev.dvalor1 = tPrev.dvalor1
+        objPrev.dValor10 = tPrev.dValor10
+        objPrev.dValor11 = tPrev.dValor11
+        objPrev.dValor12 = tPrev.dValor12
+            objPrev.dvalor1 = dValorPadrao
+            objPrev.dValor10 = dValorPadrao
+            objPrev.dValor11 = dValorPadrao
+            objPrev.dValor12 = dValorPadrao
+File CL6757~1.CLS:
+Private Const VALOR1 As String = "Valor_Total"
+        Case VALOR1
+File CL6DF3~1.CLS:
+Private mvardValor1 As Double
+Public Property Let dvalor1(ByVal vData As Double)
+    mvardValor1 = vData
+Public Property Get dvalor1() As Double
+    dvalor1 = mvardValor1
+File CL7016~1.CLS:
+Private Const VALOR1 As String = "Valor_Total"
+        Case VALOR1
+File CL7E42~1.CLS:
+Private Const VALOR1 As String = "Valor_Total"
+        Case VALOR1
+File CL9999~1.CLS:
+Dim dDiasAtrasoValor As Double, dDiasAtrasoValor1 As Double, dDiasAtrasoValor2 As Double
+            lErro = Comando_Executar(alComando(0), "SELECT SUM(ValorBaixado), MAX( {fn TIMESTAMPDIFF(SQL_TSI_DAY , DataVencimentoReal, Data) } ), SUM( {fn TIMESTAMPDIFF(SQL_TSI_DAY, DataVencimentoReal, Data ) } * ValorBaixado) FROM TitulosRec, ParcelasRec,BaixasParcRec,BaixasRec WHERE TitulosRec.NumIntDoc = ParcelasRec.NumIntTitulo AND ParcelasRec.NumIntDoc = BaixasParcRec.NumIntParcela AND BaixasParcRec.NumIntBaixa = BaixasRec.NumIntBaixa AND TitulosRec.Cliente = ? AND ParcelasRec.DataVencimento < BaixasRec.Data AND TitulosRec.Status <> ? AND BaixasParcRec.Status <> ?" & sFiltro, dValPagtosAtraso1, lMaiorAtraso1, dDiasAtrasoValor1, objClienteEstatistica.lCodCliente, STATUS_EXCLUIDO, STATUS_EXCLUIDO)
+            lErro = Comando_Executar(alComando(0), "SELECT SUM(ValorBaixado), MAX( Data - DataVencimentoReal ), SUM( ( Data - DataVencimentoReal ) * ValorBaixado) FROM TitulosRec, ParcelasRec,BaixasParcRec,BaixasRec WHERE TitulosRec.NumIntDoc = ParcelasRec.NumIntTitulo AND ParcelasRec.NumIntDoc = BaixasParcRec.NumIntParcela AND BaixasParcRec.NumIntBaixa = BaixasRec.NumIntBaixa AND TitulosRec.Cliente = ? AND ParcelasRec.DataVencimento < BaixasRec.Data AND TitulosRec.Status <> ? AND BaixasParcRec.Status <> ?" & sFiltro, dValPagtosAtraso1, lMaiorAtraso1, dDiasAtrasoValor1, objClienteEstatistica.lCodCliente, STATUS_EXCLUIDO, STATUS_EXCLUIDO)
+            lErro = Comando_Executar(alComando(0), "SELECT SUM(ValorBaixado), MAX( {fn TIMESTAMPDIFF(SQL_TSI_DAY , DataVencimentoReal, Data) } ), SUM( {fn TIMESTAMPDIFF(SQL_TSI_DAY, DataVencimentoReal, Data ) } * ValorBaixado) FROM TitulosRec, ParcelasRec,BaixasParcRec,BaixasRec WHERE TitulosRec.NumIntDoc = ParcelasRec.NumIntTitulo AND ParcelasRec.NumIntDoc = BaixasParcRec.NumIntParcela AND BaixasParcRec.NumIntBaixa = BaixasRec.NumIntBaixa AND FilialEmpresa =? AND TitulosRec.Cliente = ? AND ParcelasRec.DataVencimento < BaixasRec.Data AND TitulosRec.Status <> ? AND BaixasParcRec.Status <> ?", dValPagtosAtraso1, lMaiorAtraso1, dDiasAtrasoValor1, objClienteEstatistica.iFilialEmpresa, objClienteEstatistica.lCodCliente, STATUS_EXCLUIDO, STATUS_EXCLUIDO)
+            lErro = Comando_Executar(alComando(0), "SELECT SUM(ValorBaixado), MAX( Data - DataVencimentoReal ), SUM( ( Data - DataVencimentoReal ) * ValorBaixado) FROM TitulosRec, ParcelasRec,BaixasParcRec,BaixasRec WHERE TitulosRec.NumIntDoc = ParcelasRec.NumIntTitulo AND ParcelasRec.NumIntDoc = BaixasParcRec.NumIntParcela AND BaixasParcRec.NumIntBaixa = BaixasRec.NumIntBaixa AND FilialEmpresa =? AND TitulosRec.Cliente = ? AND ParcelasRec.DataVencimento < BaixasRec.Data AND TitulosRec.Status <> ? AND BaixasParcRec.Status <> ?", dValPagtosAtraso1, lMaiorAtraso1, dDiasAtrasoValor1, objClienteEstatistica.iFilialEmpresa, objClienteEstatistica.lCodCliente, STATUS_EXCLUIDO, STATUS_EXCLUIDO)
+    dDiasAtrasoValor = dDiasAtrasoValor1 + dDiasAtrasoValor2
+Dim dDiasAtrasoValor As Double, dDiasAtrasoValor1 As Double, dDiasAtrasoValor2    As Double
+        lErro = Comando_Executar(alComando(0), "SELECT SUM(ValorBaixado), MAX( {fn TIMESTAMPDIFF(SQL_TSI_DAY , DataVencimentoReal, Data) } ), SUM( {fn TIMESTAMPDIFF(SQL_TSI_DAY, DataVencimentoReal, Data ) } * ValorBaixado) FROM TitulosRec, ParcelasRec,BaixasParcRec,BaixasRec WHERE TitulosRec.NumIntDoc = ParcelasRec.NumIntTitulo AND ParcelasRec.NumIntDoc = BaixasParcRec.NumIntParcela AND BaixasParcRec.NumIntBaixa = BaixasRec.NumIntBaixa AND FilialEmpresa =? AND TitulosRec.Cliente = ? AND TitulosRec.Filial = ? AND ParcelasRec.DataVencimento < BaixasRec.Data", dValPagtosAtraso1, lMaiorAtraso1, dDiasAtrasoValor1, objFilialClienteEstatistica.iFilialEmpresa, objFilialClienteEstatistica.lCodCliente, objFilialClienteEstatistica.iCodFilial)
+        lErro = Comando_Executar(alComando(0), "SELECT SUM(ValorBaixado), MAX( Data - DataVencimentoReal), SUM((Data - DataVencimentoReal)* ValorBaixado) FROM TitulosRec, ParcelasRec,BaixasParcRec,BaixasRec WHERE TitulosRec.NumIntDoc = ParcelasRec.NumIntTitulo AND ParcelasRec.NumIntDoc = BaixasParcRec.NumIntParcela AND BaixasParcRec.NumIntBaixa = BaixasRec.NumIntBaixa AND FilialEmpresa =? AND TitulosRec.Cliente = ? AND TitulosRec.Filial = ? AND ParcelasRec.DataVencimento < BaixasRec.Data", dValPagtosAtraso1, lMaiorAtraso1, dDiasAtrasoValor1, objFilialClienteEstatistica.iFilialEmpresa, objFilialClienteEstatistica.lCodCliente, objFilialClienteEstatistica.iCodFilial)
+    dDiasAtrasoValor = dDiasAtrasoValor1 + dDiasAtrasoValor2
+'Dim lErro As Long, lComando As Long, dvalor1 As Double
+'    lErro = Comando_Executar(lComando, "SELECT Valor1 FROM CategoriaProdutoItem, ProdutoCategoria WHERE ProdutoCategoria.Produto = ? AND ProdutoCategoria.Categoria = ? AND ProdutoCategoria.Item = CategoriaProdutoItem.Item AND CategoriaProdutoItem.Categoria = ProdutoCategoria.Categoria", dvalor1, sProduto, "Margem de Lucro")
+'        dMargemPadrao = dvalor1 / 100
+File CL99EE~1.CLS:
+        lErro = Comando_Executar(lComando, "SELECT Categoria, Item, Ordem, Descricao, Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8 FROM CategoriaProdutoItem WHERE Categoria = ? ORDER BY Ordem", _
+            .sCategoria, .sItem, .iOrdem, .sDescricao, .dvalor1, .dvalor2, .dvalor3, .dValor4, .dValor5, .dValor6, .dValor7, .dValor8, objCategoriaProduto.sCategoria)
+            objCategoriaProdutoItem.dvalor1 = .dvalor1
+    lErro = Comando_Executar(lComando, "SELECT Categoria, Item, Ordem, Descricao, Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8 FROM CategoriaProdutoItem WHERE Categoria = ? AND Item = ?", _
+    objCategoriaProdutoItem.dvalor1 = adValor(0)
+    lErro = Comando_Executar(lComando, "SELECT CategoriaProdutoItem.Categoria, CategoriaProdutoItem.Item, CategoriaProdutoItem.Ordem, CategoriaProdutoItem.Descricao, Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8 FROM ProdutoCategoria, CategoriaProdutoItem WHERE ProdutoCategoria.Categoria = CategoriaProdutoItem.Categoria AND ProdutoCategoria.Produto = ? AND ProdutoCategoria.Categoria = ? AND ProdutoCategoria.Item = CategoriaProdutoItem.Item", _
+    tCatProdItem.sCategoria, tCatProdItem.sItem, tCatProdItem.iOrdem, tCatProdItem.sDescricao, tCatProdItem.dvalor1, tCatProdItem.dvalor2, tCatProdItem.dvalor3, tCatProdItem.dValor4, tCatProdItem.dValor5, tCatProdItem.dValor6, tCatProdItem.dValor7, tCatProdItem.dValor8, objProdutoCategoria.sProduto, objProdutoCategoria.sCategoria)
+    objCategoriaProdutoItem.dvalor1 = tCatProdItem.dvalor1
+File CLA444~1.CLS:
+Private Const VALOR1 As String = "Valor_Doc"
+        Case VALOR1
+File CLABAA~1.CLS:
+            lErro = Comando_ExecutarPos(lComando2, "UPDATE CategoriaProdutoItem SET Ordem = ?, Descricao = ?, Valor1 = ?, Valor2 = ?, Valor3 = ?, Valor4 = ?, Valor5 = ?, Valor6 = ?, Valor7 = ?, Valor8 = ?", lComando1, _
+                .iOrdem, .sDescricao, .dvalor1, .dvalor2, .dvalor3, .dvalor4, .dvalor5, .dvalor6, .dvalor7, .dvalor8)
+File CLASST~1.CLS:
+    dValorIPI = StrParaDbl(objTela.Controls("IPIValor1"))
+    dValorICMSST = StrParaDbl(objTela.Controls("ICMSSubstValor1"))
+File CLBCBA~1.CLS:
+'Function MvPerCta_Calcula_Valor1(iFilialEmpresa As Integer, iExercicio As Integer, sContaInicial As String, sContaFinal As String, dValorExercAtual As Double) As Long
+'On Error GoTo Erro_MvPerCta_Calcula_Valor1
+'    lErro = Rotina_ObterObjetoFuncao("CTB_MVPERCTA_CALCULA_VALOR1", X)
+'    MvPerCta_Calcula_Valor1 = X.MvPerCta_Calcula_Valor1(iFilialEmpresa, iExercicio, sContaInicial, sContaFinal, dValorExercAtual)
+'Erro_MvPerCta_Calcula_Valor1:
+'    MvPerCta_Calcula_Valor1 = Err
+File CLC742~1.CLS:
+                "Numero5= ? , Valor1= ? , Valor2= ? , Valor3= ? , Valor4= ? , " & _
+                "Numero2, Numero3, Numero4, Numero5, Valor1, " & _
+File CLD2F3~1.CLS:
+    lErro = Comando_Executar(alComando(0), "SELECT Categoria, Item, Ordem, Descricao, Valor1, Valor2, Valor3, Valor4, Valor5, Valor6, Valor7, Valor8 FROM CategoriaProdutoItem ORDER BY Categoria", tCatProdItem.sCategoria, tCatProdItem.sItem, tCatProdItem.iOrdem, tCatProdItem.sDescricao, _
+    tCatProdItem.dvalor1, tCatProdItem.dvalor2, tCatProdItem.dvalor3, tCatProdItem.dValor4, tCatProdItem.dValor5, tCatProdItem.dValor6, tCatProdItem.dValor7, tCatProdItem.dValor8)
+        sArquivo = sArquivo & tCatProdItem.sCategoria & Chr(vbKeyEscape) & tCatProdItem.sItem & Chr(vbKeyEscape) & tCatProdItem.iOrdem & Chr(vbKeyEscape) & tCatProdItem.sDescricao & Chr(vbKeyEscape) & tCatProdItem.dvalor1 & Chr(vbKeyEscape)
+            lErro = Comando_Executar(alComando(5), "SELECT Valor1 FROM ProdutoCategoria, CategoriaProdutoItem WHERE Produto = ? AND UPPER(ProdutoCategoria.Categoria) = ? AND ProdutoCategoria.Categoria = CategoriaProdutoItem.Categoria AND ProdutoCategoria.Item = CategoriaProdutoItem.Item", dLimiteDesconto, .sCodigo, LIMITE_DESCONTO)
+        objItem.dvalor1 = StrParaDbl(Mid(sRegistro, iPosInicio, iPosMeio - iPosInicio))
+File CLD559~1.CLS:
+Const CAMPO_VALORIPI As String = "IPIValor1"
+Const CAMPO_VALORICMS As String = "ICMSValor1"
+File CLE390~1.CLS:
+Private Const VALOR1 As String = "Valor_da_Nota"
+        Case VALOR1
+File CLF261~1.CLS:
+        TabTrib_Controle("IPIValor1").Caption = Format(objTributacao.dIPIValor, "Standard")
+        TabTrib_Controle("ISSValor1").Caption = Format(objTributacao.dISSValor, "Standard")
+        TabTrib_Controle("ICMSValor1").Caption = Format(objTributacao.dICMSValor, "Standard")
+        TabTrib_Controle("ICMSSubstValor1").Caption = Format(objTributacao.dICMSSubstValor, "Standard")
+        TabTrib_Controle("ISSValor1").Caption = ""
+        TabTrib_Controle("IPIValor1").Caption = ""
+        TabTrib_Controle("ICMSValor1").Caption = ""
+        TabTrib_Controle("ICMSSubstValor1").Caption = ""
+Dim dICMSSubstValor1 As Double
+Dim dIPIValor1 As Double
+    dICMSSubstValor1 = StrParaDbl(TabTrib_Controle("ICMSSubstValor1").Caption)
+    dIPIValor1 = StrParaDbl(TabTrib_Controle("IPIValor1").Caption)
+    dValorTotal = dValorProdutos + dICMSSubstValor1 + dIPIValor1 + dValorFrete + dValorSeguro + dValorDespesas + dValorISS - dICMSValorIsento
+                    If gobjCRFAT.iNFImportacaoTribFlag04 = DESMARCADO Then dValorTotal = dValorTotal + StrParaDbl(TabTrib_Controle("ICMSValor1").Caption)
+                If Abs(dValorTotal - dICMSSubstValor1 - dTotalAux) <= DELTA_VALORMONETARIO Then
+                        dValorTotal = Arredonda_Moeda(dValorTotal - dICMSSubstValor1)
+        dValorPagar = dValorTotal - (dValorIRRF + dPISRetido + dISSRetido + dCOFINSRetido + dCSLLRetido) - dValorINSSRetido - StrParaDbl(TabTrib_Controle("ICMSSubstValor1").Caption) + dPISSTValor + dCOFINSSTValor
+    Call mvarobjForm.Preenche_Itens_Projeto_Aux(colItensPRJ, "ICMS", "ICMS Substituto", StrParaDbl(TabTrib_Controle("ICMSSubstValor1").Caption), 1, 0, "")
+    Call mvarobjForm.Preenche_Itens_Projeto_Aux(colItensPRJ, "IPI", "IPI", StrParaDbl(TabTrib_Controle("IPIValor1").Caption), 1, 0, "")
+        If X.gobjFAT.iPrimParcICMSST Then dValorPrimParc = dValorPrimParc + StrParaDbl(TabTrib_Controle("ICMSSubstValor1"))
+        If X.gobjFAT.iPrimParcIPI Then dValorPrimParc = dValorPrimParc + StrParaDbl(TabTrib_Controle("IPIValor1"))
+File CT05A8~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+    ICMSValor1.Caption = ""
+    ICMSSubstValor1.Caption = ""
+    IPIValor1.Caption = ""
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT0BE9~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objCTNFiscalPedido.ICMSSubstValor1
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objCTNFiscalPedido.IPIValor1
+            If Len(objCTNFiscalPedido.ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(objCTNFiscalPedido.ICMSValor1.Caption)
+            If Len(objCTNFiscalPedido.ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(objCTNFiscalPedido.ICMSSubstValor1.Caption)
+            If Len(objCTNFiscalPedido.IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(objCTNFiscalPedido.IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT12AD~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT2762~1.CLS:
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT27F7~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT2B38~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT2B4C~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT352E~1.CLS:
+'Public Property Get IPIValor1() As Object
+'     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+'Public Property Get ICMSValor1() As Object
+'     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+'Public Property Get ICMSSubstValor1() As Object
+'     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+'Dim dICMSSubstValor1 As Double
+'Dim dIPIValor1 As Double
+'    If Len(Trim(ICMSSubstValor1.Caption)) > 0 And IsNumeric(ICMSSubstValor1.Caption) Then dICMSSubstValor1 = CDbl(ICMSSubstValor1.Caption)
+'    If Len(Trim(IPIValor1.Caption)) And IsNumeric(IPIValor1.Caption) Then dIPIValor1 = CDbl(IPIValor1.Caption)
+'    dValorTotal = dValorProdutos + dICMSSubstValor1 + dIPIValor1 + dValorFrete + dValorSeguro + dValorDespesas
+'            If Len(ICMSValor1.Caption) > 0 Then
+'                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+'            If Len(ICMSSubstValor1.Caption) > 0 Then
+'                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+'            If Len(IPIValor1.Caption) > 0 Then
+'                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+File CT5C4C~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT5EA1~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+        dValorParcST = StrParaDbl(ICMSSubstValor1.Caption)
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CT6F97~1.CLS:
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+Dim dICMSSubstValor1 As Double
+Dim dIPIValor1 As Double
+    If Len(Trim(ICMSSubstValor1.Caption)) > 0 And IsNumeric(ICMSSubstValor1.Caption) Then dICMSSubstValor1 = CDbl(ICMSSubstValor1.Caption)
+    If Len(Trim(IPIValor1.Caption)) And IsNumeric(IPIValor1.Caption) Then dIPIValor1 = CDbl(IPIValor1.Caption)
+    dTotal = dSubTotal + dICMSSubstValor1 + dIPIValor1 + dValorFrete + dValorSeguro + dValorDespesas - dValorDesconto
+File CTAEF6~1.CLS:
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CTB597~1.CLS:
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+    ICMSValor1.Caption = ""
+    ICMSSubstValor1.Caption = ""
+    IPIValor1.Caption = ""
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CTBAIX~4.CLS:
+Private Const VALOR1 As String = "Valor"
+File CTBDD4~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Dim dICMSSubstValor1 As Double
+Dim dIPIValor1 As Double
+    If Len(Trim(ICMSSubstValor1.Caption)) > 0 And IsNumeric(ICMSSubstValor1.Caption) Then dICMSSubstValor1 = CDbl(ICMSSubstValor1.Caption)
+    If Len(Trim(IPIValor1.Caption)) And IsNumeric(IPIValor1.Caption) Then dIPIValor1 = CDbl(IPIValor1.Caption)
+    dTotal = dSubTotal + dICMSSubstValor1 + dIPIValor1 + dValorFrete + dValorSeguro + dValorDespesas '??? - dValorDesconto
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+File CTD974~1.CLS:
+                objCategoriaProdutoItem.dvalor1 = MARCADO
+                If objCategoriaProdutoItem.dvalor1 = MARCADO Then
+            objCategoriaProdutoItem.dvalor1 = MARCADO
+            objCategoriaProdutoItem.dvalor1 = DESMARCADO
+            If objCategoriaProdutoItem.dvalor1 = MARCADO Then
+                objCategoriaProdutoItem.dvalor1 = MARCADO
+                objCategoriaProdutoItem.dvalor1 = DESMARCADO
+            If objCategoriaProdutoItem.dvalor1 = MARCADO Then
+File CTDA80~1.CLS:
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CTF940~1.CLS:
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CTFA9B~1.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CTFC8A~1.CLS:
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CTGERA~1.CLS:
+                    lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CTNFIS~1.CLS:
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+            If Len(ICMSValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSValor1.Caption)
+            If Len(ICMSSubstValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(ICMSSubstValor1.Caption)
+            If Len(IPIValor1.Caption) > 0 Then
+                objMnemonicoValor.colValor.Add CDbl(IPIValor1.Caption)
+                        lErro = CF("PlanoConta_Le_ContaSimples", objCatProdItem.dvalor1, objPlanoConta)
+File CTORCA~2.CLS:
+Public Property Get ISSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+File CTPEDI~2.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+'    ICMSSubstValor1.Caption = ICMSSubstValor.Caption
+'    ICMSValor1.Caption = ICMSValor.Caption
+'    If Len(Trim(ICMSSubstValor1.Caption)) > 0 And IsNumeric(ICMSSubstValor1.Caption) Then dValorICMSSubst = CDbl(ICMSSubstValor1.Caption)
+'    If Len(Trim(IPIValor1.Caption)) > 0 And IsNumeric(IPIValor1.Caption) Then dValorIPI = CDbl(IPIValor1.Caption)
+'    IPIValor1.Caption = IPIValor.Caption
+'    ISSValor1.Caption = Format(ISSValor.Text, "Standard")
+'    objItensPRJCR.dValorOriginal = StrParaDbl(ICMSSubstValor1.Caption)
+'    objItensPRJCR.dValorOriginal = StrParaDbl(IPIValor1.Caption)
+File CTPEDI~3.CLS:
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ISSValor1() As Object
+     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+        dValorParcST = StrParaDbl(ICMSSubstValor1.Caption)
+File CTPV_C~1.CLS:
+'Public Property Get ISSValor1() As Object
+'     Set ISSValor1 = objUserControl.Controls("ISSValor1")
+Public Property Get IPIValor1() As Object
+     Set IPIValor1 = objUserControl.Controls("IPIValor1")
+Public Property Get ICMSValor1() As Object
+     Set ICMSValor1 = objUserControl.Controls("ICMSValor1")
+Public Property Get ICMSSubstValor1() As Object
+     Set ICMSSubstValor1 = objUserControl.Controls("ICMSSubstValor1")
+'    ISSValor1.Caption = Format(objTributacaoPV.dISSValor, "Standard")
+'    ICMSValor1.Caption = Format(objTributacaoPV.dICMSValor, "Standard")
+'    ICMSSubstValor1.Caption = Format(objTributacaoPV.dICMSSubstValor, "Standard")
+'    IPIValor1.Caption = Format(objTributacaoPV.dIPIValor, "Standard")
+    ICMSValor1.Caption = ""
+    ICMSSubstValor1.Caption = ""
+    IPIValor1.Caption = ""
+File CTSAQUE.CLS:
+Private Const VALOR1 As String = "Valor"
+        Case VALOR1
+File CTTITU~3.CLS:
+Private Const VALOR1 As String = "Valor_Total"
+        Case VALOR1

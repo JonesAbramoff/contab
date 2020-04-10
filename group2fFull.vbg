@@ -1,0 +1,13 @@
+VBGROUP 5.0
+StartupProject=TelasCpr2.vbp
+Project=TelasCOM.vbp
+Project=TelasFIS.vbp
+Project=TelasECF.vbp
+Project=telasPCP.vbp
+Project=BatchTransfCC.vbp
+Project=BatchTransfECF.vbp
+Project=SGEECF.vbp
+Project=BatchFATInt.vbp
+Project=TelasSRV.vbp
+Project=SGEECFConfig.vbp
+Project=SGEECFCriptografa.vbp

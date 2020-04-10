@@ -1,0 +1,130 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AtualizaCorporatorLoja
+</name>
+</assembly>
+<members>
+<member name="P:AtualizaCorporatorLoja.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AtualizaCorporatorLoja.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:AtualizaCorporatorLoja.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.#ctor">
+	<remarks/>
+</member><member name="E:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_ClienteCompleted">
+	<remarks/>
+</member><member name="E:AtualizaCorporatorLoja.WS4.Atualizacao.Retorna_ScriptsCompleted">
+	<remarks/>
+</member><member name="E:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_ConfigCompleted">
+	<remarks/>
+</member><member name="E:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_Cliente1Completed">
+	<remarks/>
+</member><member name="E:AtualizaCorporatorLoja.WS4.Atualizacao.Aplica_ScriptCompleted">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_Cliente(System.Int64,System.Boolean@,System.Int64@,System.String@,System.String@,System.Int64@,System.String@)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_ClienteAsync(System.Int64,System.Boolean,System.Int64,System.String,System.String,System.Int64,System.String)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_ClienteAsync(System.Int64,System.Boolean,System.Int64,System.String,System.String,System.Int64,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Retorna_Scripts(System.String,System.String@,System.String@)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Retorna_ScriptsAsync(System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Retorna_ScriptsAsync(System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_Config(System.String,System.String@,System.String@)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_ConfigAsync(System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_ConfigAsync(System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_Cliente1(System.Int64,System.Boolean@,System.Boolean@,System.Boolean@,System.String@)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_Cliente1Async(System.Int64,System.Boolean,System.Boolean,System.Boolean,System.String)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Consulta_Cliente1Async(System.Int64,System.Boolean,System.Boolean,System.Boolean,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Aplica_Script(System.String,System.String,System.String,System.String@)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Aplica_ScriptAsync(System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.Aplica_ScriptAsync(System.String,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:AtualizaCorporatorLoja.WS4.Atualizacao.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Atualizacao">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventHandler">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventArgs.bComPermissao">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventArgs.lIdPgm">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventArgs.sDirPgm">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventArgs.sDirPgmCust">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventArgs.lIDBD">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventArgs.sErro">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Consulta_ClienteCompletedEventArgs">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Retorna_ScriptsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Retorna_ScriptsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Retorna_ScriptsCompletedEventArgs.sSaida">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Retorna_ScriptsCompletedEventArgs.sErro">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Retorna_ScriptsCompletedEventArgs">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Consulta_ConfigCompletedEventHandler">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ConfigCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ConfigCompletedEventArgs.sRetorno">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_ConfigCompletedEventArgs.sErro">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Consulta_ConfigCompletedEventArgs">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Consulta_Cliente1CompletedEventHandler">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_Cliente1CompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_Cliente1CompletedEventArgs.bPermissaoSuporte">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_Cliente1CompletedEventArgs.bAvisaSobreAtualizacoes">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_Cliente1CompletedEventArgs.bNaoAtualiza">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Consulta_Cliente1CompletedEventArgs.sErro">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Consulta_Cliente1CompletedEventArgs">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Aplica_ScriptCompletedEventHandler">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Aplica_ScriptCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:AtualizaCorporatorLoja.WS4.Aplica_ScriptCompletedEventArgs.sErro">
+	<remarks/>
+</member><member name="T:AtualizaCorporatorLoja.WS4.Aplica_ScriptCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>

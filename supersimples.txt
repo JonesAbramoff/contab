@@ -1,0 +1,49 @@
+File ADMFIL~1.CLS:
+Private mvariSuperSimples As Integer
+Public Property Let iSuperSimples(ByVal vData As Integer)
+    mvariSuperSimples = vData
+Public Property Get iSuperSimples() As Integer
+    iSuperSimples = mvariSuperSimples
+    mvariSuperSimples = objFilialOrig.iSuperSimples
+File ADMSEL~1.CLS:
+    lErro = Comando_Executar(lComando, "SELECT Nome, CGC, Endereco, EnderecoEntrega, AlmoxarifadoPadrao, InscricaoEstadual, ICMSPorEstimativa, InscricaoMunicipal, ISSPercPadrao, ISSCodigoPadrao, ISSIncluso, ContribuinteIPI, IRPercPadrao, RamoEmpresa, Jucerja, DataJucerja, Contador, CRCContador, CPFContador, TipoTribAtividade, SimplesFederal, SimplesFederalAliq, SimplesFederalTeto, SuperSimples, PISNaoCumulativo, COFINSNaoCumulativo FROM FiliaisEmpresa WHERE FilialEmpresa = ?", _
+        tFilialEmpresa.iContribuinteIPI, tFilialEmpresa.dIRPercPadrao, tFilialEmpresa.sRamoEmpresa, tFilialEmpresa.sJucerja, tFilialEmpresa.dtDataJucerja, tFilialEmpresa.sContador, tFilialEmpresa.sCRCContador, tFilialEmpresa.sCPFContador, tFilialEmpresa.iTipoTribAtividade, tFilialEmpresa.iSimplesFederal, tFilialEmpresa.dSimplesFederalAliq, tFilialEmpresa.dSimplesFederalTeto, tFilialEmpresa.iSuperSimples, tFilialEmpresa.iPISNaoCumulativo, tFilialEmpresa.iCOFINSNaoCumulativo, _
+        .iSuperSimples = tFilialEmpresa.iSuperSimples
+    lErro = Comando_Executar(lComando, "SELECT Nome, CGC, Endereco, AlmoxarifadoPadrao, InscricaoEstadual, ICMSPorEstimativa, InscricaoMunicipal, ISSPercPadrao, ISSCodigoPadrao, ISSIncluso, ContribuinteIPI, IRPercPadrao, TipoTribAtividade, SimplesFederal, SimplesFederalAliq, SimplesFederalTeto, SuperSimples, PISNaoCumulativo, COFINSNaoCumulativo FROM FiliaisEmpresa WHERE FilialEmpresa = ?", _
+        tFilialEmpresa.iSuperSimples, tFilialEmpresa.iPISNaoCumulativo, tFilialEmpresa.iCOFINSNaoCumulativo, objFilialEmpresa.iCodFilial)
+    objFilialEmpresa.iSuperSimples = tFilialEmpresa.iSuperSimples
+File CL8146~1.CLS:
+        mvariSimplesNacional = objFilialEmpresa.iSuperSimples
+File CL9332~1.CLS:
+        mvariSimplesNacional = objFilialEmpresa.iSuperSimples
+File CL941F~1.CLS:
+        mvariSimplesNacional = objFilialEmpresa.iSuperSimples
+File CL9B04~1.CLS:
+        mvariSimplesNacional = objFilialEmpresa.iSuperSimples
+File CLE747~1.CLS:
+        mvariSimplesNacional = objFilialEmpresa.iSuperSimples
+File CLFA04~1.CLS:
+        mvariSimplesNacional = objFilialEmpresa.iSuperSimples
+File CTFILI~3.CLS:
+Public Property Get SuperSimples() As Object
+     Set SuperSimples = objTela.SuperSimples
+        .iSuperSimples = SuperSimples.Value
+    SuperSimples.Value = vbUnchecked
+        SuperSimples.Value = .iSuperSimples
+        SuperSimples.Value = vbUnchecked
+Public Sub SuperSimples_Click()
+On Error GoTo Erro_SuperSimples_Click
+    If SuperSimples.Value = vbChecked Then
+Erro_SuperSimples_Click:
+File DICGRAVA.CLS:
+            lErro = Comando_ExecutarPos(alComando(2), "UPDATE FiliaisEmpresa SET Nome = ?, CGC = ?, AlmoxarifadoPadrao = ?, InscricaoEstadual = ?, InscricaoMunicipal = ?, ICMSPorEstimativa = ?, ISSPercPadrao = ?, ISSCodigoPadrao = ?, ISSIncluso = ?, ContribuinteIPI = ?, IRPercPadrao = ?, RamoEmpresa = ?, Jucerja = ?, DataJucerja = ?, Contador = ?, CRCContador = ?, CPFContador = ?, TipoTribAtividade = ?, SimplesFederal = ?, SimplesFederalAliq = ?, SimplesFederalTeto = ?, SuperSimples = ?, PISNaoCumulativo = ?, COFINSNaoCumulativo = ?", alComando(1), .sNome, .sCgc, .iAlmoxarifadoPadrao, .sInscricaoEstadual, .sInscricaoMunicipal, .iICMSPorEstimativa, .dISSPercPadrao, .sISSCodigoPadrao, .iISSIncluso, .iContribuinteIPI, .dIRPercPadrao, .sRamoEmpresa, .sJucerja, .dtDataJucerja, .sContador, .sCRCContador, .sCPFContador, .iTipoTribAtividade, .iSimplesFederal, .dSimplesFederalAliq, .dSimplesFederalTeto, .iSuperSimples, .iPISNaoCumulativo, .iCOFINSNaoCumulativo)
+            lErro = Comando_Executar(alComando(2), "INSERT INTO FiliaisEmpresa (FilialEmpresa, Nome, CGC, Endereco, EnderecoEntrega, AlmoxarifadoPadrao,InscricaoEstadual, InscricaoMunicipal, ICMSPorEstimativa, ISSPercPadrao, ISSCodigoPadrao, ISSIncluso, ContribuinteIPI, IRPercPadrao, RamoEmpresa, Jucerja, DataJucerja, Contador, CRCContador, CPFContador,TipoTribAtividade, SimplesFederal, SimplesFederalAliq, SimplesFederalTeto, SuperSimples, PISNaoCumulativo, COFINSNaoCumulativo) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", .iCodFilial, .sNome, .sCgc, lNumIntEndereco, lNumIntEnderecoEntrega, .iAlmoxarifadoPadrao, .sInscricaoEstadual, .sInscricaoMunicipal, .iICMSPorEstimativa, .dISSPercPadrao, .sISSCodigoPadrao, .iISSIncluso, .iContribuinteIPI, .dIRPercPadrao, .sRamoEmpresa, .sJucerja, .dtDataJucerja, .sContador, .sCRCContador, .sCPFContador, .iTipoTribAtividade, .iSimplesFederal, .dSimplesFederalAliq, .dSimplesFederalTeto, .iSuperSimples, .iPISNaoCumulativo, .iCOFINSNaoCumulativo)
+File DICSEL~1.CLS:
+        lErro = Comando_Executar(lComando, "SELECT FilialEmpresa,Nome,CGC,Endereco,AlmoxarifadoPadrao,InscricaoEstadual,ICMSPorEstimativa,InscricaoMunicipal,ISSCodigoPadrao,ISSIncluso,ContribuinteIPI,IRPercPadrao,RamoEmpresa,Jucerja,DataJucerja,Contador,CRCContador,CPFContador,TipoTribAtividade, SimplesFederal, SimplesFederalAliq, SimplesFederalTeto, SuperSimples, PISNaoCumulativo, COFINSNaoCumulativo FROM FiliaisEmpresa", .iCodFilial, .sNome, .sCgc, .lEndereco, .iAlmoxarifadoPadrao, .sInscricaoEstadual, .iICMSPorEstimativa, .sInscricaoMunicipal, .sISSCodigoPadrao, .iISSIncluso, .iContribuinteIPI, .dIRPercPadrao, .sRamoEmpresa, .sJucerja, .dtDataJucerja, .sContador, .sCRCContador, .sCPFContador, .iTipoTribAtividade, .iSimplesFederal, .dSimplesFederalAliq, .dSimplesFederalTeto, .iSuperSimples, .iPISNaoCumulativo, .iCOFINSNaoCumulativo)
+            objFilial.iSuperSimples = .iSuperSimples
+File ADCAPIM.BAS:
+    iSuperSimples As Integer
+File FILIAL~1.FRM:
+      Begin VB.CheckBox SuperSimples 
+Private Sub SuperSimples_Click()
+    objCT.SuperSimples_Click

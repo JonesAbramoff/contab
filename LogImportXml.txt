@@ -1,0 +1,22 @@
+-=====================================================
+-INICIANDO 13/01/2016 16:10:44
+Inicializa-Estabelecendo conexão com o SGEDic. BD: SGEDic_EJS
+Inicializa-Verificando empresas. Código: 1 Nome: ASSOCIAÇÃO CENTRO ENSINO RELIGIOSO EJS NomeReduzido: EJS
+Inicializa-Estabelecendo conexão com 'server=JONES-STI\SQL_STD_2014;uid=sa;pwd=SAPWD;;database=SGEDados1_EJS' BD: SGEDados1_EJS
+Inicializa-Conexões com todos bancos de dados feita com sucesso
+Importa_Todos_XML-Diretório da importação: H:\clientes\smh\
+Importa_Todos_XML-6 arquivos encontrados na pasta.
+Importa_Todos_XML-Processando DI_-_AC_&_Servs_-_1522152883.xml
+Importa_Todos_XML-Tipo\Versão: DI\001
+Importa_Todos_XML-O arquivo foi desserializado e gravado com sucesso
+Importa_Todos_XML-Arquivo processado com sucesso.
+Importa_Todos_XML-Processando SGEDados1_ACeF_20150507_100219.bak
+Importa_Todos_XML-O arquivo não é um XML
+Importa_Todos_XML-Processando SGEDados2_ACeF_20150507_100219.bak
+Importa_Todos_XML-O arquivo não é um XML
+Importa_Todos_XML-Processando SGEDic_Acef.MDF
+Importa_Todos_XML-O arquivo não é um XML
+Importa_Todos_XML-Processando SGEDic_Acef_1.LDF
+Importa_Todos_XML-O arquivo não é um XML
+Importa_Todos_XML-Processando SGEDic_ACeF_20150507_100219.bak
+Importa_Todos_XML-O arquivo não é um XML

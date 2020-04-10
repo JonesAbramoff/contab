@@ -1,0 +1,11 @@
+VBGROUP 5.0
+StartupProject=RelatoriosCOM.vbp
+Project=RelatoriosContab2.vbp
+Project=RelatoriosCPR2.vbp
+Project=RelatoriosEST2.vbp
+Project=RelatoriosFAT2.vbp
+Project=RelatoriosFIS.vbp
+Project=RelatoriosPCP.vbp
+Project=RelatoriosPRJ.vbp
+Project=RelatoriosLoja.vbp
+Project=RelatoriosSRV.vbp

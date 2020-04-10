@@ -1,0 +1,18 @@
+VBGROUP 5.0
+StartupProject=rotinasadm2.vbp
+Project=RotinasCPR2.vbp
+Project=RotinasTRB2.vbp
+Project=RotinasEST2.vbp
+Project=RotinasCRFAT2.vbp
+Project=RotinasMAT2.vbp
+Project=RotinasFAT2.vbp
+Project=RotinasPV2.vbp
+Project=DicRotinas2.vbp
+Project=RotinasCOM.vbp
+Project=RotinasFIS.vbp
+Project=RotinasContab2.vbp
+Project=RotinasLoja.vbp
+Project=RotinasPCP2.vbp
+Project=RotinasECF.vbp
+Project=RotinasPRJ.vbp
+Project=RotinasSRV2.vbp

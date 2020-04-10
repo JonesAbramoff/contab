@@ -1,0 +1,14 @@
+Line 90: Class MSMask.MaskEdBox of control TrechoDistancia was not a loaded control class.
+Line 102: Class MSMask.MaskEdBox of control TrechoTempo was not a loaded control class.
+Line 386: Class MSMask.MaskEdBox of control CodigoTransf was not a loaded control class.
+Line 490: Class MSMask.MaskEdBox of control Codigo was not a loaded control class.
+Line 602: Class MSMask.MaskEdBox of control Vendedor was not a loaded control class.
+Line 614: Class MSMask.MaskEdBox of control VendTelefone1 was not a loaded control class.
+Line 627: Class MSMask.MaskEdBox of control VendTelefone2 was not a loaded control class.
+Line 696: Class MSMask.MaskEdBox of control LinhaDesejada was not a loaded control class.
+Line 830: Class MSMask.MaskEdBox of control ParadasFilial was not a loaded control class.
+Line 867: Class MSMask.MaskEdBox of control ParadasCliente was not a loaded control class.
+Line 879: Class MSMask.MaskEdBox of control ParadasEndereco was not a loaded control class.
+Line 892: Class MSMask.MaskEdBox of control ParadasBairro was not a loaded control class.
+Line 905: Class MSMask.MaskEdBox of control ParadasDistancia was not a loaded control class.
+Line 918: Class MSMask.MaskEdBox of control ParadasOBS was not a loaded control class.

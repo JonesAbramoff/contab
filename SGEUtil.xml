@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SGEUtil</name>
+    </assembly>
+    <members>
+        <member name="T:SGEUtil.Email">
+            <summary>
+            Classe que trata o envio de email
+            </summary>
+        </member>
+        <member name="M:SGEUtil.Email.Inicializa(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Criada apenas para manter a compatibilidade com a Interface anterior
+            </summary>
+            <param name="sSMTP"></param>
+            <param name="sUsuario"></param>
+            <param name="sSenha"></param>
+            <param name="lPorta"></param>
+            <param name="iSSL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SGEUtil.Email.Enviar_Email(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.Nullable{System.Int32},System.String@)">
+            <summary>
+            Realiza o envio dde email
+            </summary>
+            <param name="sDe"></param>
+            <param name="sDeNomeExibicao"></param>
+            <param name="sEmailResposta"></param>
+            <param name="sPara"></param>
+            <param name="sCC"></param>
+            <param name="sCCO"></param>
+            <param name="sAssunto"></param>
+            <param name="sMensagem"></param>
+            <param name="iMsgHtml"></param>
+            <param name="sAnexos"></param>
+            <param name="sAliasAnexo"></param>
+            <param name="iConfirmacaoEnvio"></param>
+            <param name="sErro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SGEUtil.Email.Finaliza">
+            <summary>
+            Criada para manter a compatibilidade com a interface anterior
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SGEUtil.Email.Retorna_List(System.String)">
+            <summary>
+            Devolve o texto enviado como uma coleção se textos para cada ; que os separe
+            </summary>
+            <param name="sInfo">Texto a ser separado</param>
+        </member>
+    </members>
+</doc>

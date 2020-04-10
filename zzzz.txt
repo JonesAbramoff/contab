@@ -1,0 +1,83 @@
+File LA6092~1.CTL:
+        objDoc.iFilialEmpresa = objDoc.iFilialEmpresa - giFilialAuxiliar
+File LANCAM~1.CTL:
+        objDoc.iFilialEmpresa = objDoc.iFilialEmpresa - giFilialAuxiliar
+File LANCAM~3.CTL:
+        objLancamento_Cabecalho.iFilialEmpresa = objLancamento_Cabecalho.iFilialEmpresa - giFilialAuxiliar
+        objDoc.iFilialEmpresa = objDoc.iFilialEmpresa - giFilialAuxiliar
+File RE0CA6~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RE2BE6~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RE3C8B~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RE5FFB~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresa < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresa > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RE878A~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File REA120~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File REA31C~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File REA361~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresa < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresa > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File REEAE7~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File REEE2F~1.CTL:
+'            sExpressao = sExpressao & "FilialEmpresa < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+'        Case Abs(giFilialAuxiliar)
+'            sExpressao = sExpressao & "FilialEmpresa > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File REF818~1.CTL:
+'            sExpressao = sExpressao & "FilialEmpresa < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+'        Case Abs(giFilialAuxiliar)
+'            sExpressao = sExpressao & "FilialEmpresa > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RELOPA~3.CTL:
+        If objCodigoNome.iCodigo < Abs(giFilialAuxiliar) Then
+File RELOPI~3.CTL:
+        If objCodigoNome.iCodigo < Abs(giFilialAuxiliar) Then
+File RELOPL~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RELOPL~3.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RELOPR~1.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RELOPR~2.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File RELOPR~3.CTL:
+            If giContabGerencial <> 0 Then sExpressao = sExpressao & "FilialEmpresaLcto < " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+        Case Abs(giFilialAuxiliar)
+            sExpressao = sExpressao & "FilialEmpresaLcto > " & Forprint_ConvInt(Abs(giFilialAuxiliar))
+File TRPFAT~2.CTL:
+        'If objCodigoNome.iCodigo < Abs(giFilialAuxiliar) Then
+File TRPGER~1.CTL:
+        'If objCodigoNome.iCodigo < Abs(giFilialAuxiliar) Then
+File TRVFAT~2.CTL:
+        If objCodigoNome.iCodigo < Abs(giFilialAuxiliar) Then
+File TRVGER~1.CTL:
+        If objCodigoNome.iCodigo < Abs(giFilialAuxiliar) Then

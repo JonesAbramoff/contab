@@ -1,0 +1,19 @@
+VBGROUP 5.0
+Project=GlobaisCRFATInpal.vbp
+Project=GlobaisFATInpal.vbp
+Project=GlobaisTelasFATInpal.vbp
+Project=RelatoriosCPRInpal.vbp
+Project=RelatoriosCTBInpal.vbp
+Project=RelatoriosFATInpal.vbp
+Project=RelatoriosESTinpal.vbp
+Project=RelatoriosPCPInpal.vbp
+Project=RotinasContabInpal.vbp
+Project=RotinasCPRInpal.vbp
+Project=RotinasCRFATInpal.vbp
+Project=RotinasEstInpal.vbp
+Project=RotinasFATInpal.vbp
+Project=RotinasPVInpal.vbp
+Project=RotinasAdmInpal.vbp
+Project=RotinasMATInpal.vbp
+Project=RotinasPCPInpal.vbp
+Project=TelasFATInpal.vbp

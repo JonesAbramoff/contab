@@ -1,0 +1,15 @@
+VBGROUP 5.0
+Project=GlobaisFATDan.vbp
+Project=GlobaisTelasFATDan.vbp
+Project=RotinasCPRDan.vbp
+Project=RotinasFATDan.vbp
+Project=TelasFATDan.vbp
+StartupProject=GlobaisTelasCPRX.vbp
+Project=RotinasAdmX.vbp
+Project=RotinasCPRX.vbp
+Project=RotinasESTX.vbp
+Project=RotinasFATX.vbp
+Project=RotinasTRBX.vbp
+Project=TelasCPRX.vbp
+Project=TelasFATX.vbp
+Project=RotinasLojaX.vbp

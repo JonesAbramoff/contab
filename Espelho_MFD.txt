@@ -1,0 +1,1349 @@
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 26/03/2013 15:48:28                   COO:001313
+         LEITURA X        
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000282
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0109
+Contador de Cupom Fiscal:                 000558
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000194
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0000
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     143689,47
+VENDA BRUTA DIÁRIA:                         0,00
+CANCELAMENTO ICMS:                          0,00
+DESCONTO ICMS:                              0,00
+Total de ISSQN:                             0,00
+CANCELAMENTO ISSQN:                         0,00
+DESCONTO ISSQN:                             0,00
+                                                
+VENDA LÍQUIDA:                              0,00
+ACRÉSCIMO ICMS:                             0,00
+ACRÉSCIMO ISSQN:                            0,00
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%                0,00                 0,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%                0,00                 0,00
+Total ICMS:            0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                        0,00
+I2 =                                        0,00
+N1 =                                        0,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0000
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                                0,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                       0,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:00:00
+Tempo Operacional:                      15:48:20
+Qtd. Reduções Restantes:                    1920
+Número série MFD:           60131282008040058259
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEDGIJEH           26/03/2013 15:48:30 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 26/03/2013 15:49:39                   COO:001314
+         LEITURA X        
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000282
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0109
+Contador de Cupom Fiscal:                 000558
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000194
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0000
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     143689,47
+VENDA BRUTA DIÁRIA:                         0,00
+CANCELAMENTO ICMS:                          0,00
+DESCONTO ICMS:                              0,00
+Total de ISSQN:                             0,00
+CANCELAMENTO ISSQN:                         0,00
+DESCONTO ISSQN:                             0,00
+                                                
+VENDA LÍQUIDA:                              0,00
+ACRÉSCIMO ICMS:                             0,00
+ACRÉSCIMO ISSQN:                            0,00
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%                0,00                 0,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%                0,00                 0,00
+Total ICMS:            0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                        0,00
+I2 =                                        0,00
+N1 =                                        0,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0000
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                                0,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                       0,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:00:00
+Tempo Operacional:                      15:49:31
+Qtd. Reduções Restantes:                    1920
+Número série MFD:           60131282008040058259
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEDGIJEH           26/03/2013 15:49:41 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 16:34:56                   COO:001315
+         LEITURA X        
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000282
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0109
+Contador de Cupom Fiscal:                 000558
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000194
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0000
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     143689,47
+VENDA BRUTA DIÁRIA:                         0,00
+CANCELAMENTO ICMS:                          0,00
+DESCONTO ICMS:                              0,00
+Total de ISSQN:                             0,00
+CANCELAMENTO ISSQN:                         0,00
+DESCONTO ISSQN:                             0,00
+                                                
+VENDA LÍQUIDA:                              0,00
+ACRÉSCIMO ICMS:                             0,00
+ACRÉSCIMO ISSQN:                            0,00
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%                0,00                 0,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%                0,00                 0,00
+Total ICMS:            0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                        0,00
+I2 =                                        0,00
+N1 =                                        0,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0000
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                                0,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                       0,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:00:00
+Tempo Operacional:                      27:46:39
+Qtd. Reduções Restantes:                    1920
+Número série MFD:           60131282008040058259
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEDGIJEH           01/04/2013 16:34:58 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 16:35:28                   COO:001316
+         LEITURA X        
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000282
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0109
+Contador de Cupom Fiscal:                 000558
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000194
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0000
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     143689,47
+VENDA BRUTA DIÁRIA:                         0,00
+CANCELAMENTO ICMS:                          0,00
+DESCONTO ICMS:                              0,00
+Total de ISSQN:                             0,00
+CANCELAMENTO ISSQN:                         0,00
+DESCONTO ISSQN:                             0,00
+                                                
+VENDA LÍQUIDA:                              0,00
+ACRÉSCIMO ICMS:                             0,00
+ACRÉSCIMO ISSQN:                            0,00
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%                0,00                 0,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%                0,00                 0,00
+Total ICMS:            0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                        0,00
+I2 =                                        0,00
+N1 =                                        0,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0000
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                                0,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                       0,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:00:00
+Tempo Operacional:                      27:46:39
+Qtd. Reduções Restantes:                    1920
+Número série MFD:           60131282008040058259
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEDGIJEH           01/04/2013 16:35:31 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 16:50:38        CCF:000559 COO:001317
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 0002124 Agenda Escolar Roxy       1un T12,00% 120,00€
+ 002 0018001 copo 12                        1un N1 200,00€
+ 003 0001010 Grama                      1un T07,00% 10,00€
+cancelamento de item: 003                -10,00
+ 004 0001005 InpalLene MFS                   1KG N1 13,00€
+ 005 0001001 Parafuso                   1KG T07,00% 35,00€
+ 006 0001013 Resistor 300kg                   1un I1 8,00€
+  TOTAL   R$       376,00
+Dinheiro                                 386,00
+TROCO  R$                                 10,00
+------------------------------------------------
+MD5:28E9FEDA16D6A512D39F155CD48FBCF6                                                                DAV"0000000060"
+   Corporator - ECF 3.2                      
+1C3 EE5F4 32116 93D026 47 5BA187 772A2 26CB2 71A
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEEAHFEH           01/04/2013 16:50:48 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 16:59:25        CCF:000560 COO:001318
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 0002124 Agenda Escolar Roxy       1un T12,00% 120,00€
+ 002 0018001 copo 12                        1un N1 200,00€
+cancelamento de item: 002               -200,00
+ 003 0001010 Grama                      1un T07,00% 10,00€
+ 004 0001005 InpalLene MFS                   1KG N1 13,00€
+ 005 0001001 Parafuso                   1KG T07,00% 35,00€
+ 006 0001014 Resistor 40Kg              1un T12,00% 30,00€
+  TOTAL   R$       208,00
+Dinheiro                                 408,00
+TROCO  R$                                200,00
+------------------------------------------------
+MD5:28E9FEDA16D6A512D39F155CD48FBCF6                                                                DAV"0000000057"
+   Corporator - ECF 3.2                      
+164 7CC74 3178C F9D01C BC 004128 05921 2747F FF0
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEEEIDEH           01/04/2013 16:59:30 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 17:19:38        CCF:000561 COO:001319
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 0002124 Agenda Escolar Roxy       1un T12,00% 120,00€
+ 002 0018001 copo 12                        1un N1 200,00€
+ 003 0001010 Grama                      1un T07,00% 10,00€
+cancelamento de item: 002               -200,00
+  TOTAL   R$       130,00
+Dinheiro                                 130,00
+------------------------------------------------
+MD5:28E9FEDA16D6A512D39F155CD48FBCF6
+   Corporator - ECF 3.2                      
+046 713D4 2FAF0 E75000 21 3FE009 FA07E 2AF39 357
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEEIBDEH           01/04/2013 17:20:06 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 17:20:51        GNF:000283 COO:001320
+GRG:000195                 CER:0001
+    RELATÓRIO GERENCIAL   
+        Gerencial X       
+
+Emitente: Forprint Informática
+CNPJ Emitente: 73.841.488/0001-53
+------------------------------------------------
+Destinatário:
+CPF/CNPJ Destinatário:
+------------------------------------------------
+ N° do Documento: 0000000061
+------------------------------------------------
+001 0002124 Agenda Escolar Roxy
+         1   x    120,00      =           120,00
+003 0001010 Grama
+         1   x    10,00       =            10,00
+                                TOTAL :   130,00
+             NÃO É DOCUMENTO FISCAL             
+   Corporator - ECF 3.2                      
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEEIBDEH           01/04/2013 17:20:57 
+FAB:DR0208BR000000142309                   
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 17:21:36        CCF:000562 COO:001321
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 0002124 Agenda Escolar Roxy       1un T12,00% 120,00€
+ 002 0018001 copo 12                        1un N1 200,00€
+cancelamento de item: 002               -200,00
+ 003 0001010 Grama                      1un T07,00% 10,00€
+  TOTAL   R$       130,00
+Dinheiro                                 330,00
+TROCO  R$                                200,00
+------------------------------------------------
+MD5:28E9FEDA16D6A512D39F155CD48FBCF6                                                                DAV"0000000061"
+   Corporator - ECF 3.2                      
+223 49FE4 32A9F F5902F D0 87A1E6 D2C93 2B052 362
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFBEDEH           01/04/2013 17:21:57 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 17:47:43        GNF:000284 COO:001322
+GRG:000196                 CER:0002
+    RELATÓRIO GERENCIAL   
+        Gerencial X       
+
+Emitente: Forprint Informática
+CNPJ Emitente: 73.841.488/0001-53
+------------------------------------------------
+Destinatário:
+CPF/CNPJ Destinatário:
+------------------------------------------------
+ N° do Documento: 0000000062
+------------------------------------------------
+001 0002124 Agenda Escolar Roxy
+         1   x    120,00      =           120,00
+003 0001010 Grama
+         1   x    10,00       =            10,00
+                                TOTAL :   130,00
+             NÃO É DOCUMENTO FISCAL             
+   Corporator - ECF 3.2                      
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFBEDEH           01/04/2013 17:47:49 
+FAB:DR0208BR000000142309                   
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 17:48:13        CCF:000563 COO:001323
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 0002124 Agenda Escolar Roxy       1un T12,00% 120,00€
+ 002 0018001 copo 12                        1un N1 200,00€
+cancelamento de item: 002               -200,00
+ 003 0001010 Grama                      1un T07,00% 10,00€
+  TOTAL   R$       130,00
+Dinheiro                                 130,00
+------------------------------------------------
+MD5:28E9FEDA16D6A512D39F155CD48FBCF6                                                                DAV"0000000062"
+   Corporator - ECF 3.2                      
+0A5 D42F4 3047A 5BD009 AB 276069 5CF9F 2CA20 E6A
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFEHDEH           01/04/2013 17:48:18 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 18:21:07        GNF:000285 COO:001324
+GRG:000197                 CER:0003
+    RELATÓRIO GERENCIAL   
+        Gerencial X       
+
+Emitente: Forprint Informática
+CNPJ Emitente: 73.841.488/0001-53
+------------------------------------------------
+Destinatário:
+CPF/CNPJ Destinatário:
+------------------------------------------------
+ N° do Documento: 0000000063
+------------------------------------------------
+001 0002124 Agenda Escolar Roxy
+         1   x    120,00      =           120,00
+002 0018001 copo 12
+         1   x    200,00      =           200,00
+003 0001010 Grama
+         1   x    10,00       =            10,00
+004 0001005 InpalLene MFS
+         1   x    13,00       =            13,00
+005 0002145 Agenda Permanente
+         1   x    7,00        =             7,00
+006 0001013 Resistor 300kg
+         1   x    8,00        =             8,00
+                                TOTAL :   358,00
+             NÃO É DOCUMENTO FISCAL             
+   Corporator - ECF 3.2                      
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFEHDEH           01/04/2013 18:21:16 
+FAB:DR0208BR000000142309                   
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 18:29:02        CCF:000564 COO:001325
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 0002124 Agenda Escolar Roxy       1un T12,00% 120,00€
+ 002 0018001 copo 12                        1un N1 200,00€
+ 003 0001010 Grama                      1un T07,00% 10,00€
+ 004 0001005 InpalLene MFS                   1KG N1 13,00€
+ 005 0002145 Agenda Permanente                1un N1 7,00€
+ 006 0001013 Resistor 300kg                   1un I1 8,00€
+  TOTAL   R$       358,00
+Dinheiro                                 358,00
+------------------------------------------------
+MD5:28E9FEDA16D6A512D39F155CD48FBCF6                                                                DAV"0000000063"
+   Corporator - ECF 3.2                      
+0A5 C5894 3047A 365009 A9 B1A069 4E53F 316CC 5A4
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           01/04/2013 18:29:12 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 18:56:18                   COO:001326
+         LEITURA X        
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000285
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0109
+Contador de Cupom Fiscal:                 000564
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000197
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0000
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     145831,47
+VENDA BRUTA DIÁRIA:                      2142,00
+CANCELAMENTO ICMS:                        810,00
+DESCONTO ICMS:                              0,00
+Total de ISSQN:                             0,00
+CANCELAMENTO ISSQN:                         0,00
+DESCONTO ISSQN:                             0,00
+                                                
+VENDA LÍQUIDA:                           1332,00
+ACRÉSCIMO ICMS:                             0,00
+ACRÉSCIMO ISSQN:                            0,00
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%              750,00                90,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%              120,00                 8,40
+Total ICMS:          870,00                98,40
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                       16,00
+I2 =                                        0,00
+N1 =                                      446,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0003
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                             1742,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                     410,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:01:21
+Tempo Operacional:                      27:46:39
+Qtd. Reduções Restantes:                    1920
+Número série MFD:           60131282008040058259
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           01/04/2013 18:56:20 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 01/04/2013 18:56:27                   COO:001327
+         REDUÇÃO Z        
+MOVIMENTO DO DIA: 01/04/2013
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000285
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0110
+Contador de Cupom Fiscal:                 000564
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000197
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0000
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     145831,47
+VENDA BRUTA DIÁRIA:                      2142,00
+CANCELAMENTO ICMS:                        810,00
+DESCONTO ICMS:                    ***********,**
+Total de ISSQN:                   ***********,**
+CANCELAMENTO ISSQN:               ***********,**
+DESCONTO ISSQN:                   ***********,**
+                                                
+VENDA LÍQUIDA:                           1332,00
+ACRÉSCIMO ICMS:                   ***********,**
+ACRÉSCIMO ISSQN:                  ***********,**
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%              750,00                90,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%              120,00                 8,40
+Total ICMS:          870,00                98,40
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                       16,00
+I2 =                                        0,00
+N1 =                                      446,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0003
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                             1742,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                     410,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:01:21
+Tempo Operacional:                      27:46:39
+Qtd. Reduções Restantes:                    1919
+Número série MFD:           60131282008040058259
+164 868B4 3178D 12D01C BC FFE128 0F561 330C2 587
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           01/04/2013 18:56:34 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 11:10:54        GNF:000286 COO:001328
+GRG:000198                 CER:0001
+    RELATÓRIO GERENCIAL   
+        Gerencial X       
+
+                  DAV EMITIDOS
+
+Periodo De: 26/03/2013 a 01/04/2013
+
+   Número      Data     Título       Valor Total
+0000000057   26/03/13  Orçamento          208,00
+COO: 000000  COO Vinculado: 001318
+0000000058   26/03/13  Orçamento          120,00
+COO: 000000  COO Vinculado: 000000
+0000000059   26/03/13  Orçamento           10,00
+COO: 000000  COO Vinculado: 000000
+0000000060   26/03/13  Orçamento          376,00
+COO: 000000  COO Vinculado: 001317
+0000000061   01/04/13  Orçamento          130,00
+COO: 001320  COO Vinculado: 001321
+0000000062   01/04/13  Orçamento          130,00
+COO: 001322  COO Vinculado: 001323
+0000000063   01/04/13  Orçamento          358,00
+COO: 001324  COO Vinculado: 001325
+             NÃO É DOCUMENTO FISCAL             
+   Corporator - ECF 3.2                      
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           02/04/2013 11:11:02 
+FAB:DR0208BR000000142309                   
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 11:21:19        GNF:000287 COO:001329
+GRG:000199                 CER:0002
+    RELATÓRIO GERENCIAL   
+        Gerencial X       
+
+                  DAV EMITIDOS
+
+Periodo De: 15/03/2013 a 25/03/2013
+
+   Número      Data     Título       Valor Total
+0000000026   18/03/13  Orçamento          700,00
+COO: 001228  COO Vinculado: 000000
+0000000027   18/03/13  Orçamento          700,00
+COO: 001230  COO Vinculado: 000000
+0000000028   18/03/13  Orçamento          210,00
+COO: 001231  COO Vinculado: 000000
+0000000029   18/03/13  Orçamento          700,00
+COO: 000000  COO Vinculado: 000000
+0000000030   18/03/13  Orçamento          210,00
+COO: 000000  COO Vinculado: 000000
+0000000032   19/03/13  Orçamento        1.200,00
+COO: 000000  COO Vinculado: 000000
+0000000034   19/03/13  Orçamento        1.200,00
+COO: 000000  COO Vinculado: 000000
+0000000035   19/03/13  Orçamento           10,00
+COO: 000000  COO Vinculado: 000000
+0000000036   19/03/13  Orçamento        1.200,00
+COO: 000000  COO Vinculado: 000000
+0000000037   19/03/13  Orçamento        1.200,00
+COO: 000000  COO Vinculado: 000000
+0000000038   19/03/13  Orçamento        1.200,00
+COO: 000000  COO Vinculado: 000000
+0000000039   19/03/13  Orçamento        1.200,00
+COO: 000000  COO Vinculado: 000000
+0000000040   19/03/13  Orçamento        1.200,00
+COO: 000000  COO Vinculado: 000000
+0000000041   19/03/13  Orçamento            7,00
+COO: 000000  COO Vinculado: 000000
+0000000042   19/03/13  Orçamento          300,00
+COO: 001242  COO Vinculado: 001243
+0000000043   19/03/13  Orçamento          120,00
+COO: 001246  COO Vinculado: 001248
+0000000044   20/03/13  Orçamento        1.000,00
+COO: 001273  COO Vinculado: 001274
+0000000045   20/03/13  Orçamento        2.000,00
+COO: 001275  COO Vinculado: 000000
+0000000046   20/03/13  Orçamento        3.000,00
+COO: 001276  COO Vinculado: 000000
+0000000047   20/03/13  Orçamento        4.000,00
+COO: 001277  COO Vinculado: 000000
+0000000048   20/03/13  Orçamento        5.000,00
+COO: 001278  COO Vinculado: 000000
+0000000049   20/03/13  Orçamento        6.000,00
+COO: 001279  COO Vinculado: 000000
+0000000050   20/03/13  Orçamento        7.000,00
+COO: 001280  COO Vinculado: 000000
+0000000051   20/03/13  Orçamento        8.000,00
+COO: 001281  COO Vinculado: 000000
+0000000052   20/03/13  Orçamento        9.000,00
+COO: 001282  COO Vinculado: 000000
+0000000053   20/03/13  Orçamento       10.000,00
+COO: 001283  COO Vinculado: 000000
+0000000054   20/03/13  Orçamento          500,00
+COO: 001284  COO Vinculado: 000000
+0000000055   20/03/13  Orçamento        1.500,00
+COO: 001285  COO Vinculado: 000000
+0000000056   20/03/13  Orçamento        2.500,00
+COO: 001286  COO Vinculado: 000000
+             NÃO É DOCUMENTO FISCAL             
+   Corporator - ECF 3.2                      
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           02/04/2013 11:21:47 
+FAB:DR0208BR000000142309                   
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 12:14:19        GNF:000288 COO:001330
+GRG:000200                 CER:0003
+    RELATÓRIO GERENCIAL   
+        Gerencial X       
+
+               MEIOS DE PAGAMENTO
+
+Periodo De: 01/04/2013 a 02/04/2013
+
+       Meio            Tipo   Valor       Data
+Dinheiro                ECF    1.742,00 01/04/13
+
+Total Dinheiro = 1.742,00
+
+------------------------------------------------
+             NÃO É DOCUMENTO FISCAL             
+   Corporator - ECF 3.2                      
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           02/04/2013 12:14:26 
+FAB:DR0208BR000000142309                   
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 12:14:59                   COO:001331
+         LEITURA X        
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000288
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0110
+Contador de Cupom Fiscal:                 000564
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000200
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0000
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     145831,47
+VENDA BRUTA DIÁRIA:                         0,00
+CANCELAMENTO ICMS:                          0,00
+DESCONTO ICMS:                              0,00
+Total de ISSQN:                             0,00
+CANCELAMENTO ISSQN:                         0,00
+DESCONTO ISSQN:                             0,00
+                                                
+VENDA LÍQUIDA:                              0,00
+ACRÉSCIMO ICMS:                             0,00
+ACRÉSCIMO ISSQN:                            0,00
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%                0,00                 0,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%                0,00                 0,00
+Total ICMS:            0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                        0,00
+I2 =                                        0,00
+N1 =                                        0,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0003
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                                0,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                       0,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:00:00
+Tempo Operacional:                      12:14:53
+Qtd. Reduções Restantes:                    1919
+Número série MFD:           60131282008040058259
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           02/04/2013 12:15:02 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 12:16:44        GNF:000289 COO:001332
+GRG:000201                 CER:0004
+    RELATÓRIO GERENCIAL   
+        Gerencial X       
+
+Emitente: Forprint Informática
+CNPJ Emitente: 73.841.488/0001-53
+------------------------------------------------
+Destinatário:
+CPF/CNPJ Destinatário:
+------------------------------------------------
+ N° do Documento: 0000000064
+------------------------------------------------
+001 0018001 copo 12
+         1   x    200,00      =           200,00
+002 0001014 Resistor 40Kg
+         1   x    30,00       =            30,00
+003 0001016 Resistor 60Kg
+         3   x    50,00       =           150,00
+                                TOTAL :   380,00
+             NÃO É DOCUMENTO FISCAL             
+   Corporator - ECF 3.2                      
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           02/04/2013 12:16:51 
+FAB:DR0208BR000000142309                   
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 12:17:06        GNF:000290 COO:001333
+GRG:000202                 CER:0005
+    RELATÓRIO GERENCIAL   
+        Gerencial X       
+
+               MEIOS DE PAGAMENTO
+
+Periodo De: 01/04/2013 a 02/04/2013
+
+       Meio            Tipo   Valor       Data
+Dinheiro                ECF    1.742,00 01/04/13
+
+Total Dinheiro = 1.742,00
+
+------------------------------------------------
+             NÃO É DOCUMENTO FISCAL             
+   Corporator - ECF 3.2                      
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFIDBEH           02/04/2013 12:17:11 
+FAB:DR0208BR000000142309                   
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 13:02:16        CCF:000565 COO:001334
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 0002124 Agenda Escolar Roxy       1un T12,00% 120,00€
+  TOTAL   R$       120,00
+Dinheiro                                 120,00
+------------------------------------------------
+MD5:28E9FEDA16D6A512D39F155CD48FBCF6                                                                PV"0000000122"
+   Corporator - ECF 3.2                      
+0A5 D6A04 3047A 621009 AB 6CC072 E8D2F 120E2 D82
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFJFBEH           02/04/2013 13:02:19 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 13:02:20        CCF:000565 COO:001335
+       CUPOM FISCAL      
+       CANCELAMENTO      
+
+Cancelamento de Cupom Fiscal (CCF):       000565
+COO do Cupom Fiscal cancelado:            001334
+Valor total da operação  R$               120,00
+Quantidade de CCD cancelados:               0000
+105 21284 30E03 981013 32 E160D2 335B0 12020 06C
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFJFBEH           02/04/2013 13:02:21 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 14:01:14        CCF:000566 COO:001336
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 0001010 Grama                      1un T07,00% 10,00€
+  TOTAL   R$        10,00
+Dinheiro                                  10,00
+------------------------------------------------
+MD5:28E9FEDA16D6A512D39F155CD48FBCF6
+   Corporator - ECF 3.2                      
+0A5 D1BE4 3047A 559009 AA F10072 E3F0F 17F1B 708
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFJGBEH           02/04/2013 14:01:17 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 14:03:54                   COO:001337
+         LEITURA X        
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000290
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0110
+Contador de Cupom Fiscal:                 000566
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000202
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0001
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     145961,47
+VENDA BRUTA DIÁRIA:                       130,00
+CANCELAMENTO ICMS:                        120,00
+DESCONTO ICMS:                              0,00
+Total de ISSQN:                             0,00
+CANCELAMENTO ISSQN:                         0,00
+DESCONTO ISSQN:                             0,00
+                                                
+VENDA LÍQUIDA:                             10,00
+ACRÉSCIMO ICMS:                             0,00
+ACRÉSCIMO ISSQN:                            0,00
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%                0,00                 0,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%               10,00                 0,70
+Total ICMS:           10,00                 0,70
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                        0,00
+I2 =                                        0,00
+N1 =                                        0,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0005
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                               10,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                       0,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:00:07
+Tempo Operacional:                      14:03:46
+Qtd. Reduções Restantes:                    1919
+Número série MFD:           60131282008040058259
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFJGBEH           02/04/2013 14:03:56 
+FAB:DR0208BR000000142309                   BR
+
+
+
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 73.841.488/0001-53       IE:   84.949.86-8         
+IM:   01611720            
+ 02/04/2013 14:04:04                   COO:001338
+         REDUÇÃO Z        
+MOVIMENTO DO DIA: 02/04/2013
+------------------ CONTADORES ------------------
+Geral de Operação Não-Fiscal:             000290
+Contador de Reinício de Operação:            005
+Contador de Reduções Z:                     0111
+Contador de Cupom Fiscal:                 000566
+Contador de Fita-Detalhe:                 000000
+Comprovante de Crédito ou Débito:           0000
+Geral de Relatório Gerencial:             000202
+Geral Oper. Não-Fiscal Canc.:               0000
+Cupom Fiscal Cancelado:                     0001
+------------ TOTALIZADORES FISCAIS -------------
+TOTALIZADOR GERAL:                     145961,47
+VENDA BRUTA DIÁRIA:                       130,00
+CANCELAMENTO ICMS:                        120,00
+DESCONTO ICMS:                    ***********,**
+Total de ISSQN:                   ***********,**
+CANCELAMENTO ISSQN:               ***********,**
+DESCONTO ISSQN:                   ***********,**
+                                                
+VENDA LÍQUIDA:                             10,00
+ACRÉSCIMO ICMS:                   ***********,**
+ACRÉSCIMO ISSQN:                  ***********,**
+--------------------- ICMS ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+T12,00%                0,00                 0,00
+T15,00%                0,00                 0,00
+T10,00%                0,00                 0,00
+T07,00%               10,00                 0,70
+Total ICMS:           10,00                 0,70
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+F1 =                                        0,00
+F2 =                                        0,00
+I1 =                                        0,00
+I2 =                                        0,00
+N1 =                                        0,00
+N2 =                                        0,00
+-------------------- ISSQN ---------------------
+Totalizador  Base Cálculo( R$)      Imposto( R$)
+S05,00%                0,00                 0,00
+S03,00%                0,00                 0,00
+Total ISSQN:           0,00                 0,00
+---------------- Não Tributados ----------------
+Totalizador                 Valor Acumulado( R$)
+FS1 =                                       0,00
+FS2 =                                       0,00
+IS1 =                                       0,00
+IS2 =                                       0,00
+NS1 =                                       0,00
+NS2 =                                       0,00
+---------- TOTALIZADORES NÃO FISCAIS -----------
+No Operação        CON      Valor Acumulado( R$)
+01 Sangria         0000                     0,00
+02 Suprimento      0000                     0,00
+Total Oper Não-Fiscais        R$            0,00
+
+ACRE NÃO-FISC                               0,00
+DESC NÃO-FISC                               0,00
+CANC NÃO-FISC                               0,00
+------------- RELATÓRIO GERENCIAL --------------
+No Relatório                                 CER
+01 Gerencial X                              0005
+-------------- MEIOS DE PAGAMENTO --------------
+No. Meio Pagamento          Valor Acumulado( R$)
+01  Dinheiro                               10,00
+02v Cheque                                  0,00
+03v Troca                                   0,00
+04v Vale/Ticket                             0,00
+05v Cartão Crédito                          0,00
+06v Cartão Débito                           0,00
+07v Carnet                                  0,00
+08v Outros                                  0,00
+TROCO                                       0,00
+Comprovante Não Emitido:                    0000
+Tempo Emitindo Doc.Fiscal:              00:00:07
+Tempo Operacional:                      14:03:56
+Qtd. Reduções Restantes:                    1918
+Número série MFD:           60131282008040058259
+0A5 C0A74 3047A 29D009 A9 3CC072 D2D9F 1814B 410
+DARUMA AUTOMAÇÃO     FS600               
+ECF-IF    VERSÃO:01.05.00     ECF:001    Lj:    
+AAAAAAAAAABEFJGBEH           02/04/2013 14:04:10 
+FAB:DR0208BR000000142309                   BR
+
+
+
+

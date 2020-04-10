@@ -1,0 +1,5 @@
+VBGROUP 5.0
+StartupProject=GlobaisCRFATBol.vbp
+Project=GlobaisTelasFATBol.vbp
+Project=RotinasFATBol.vbp
+Project=TelasFATBol.vbp

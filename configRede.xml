@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<tipoInter>ETHE</tipoInter>
+<tipoLan>IPFIX</tipoLan>
+<lanIP>192.168.0.156</lanIP>
+<lanMask>255.255.255.0</lanMask>
+<lanGW>192.168.0.147</lanGW>
+<lanDNS1>192.168.0.147</lanDNS1>
+<lanDNS2>8.8.8.8</lanDNS2>
+<proxy>0</proxy >
+</config>

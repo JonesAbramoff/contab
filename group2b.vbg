@@ -1,0 +1,12 @@
+VBGROUP 5.0
+StartupProject=GlobaisTRB2.vbp
+Project=GlobaisPV2.vbp
+Project=GlobaisEST2.vbp
+Project=GlobaisCOM.vbp
+Project=DicGlobais2.vbp
+Project=GlobaisFIS.vbp
+Project=GlobaisFAT2.vbp
+Project=GlobaisLoja.vbp
+Project=GlobaisPCP2.vbp
+Project=GlobaisPRJ.vbp
+Project=GlobaisSRV2.vbp

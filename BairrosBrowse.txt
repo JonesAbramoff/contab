@@ -1,0 +1,50 @@
+--BROWSE CRIADO AUTOMATICAMENTE PELA TELA BROWSECRIA
+--ARQUIVO 
+INSERT INTO Arquivos (Nome, Descricao, Tipo) 
+VALUES ('Bairros','Bairros',4)
+GO
+
+--TELAS 
+INSERT INTO Telas (Nome, Projeto_Original, Classe_Original, FilialEmpresa, Descricao) 
+VALUES ('BairrosLista','TelasFAT','ClassTelasFAT',1,'Bairros')
+GO
+
+--GRUPOTELAS 
+INSERT INTO GrupoTela (CodGrupo, NomeTela, TipoDeAcesso) 
+VALUES ('supervisor', 'BairrosLista', 1)
+GO
+
+--TELASMODULO
+INSERT INTO TelasModulo (SiglaModulo, NomeTela) 
+VALUES ('Adm', 'BairrosLista')
+GO
+
+--BROWSEARQUIVOS
+INSERT INTO BrowseArquivo (NomeTela, NomeArq, SelecaoSQL, Projeto, Classe, TituloBrowser, BotaoSeleciona, BotaoEdita, BotaoConsulta, ProjetoObjeto, ClasseObjeto, BancoDados, NomeTelaEdita, NomeTelaConsulta) 
+VALUES ('BairrosLista', 'Bairros', '', 'RotinasFAT', 'ClassFATFormata', 'Lista de Bairros', 1, 0, 0, 'GlobaisAdm', 'ClassEndereco', 0, 'Bairros', '')
+GO
+
+--CAMPOS 
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('Bairros', 'Bairro', 'Bairro',1,0,1,4,40,0,0,0, 'Bairro', 'Bairro', 1,0,0)
+GO
+
+--BROWSECAMPO 
+INSERT INTO BrowseCampo(NomeTela,NomeCampo,Nome)
+VALUES ('BairrosLista', 'Bairro', 'sBairro')
+GO
+
+--BROWSEUSUARIOCAMPO 
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BairrosLista','supervisor', 'Bairros', 'Bairro', 1, 'Bairro', 1500)
+GO
+
+--GRUPOBROWSECAMPO 
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BairrosLista', 'Bairros', 'Bairro')
+GO
+
+--BROWSEINDICE 
+INSERT INTO BrowseIndice (NomeTela, Indice, NomeIndice, OrdenacaoSQL, SelecaoSQL) 
+VALUES ('BairrosLista',1, 'Bairro', 'Bairro', 'Bairro < ?')
+GO

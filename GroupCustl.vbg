@@ -1,0 +1,9 @@
+VBGROUP 5.0
+StartupProject=GlobaisESTARTX.vbp
+Project=RotinasESTARTX.vbp
+Project=telasESTARTX.vbp
+Project=RelatoriosFATPur.vbp
+Project=RotinasESTTA.vbp
+Project=RotinasESTEC.vbp
+Project=telasFATARTX.vbp
+Project=GlobaisTelasFATPan.vbp

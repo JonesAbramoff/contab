@@ -1,0 +1,10586 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "ClassChamaFuncoes"
+Attribute VB_GlobalNameSpace = True
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+Function TipoDeProduto_Le(objTipoDeProduto As ClassTipoDeProduto) As Long
+'Lê a tabela TiposDeProduto, a partir do Tipo De Produto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TipoDeProduto_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TIPODEPRODUTO_LE", X)
+    If lErro <> SUCESSO Then Error 24890
+    
+    
+    TipoDeProduto_Le = X.TipoDeProduto_Le(objTipoDeProduto)
+
+    Exit Function
+    
+Erro_TipoDeProduto_Le:
+    
+    TipoDeProduto_Le = Err
+    
+    Select Case Err
+
+        Case 24890
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146142)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+
+Function TipoDeProduto_Le_Categorias(objTipoDeProduto As ClassTipoDeProduto, colCategoriaItem As Collection) As Long
+'Lê na tabela de TiposDeProdutoCategoria, todas as categorias de um Tipo de Produto, guardando na coleção colCategoriaItem
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TipoDeProduto_Le_Categorias
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TIPODEPRODUTO_LE_CATEGORIAS", X)
+    If lErro <> SUCESSO Then Error 24891
+    
+    
+    TipoDeProduto_Le_Categorias = X.TipoDeProduto_Le_Categorias(objTipoDeProduto, colCategoriaItem)
+
+    Exit Function
+    
+Erro_TipoDeProduto_Le_Categorias:
+    
+    TipoDeProduto_Le_Categorias = Err
+    
+    Select Case Err
+
+        Case 24891
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146143)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+
+Function TipoDeProduto_Exclui(objTipoDeProduto As ClassTipoDeProduto) As Long
+'Exclui o Tipo de Produto
+'Se o Tipo de Produto estiver sendo usado em Produtos não poderá ser excluído
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TipoDeProduto_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TIPODEPRODUTO_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 24893
+    
+    
+    TipoDeProduto_Exclui = X.TipoDeProduto_Exclui(objTipoDeProduto)
+
+    Exit Function
+    
+Erro_TipoDeProduto_Exclui:
+    
+    TipoDeProduto_Exclui = Err
+    
+    Select Case Err
+
+        Case 24893
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146144)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function TipoDeProduto_Grava(objTipoDeProduto As ClassTipoDeProduto) As Long
+'Inclui ou altera um Tipo de Produto
+'Tabelas:TiposDeProduto e TipoDeProdutoCategoria
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TipoDeProduto_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TIPODEPRODUTO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 24894
+    
+    
+    TipoDeProduto_Grava = X.TipoDeProduto_Grava(objTipoDeProduto)
+
+    Exit Function
+    
+Erro_TipoDeProduto_Grava:
+    
+    TipoDeProduto_Grava = Err
+    
+    Select Case Err
+
+        Case 24894
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146145)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function TipoDeProduto_Lock(objTipoDeProduto As ClassTipoDeProduto) As Long
+'Lê e faz "lock" na tabela TiposDeProduto, a partir do Tipo De Produto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TipoDeProduto_Lock
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TIPODEPRODUTO_LOCK", X)
+    If lErro <> SUCESSO Then Error 19673
+    
+    
+    TipoDeProduto_Lock = X.TipoDeProduto_Lock(objTipoDeProduto)
+
+    Exit Function
+    
+Erro_TipoDeProduto_Lock:
+    
+    TipoDeProduto_Lock = Err
+    
+    Select Case Err
+
+        Case 19673
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146146)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Grava(objMovEst As ClassMovEstoque) As Long
+'grava as informações relativas a um conjunto de movimentações de estoque
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_GRAVA", X)
+    If lErro <> SUCESSO Then Error 25073
+    
+    
+    MovEstoque_Grava = X.MovEstoque_Grava(objMovEst)
+
+    Exit Function
+    
+Erro_MovEstoque_Grava:
+    
+    MovEstoque_Grava = Err
+    
+    Select Case Err
+
+        Case 25073
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error, 146147)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Grava1(alComando() As Long, objMovEst As ClassMovEstoque) As Long
+'grava as informações relativas a um conjunto de movimentações de estoque
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Grava1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_GRAVA1", X)
+    If lErro <> SUCESSO Then Error 44285
+    
+    
+    MovEstoque_Grava1 = X.MovEstoque_Grava1(alComando(), objMovEst)
+
+    Exit Function
+    
+Erro_MovEstoque_Grava1:
+    
+    MovEstoque_Grava1 = Err
+    
+    Select Case Err
+
+        Case 44285
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error, 146148)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+
+Function MovEstoque_Grava_Trans(objMovEst As ClassMovEstoque) As Long
+'grava as informações relativas a um conjunto de movimentações de estoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Grava_Trans
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_GRAVA_TRANS", X)
+    If lErro <> SUCESSO Then Error 25074
+    
+    
+    MovEstoque_Grava_Trans = X.MovEstoque_Grava_Trans(objMovEst)
+
+    Exit Function
+    
+Erro_MovEstoque_Grava_Trans:
+    
+    MovEstoque_Grava_Trans = Err
+    
+    Select Case Err
+
+        Case 25074
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error, 146149)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function UM_Conversao(iClasseUM As Integer, sUnidade1 As String, sUnidade2 As String, dFator As Double) As Long
+'Calcula o fator de conversão entre 2 Unidades de Medida
+'De sUnidade1 para sUnidade2
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_UM_Conversao
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_UM_CONVERSAO", X)
+    If lErro <> SUCESSO Then Error 25067
+    
+    
+    UM_Conversao = X.UM_Conversao(iClasseUM, sUnidade1, sUnidade2, dFator)
+
+    Exit Function
+    
+Erro_UM_Conversao:
+    
+    UM_Conversao = Err
+    
+    Select Case Err
+
+        Case 25067
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146150)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+Function AlmoxarifadosProduto_Le(sProduto As String, colAlmoxarifado As Collection) As Long
+'Lê os códigos de todos os Almoxarifados que tem o Produto cadastrado,
+'mesmo que a quantidade disponível seja zero.
+'Entra com código do produto em sProduto, retorna colAlmoxarifado
+'Filtra os Almoxarifados do Tipo Normal
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_AlmoxarifadosProduto_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADOSPRODUTO_LE", X)
+    If lErro <> SUCESSO Then Error 25128
+    
+    
+    AlmoxarifadosProduto_Le = X.AlmoxarifadosProduto_Le(sProduto, colAlmoxarifado)
+
+    Exit Function
+    
+Erro_AlmoxarifadosProduto_Le:
+    
+    AlmoxarifadosProduto_Le = Err
+    
+    Select Case Err
+
+        Case 25128
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error, 146151)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+Function EstoquesProduto_Le(sProduto As String, colEstoque As colEstoqueProduto) As Long
+'Lê nas tabelas de EstoqueProduto e Almoxarifado as posições do produto
+'Retorna os Almoxarifados com os produtos em questão em colEstoque
+'Filtra apenas os Estoques que têm quantidade positiva do produto
+'Filtra os Almoxarifados do Tipo Normal
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoquesProduto_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUESPRODUTO_LE", X)
+    If lErro <> SUCESSO Then Error 25122
+    
+    
+    EstoquesProduto_Le = X.EstoquesProduto_Le(sProduto, colEstoque)
+
+    Exit Function
+    
+Erro_EstoquesProduto_Le:
+    
+    EstoquesProduto_Le = Err
+    
+    Select Case Err
+
+        Case 25122
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error, 146152)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Almoxarifado_Le(objAlmoxarifado As ClassAlmoxarifado) As Long
+'Le no BD os dados do Almoxarifado cujo código foi passado como parâmetro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Almoxarifado_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADO_LE", X)
+    If lErro <> SUCESSO Then Error 25061
+    
+    
+    Almoxarifado_Le = X.Almoxarifado_Le(objAlmoxarifado)
+
+    Exit Function
+    
+Erro_Almoxarifado_Le:
+    
+    Almoxarifado_Le = Err
+    
+    Select Case Err
+
+        Case 25061
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146153)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+Function Almoxarifado_Le_NomeReduzido(objAlmoxarifado As ClassAlmoxarifado) As Long
+'Le todos no BD os dados do Almoxarifado cujo NomeReduzido foi passado por parâmetro
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Almoxarifado_Le_NomeReduzido
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADO_LE_NOME_REDUZIDO", X)
+    If lErro <> SUCESSO Then Error 25062
+    
+    
+    Almoxarifado_Le_NomeReduzido = X.Almoxarifado_Le_NomeReduzido(objAlmoxarifado)
+
+    Exit Function
+    
+Erro_Almoxarifado_Le_NomeReduzido:
+    
+    Almoxarifado_Le_NomeReduzido = Err
+    
+    Select Case Err
+
+        Case 25062
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146154)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+Function Produtos_Le_Reserva(colProduto As Collection) As Long
+'Lê Codigo e Descricao de todos os produtos ATIVOS que fazem RESERVA e coloca-os em colProduto
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produtos_Le_Reserva
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOS_LE_RESERVA", X)
+    If lErro <> SUCESSO Then Error 25051
+    
+    
+    Produtos_Le_Reserva = X.Produtos_Le_Reserva(colProduto)
+
+    Exit Function
+    
+Erro_Produtos_Le_Reserva:
+    
+    Produtos_Le_Reserva = Err
+    
+    Select Case Err
+
+        Case 25051
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146155)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Le_Todos(colProduto As Collection) As Long
+'Lê todos os produtos e coloca-os em colProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_Todos
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_TODOS", X)
+    If lErro <> SUCESSO Then Error 24269
+    
+    
+    Produto_Le_Todos = X.Produto_Le_Todos(colProduto)
+
+    Exit Function
+    
+Erro_Produto_Le_Todos:
+    
+    Produto_Le_Todos = Err
+    
+    Select Case Err
+
+        Case 24269
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146156)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+Function Inicializa_Mascara_Produto_MaskEd(MaskEdProduto As Object) As Long
+'inicializa a mascara de Produto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Inicializa_Mascara_Produto_MaskEd
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INICIALIZA_MASCARA_PRODUTO_MASKED", X)
+    If lErro <> SUCESSO Then Error 24272
+    
+    
+    Inicializa_Mascara_Produto_MaskEd = X.Inicializa_Mascara_Produto_MaskEd(MaskEdProduto)
+
+    Exit Function
+    
+Erro_Inicializa_Mascara_Produto_MaskEd:
+    
+    Inicializa_Mascara_Produto_MaskEd = Err
+    
+    Select Case Err
+
+        Case 24272
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146157)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function Produto_Perde_Foco(Produto As Object, Desc As Object) As Long
+'recebe MaskEdBox do Produto e o label da descrição
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Perde_Foco
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_PERDE_FOCO", X)
+    If lErro <> SUCESSO Then Error 24273
+    
+    
+    Produto_Perde_Foco = X.Produto_Perde_Foco(Produto, Desc)
+
+    Exit Function
+    
+Erro_Produto_Perde_Foco:
+    
+    Produto_Perde_Foco = Err
+    
+    Select Case Err
+
+        Case 24273
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146158)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function Traz_Produto_MaskEd(sProduto As String, MaskEdProduto As Object, Label As Object) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Traz_Produto_MaskEd
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TRAZ_PRODUTO_MASKED", X)
+    If lErro <> SUCESSO Then Error 24274
+    
+    
+    Traz_Produto_MaskEd = X.Traz_Produto_MaskEd(sProduto, MaskEdProduto, Label)
+
+    Exit Function
+    
+Erro_Traz_Produto_MaskEd:
+    
+    Traz_Produto_MaskEd = Err
+    
+    Select Case Err
+
+        Case 24274
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146159)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+Function Produto_Critica_Estoque(ByVal sProduto As String, objProduto As ClassProduto, iProdutoPreenchido As Integer) As Long
+'Verifica se o Produto existe é ATIVO e não é GERENCIAL e participa do ESTOQUE.
+'Devolve os dados do Produto em objProduto
+'Devolve PRODUTO_PREENCHIDO ou PRODUTO_VAZIO em iProdutoPreenchido
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Critica_Estoque
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_CRITICA_ESTOQUE", X)
+    If lErro <> SUCESSO Then Error 25081
+    
+    
+    Produto_Critica_Estoque = X.Produto_Critica_Estoque(sProduto, objProduto, iProdutoPreenchido)
+
+    Exit Function
+    
+Erro_Produto_Critica_Estoque:
+    
+    Produto_Critica_Estoque = Err
+    
+    Select Case Err
+
+        Case 25081
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146160)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ProdutoCategorias_Le_Produto(sProduto As String, colProdutoCategoria As Collection) As Long
+'preenche uma colecao com objProdutoCategoria(s) associados a sProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutoCategorias_Le_Produto
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOCATEGORIAS_LE_PRODUTO", X)
+    If lErro <> SUCESSO Then Error 24598
+    
+    
+    ProdutoCategorias_Le_Produto = X.ProdutoCategorias_Le_Produto(sProduto, colProdutoCategoria)
+
+    Exit Function
+    
+Erro_ProdutoCategorias_Le_Produto:
+    
+    ProdutoCategorias_Le_Produto = Err
+    
+    Select Case Err
+
+        Case 24598
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146161)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EstoqueProduto_Le(objEstoqueProduto As ClassEstoqueProduto) As Long
+'Le as informacoes sobre o produto passado em objEstoqueProduto na tabela EstoqueProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_LE", X)
+    If lErro <> SUCESSO Then Error 24692
+    
+    
+    EstoqueProduto_Le = X.EstoqueProduto_Le(objEstoqueProduto)
+
+    Exit Function
+    
+Erro_EstoqueProduto_Le:
+    
+    EstoqueProduto_Le = Err
+    
+    Select Case Err
+
+        Case 24692
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146162)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ProdutoFilial_Le(objProdutoFilial As ClassProdutoFilial) As Long
+'Lê os dados do Produto da Filial à partir da chave fornecida em objProdutoFilial. Retorna os dados em objProdutoFilial
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutoFilial_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOFILIAL_LE", X)
+    If lErro <> SUCESSO Then Error 24693
+    
+    
+    ProdutoFilial_Le = X.ProdutoFilial_Le(objProdutoFilial)
+
+    Exit Function
+    
+Erro_ProdutoFilial_Le:
+    
+    ProdutoFilial_Le = Err
+    
+    Select Case Err
+
+        Case 24693
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146163)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function UnidadesDeMedidas_Le_ClasseUM(objClasseUM As ClassClasseUM, colUM As Collection) As Long
+'carrega a colUM com objetos do tipo ClassUnidadeDeMedida correspondentes a objClasseUM
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_UnidadesDeMedidas_Le_ClasseUM
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_UMS_LE_CLASSE", X)
+    If lErro <> SUCESSO Then Error 27499
+    
+    
+    UnidadesDeMedidas_Le_ClasseUM = X.UnidadesDeMedidas_Le_ClasseUM(objClasseUM, colUM)
+
+    Exit Function
+    
+Erro_UnidadesDeMedidas_Le_ClasseUM:
+    
+    UnidadesDeMedidas_Le_ClasseUM = Err
+    
+    Select Case Err
+
+        Case 27499
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146164)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ClasseUM_Le(objClasseUM As ClassClasseUM) As Long
+'Lê na tabela ClasseUM a Descrição e a Sigla da classe, a partir do código da classe
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClasseUM_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_LE", X)
+    If lErro <> SUCESSO Then Error 24870
+    
+    
+    ClasseUM_Le = X.ClasseUM_Le(objClasseUM)
+
+    Exit Function
+    
+Erro_ClasseUM_Le:
+    
+    ClasseUM_Le = Err
+    
+    Select Case Err
+
+        Case 24870
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146165)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ClasseUM_Grava(objClasseUM As ClassClasseUM, colSiglas As Collection) As Long
+'Inclui ou altera uma Classe de Unidade de Medida
+'Tabelas:ClasseUM e UnidadeDeMedida
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClasseUM_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_GRAVA", X)
+    If lErro <> SUCESSO Then Error 24871
+    
+    
+    ClasseUM_Grava = X.ClasseUM_Grava(objClasseUM, colSiglas)
+
+    Exit Function
+    
+Erro_ClasseUM_Grava:
+    
+    ClasseUM_Grava = Err
+    
+    Select Case Err
+
+        Case 24871
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146166)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ClasseUM_Grava_NovasSiglas(objClasseUM As ClassClasseUM, colSiglas As Collection) As Long
+'Percorre as Siglas na coleção incluindo-as no BD
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClasseUM_Grava_NovasSiglas
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_GRAVA_NOVASSIGLAS", X)
+    If lErro <> SUCESSO Then Error 24872
+    
+    
+    ClasseUM_Grava_NovasSiglas = X.ClasseUM_Grava_NovasSiglas(objClasseUM, colSiglas)
+
+    Exit Function
+    
+Erro_ClasseUM_Grava_NovasSiglas:
+    
+    ClasseUM_Grava_NovasSiglas = Err
+    
+    Select Case Err
+
+        Case 24872
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146167)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ClasseUM_Exclui(objClasseUM As ClassClasseUM) As Long
+'Exclui a Classe UM
+'Se a Classe estiver sendo usada em Produtos ou TiposDeProduto não poderá ser excluída
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClasseUM_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 24873
+    
+    
+    ClasseUM_Exclui = X.ClasseUM_Exclui(objClasseUM)
+
+    Exit Function
+    
+Erro_ClasseUM_Exclui:
+    
+    ClasseUM_Exclui = Err
+    
+    Select Case Err
+
+        Case 24873
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146168)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ClasseUM_Exclui_UM(objClasseUM As ClassClasseUM) As Long
+'Exclui as Unidades de Medida de uma Classe
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClasseUM_Exclui_UM
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_EXCLUI_UM", X)
+    If lErro <> SUCESSO Then Error 24874
+    
+    
+    ClasseUM_Exclui_UM = X.ClasseUM_Exclui_UM(objClasseUM)
+
+    Exit Function
+    
+Erro_ClasseUM_Exclui_UM:
+    
+    ClasseUM_Exclui_UM = Err
+    
+    Select Case Err
+
+        Case 24874
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146169)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+'Function ClasseUM_Exclui2(objClasseUM As ClassClasseUM) As Long
+''Retorna SUCESSO se a Classe e a Sigla não estiverem sendo usadas nas tabelas Produtos , TiposDeProduto e ItensPedidoDeVenda
+'
+'Dim X As Object, lErro As Long
+'
+'On Error GoTo Erro_ClasseUM_Exclui2
+'
+'
+'
+'
+'    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_EXCLUI2",X)
+'    If lErro <> SUCESSO Then Error 24875
+'
+'
+'    ClasseUM_Exclui2 = X.ClasseUM_Exclui2(objClasseUM)
+'
+'    Exit Function
+'
+'Erro_ClasseUM_Exclui2:
+'
+'    ClasseUM_Exclui2 = Err
+'
+'    Select Case Err
+'
+'        Case 24875
+'
+'
+'        Case Else
+'            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146170)
+'
+'    End Select
+'
+'    Exit Function
+'
+'End Function
+'
+'Function ClasseUM_Exclui1(objClasseUM As ClassClasseUM) As Long
+'''Retorna SUCESSO se a Classe não estiver sendo usada nas tabelas Produtos e TiposDeProduto
+'
+'Dim X As Object, lErro As Long
+'
+'On Error GoTo Erro_ClasseUM_Exclui1
+'
+'
+'
+'
+'    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_EXCLUI1",X)
+'    If lErro <> SUCESSO Then Error 24876
+'
+'
+'    ClasseUM_Exclui1 = X.ClasseUM_Exclui1(objClasseUM)
+'
+'    Exit Function
+'
+'Erro_ClasseUM_Exclui1:
+'
+'    ClasseUM_Exclui1 = Err
+'
+'    Select Case Err
+'
+'        Case 24876
+'
+'
+'        Case Else
+'            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146171)
+'
+'    End Select
+'
+'    Exit Function
+'
+'End Function
+'
+Function ClasseUM_Automatico(iProxClasse As Integer) As Long
+'Gera o próximo código para Classe de UM
+'Chamada dentro de transação
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClasseUM_Automatico
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_AUTOMATICO", X)
+    If lErro <> SUCESSO Then Error 24877
+    
+    
+    ClasseUM_Automatico = X.ClasseUM_Automatico(iProxClasse)
+
+    Exit Function
+    
+Erro_ClasseUM_Automatico:
+    
+    ClasseUM_Automatico = Err
+    
+    Select Case Err
+
+        Case 24877
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146172)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ClasseUM_Grava_SiglaNaColecao(colUMCopia As Collection, sSigla As String) As Long
+'Retorna o Indice da Sigla na coleção ou Zero se não acha-la (na coleção)
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClasseUM_Grava_SiglaNaColecao
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_GRAVA_SIGLANACOLECAO", X)
+    If lErro <> SUCESSO Then Error 24878
+    
+    
+    ClasseUM_Grava_SiglaNaColecao = X.ClasseUM_Grava_SiglaNaColecao(colUMCopia, sSigla)
+
+    Exit Function
+    
+Erro_ClasseUM_Grava_SiglaNaColecao:
+    
+    ClasseUM_Grava_SiglaNaColecao = Err
+    
+    Select Case Err
+
+        Case 24878
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146173)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_Grava_NovosItens(objCategoriaProduto As ClassCategoriaProduto, colItensCategoria As Collection) As Long
+'percorrer os itens na colecao incluindo-os no bd
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_Grava_NovosItens
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTO_GRAVA_NOVOSITENS", X)
+    If lErro <> SUCESSO Then Error 24409
+    
+    
+    CategoriaProduto_Grava_NovosItens = X.CategoriaProduto_Grava_NovosItens(objCategoriaProduto, colItensCategoria)
+
+    Exit Function
+    
+Erro_CategoriaProduto_Grava_NovosItens:
+    
+    CategoriaProduto_Grava_NovosItens = Err
+    
+    Select Case Err
+
+        Case 24409
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146174)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_Grava_ItemNaColecao(colItensCategoria As Collection, sItem As String) As Long
+'retorna o indice do item na colecao ou zero se nao acha-lo (na colecao)
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_Grava_ItemNaColecao
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTO_GRAVA_ITEMNACOLECAO", X)
+    If lErro <> SUCESSO Then Error 24410
+    
+    
+    CategoriaProduto_Grava_ItemNaColecao = X.CategoriaProduto_Grava_ItemNaColecao(colItensCategoria, sItem)
+
+    Exit Function
+    
+Erro_CategoriaProduto_Grava_ItemNaColecao:
+    
+    CategoriaProduto_Grava_ItemNaColecao = Err
+    
+    Select Case Err
+
+        Case 24410
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146175)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_Grava(objCategoriaProduto As ClassCategoriaProduto, colItensCategoria As Collection) As Long
+'inclui ou altera uma categoria de produtos e seus valores
+'tabelas:CategoriaProduto e CategoriaProdutoItem
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 24411
+    
+    
+    CategoriaProduto_Grava = X.CategoriaProduto_Grava(objCategoriaProduto, colItensCategoria)
+
+    Exit Function
+    
+Erro_CategoriaProduto_Grava:
+    
+    CategoriaProduto_Grava = Err
+    
+    Select Case Err
+
+        Case 24411
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146176)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_Exclui(objCategoriaProduto As ClassCategoriaProduto) As Long
+'excluir a tabela com todos os seus itens se nao for usada em ProdutoCategoria
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTO_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 24412
+    
+    
+    CategoriaProduto_Exclui = X.CategoriaProduto_Exclui(objCategoriaProduto)
+
+    Exit Function
+    
+Erro_CategoriaProduto_Exclui:
+    
+    CategoriaProduto_Exclui = Err
+    
+    Select Case Err
+
+        Case 24412
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146177)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_Exclui1(objCategoriaProduto As ClassCategoriaProduto) As Long
+'retorna SUCESSO se a categoria nao estiver sendo usada por nenhum produto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_Exclui1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTO_EXCLUI1", X)
+    If lErro <> SUCESSO Then Error 24413
+    
+    
+    CategoriaProduto_Exclui1 = X.CategoriaProduto_Exclui1(objCategoriaProduto)
+
+    Exit Function
+    
+Erro_CategoriaProduto_Exclui1:
+    
+    CategoriaProduto_Exclui1 = Err
+    
+    Select Case Err
+
+        Case 24413
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146178)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_ExcluiItens(objCategoriaProduto As ClassCategoriaProduto) As Long
+'exclui os itens de uma categoria (se nao for utilizado ??? )
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_ExcluiItens
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTO_EXCLUIITENS", X)
+    If lErro <> SUCESSO Then Error 24414
+    
+    
+    CategoriaProduto_ExcluiItens = X.CategoriaProduto_ExcluiItens(objCategoriaProduto)
+
+    Exit Function
+    
+Erro_CategoriaProduto_ExcluiItens:
+    
+    CategoriaProduto_ExcluiItens = Err
+    
+    Select Case Err
+
+        Case 24414
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146179)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProdutoItem_NaoUtilizado(sCategoria As String, sItem As String) As Long
+'retorna SUCESSO se nenhum produto tiver o valor de sItem na categoria identificada por sCategoria
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProdutoItem_NaoUtilizado
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTOITEM_NAOUTILIZADO", X)
+    If lErro <> SUCESSO Then Error 24415
+    
+    
+    CategoriaProdutoItem_NaoUtilizado = X.CategoriaProdutoItem_NaoUtilizado(sCategoria, sItem)
+
+    Exit Function
+    
+Erro_CategoriaProdutoItem_NaoUtilizado:
+    
+    CategoriaProdutoItem_NaoUtilizado = Err
+    
+    Select Case Err
+
+        Case 24415
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146180)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_Le(objCategoriaProduto As ClassCategoriaProduto) As Long
+'Le na tabela CategoriaProduto a descrição da categoria
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTO_LE", X)
+    If lErro <> SUCESSO Then Error 24406
+    
+    
+    CategoriaProduto_Le = X.CategoriaProduto_Le(objCategoriaProduto)
+
+    Exit Function
+    
+Erro_CategoriaProduto_Le:
+    
+    CategoriaProduto_Le = Err
+    
+    Select Case Err
+
+        Case 24406
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146181)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriasProduto_Le_Todas(colCategorias As Collection) As Long
+'Le a tabela CategoriaProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriasProduto_Le_Todas
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIASPRODUTO_LE_TODAS", X)
+    If lErro <> SUCESSO Then Error 24407
+    
+    
+    CategoriasProduto_Le_Todas = X.CategoriasProduto_Le_Todas(colCategorias)
+
+    Exit Function
+    
+Erro_CategoriasProduto_Le_Todas:
+    
+    CategoriasProduto_Le_Todas = Err
+    
+    Select Case Err
+
+        Case 24407
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146182)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_Le_Itens(objCategoriaProduto As ClassCategoriaProduto, colItensCategoria As Collection) As Long
+'Le a tabela de CategoriaProdutoItem
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_Le_Itens
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("EST_CATEGORIAPRODUTO_LE_ITENS", X)
+    If lErro <> SUCESSO Then Error 24408
+    
+    
+    CategoriaProduto_Le_Itens = X.CategoriaProduto_Le_Itens(objCategoriaProduto, colItensCategoria)
+
+    Exit Function
+    
+Erro_CategoriaProduto_Le_Itens:
+    
+    CategoriaProduto_Le_Itens = Err
+    
+    Select Case Err
+
+        Case 24408
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146183)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProduto_Le_Item(objCategoriaProdutoItem As ClassCategoriaProdutoItem) As Long
+'Le na tabela de CategoriaProdutoItem a Categoria e o Item de uma deteminada Categoria de Produto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProduto_Le_Item
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CATEGORIAPRODUTO_LE_ITEM", X)
+    If lErro <> SUCESSO Then Error 24892
+    
+    
+    CategoriaProduto_Le_Item = X.CategoriaProduto_Le_Item(objCategoriaProdutoItem)
+
+    Exit Function
+    
+Erro_CategoriaProduto_Le_Item:
+    
+    CategoriaProduto_Le_Item = Err
+    
+    Select Case Err
+
+        Case 24892
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146184)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Kit_Grava(objKit As ClassKit) As Long
+'grava os registros correspondentes em ProdutoKit e Kit
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Kit_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_KIT_GRAVA", X)
+    If lErro <> SUCESSO Then Error 24895
+    
+    
+    Kit_Grava = X.Kit_Grava(objKit)
+
+    Exit Function
+    
+Erro_Kit_Grava:
+    
+    Kit_Grava = Err
+    
+    Select Case Err
+
+        Case 24895
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146185)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Kit_Exclui(objKit As ClassKit) As Long
+'recebe um produto raiz e exclui suas composições
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Kit_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_KIT_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 24896
+    
+    
+    Kit_Exclui = X.Kit_Exclui(objKit)
+
+    Exit Function
+    
+Erro_Kit_Exclui:
+    
+    Kit_Exclui = Err
+    
+    Select Case Err
+
+        Case 24896
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146186)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Kit_Le(objKit As ClassKit) As Long
+'Le a tabela de Kits a partir do produto e da versão passados em objKit
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Kit_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_KIT_LE", X)
+    If lErro <> SUCESSO Then Error 24897
+    
+    
+    Kit_Le = X.Kit_Le(objKit)
+
+    Exit Function
+    
+Erro_Kit_Le:
+    
+    Kit_Le = Err
+    
+    Select Case Err
+
+        Case 24897
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146187)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Kit_Le_MaisRecente(objKit As ClassKit) As Long
+'Le uma versão na tabela de Kits de Produtos a partir do produto passado em objKit e devolve os dados do Kit em objKit
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Kit_Le_MaisRecente
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_KIT_LE_MAISRECENTE", X)
+    If lErro <> SUCESSO Then Error 24898
+    
+    
+    Kit_Le_MaisRecente = X.Kit_Le_MaisRecente(objKit)
+
+    Exit Function
+    
+Erro_Kit_Le_MaisRecente:
+    
+    Kit_Le_MaisRecente = Err
+    
+    Select Case Err
+
+        Case 24898
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146188)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Kit_Le_Componentes(objKit As ClassKit) As Long
+'Preenche objKit.colComponentes a partir do produto e da versão passados em objKit
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Kit_Le_Componentes
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_KIT_LE_COMPONENTES", X)
+    If lErro <> SUCESSO Then Error 24899
+    
+    
+    Kit_Le_Componentes = X.Kit_Le_Componentes(objKit)
+
+    Exit Function
+    
+Erro_Kit_Le_Componentes:
+    
+    Kit_Le_Componentes = Err
+    
+    Select Case Err
+
+        Case 24899
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146189)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Estoque_AtualizaMovimento(objMovEst As ClassMovEstoque) As Long
+'grava as informações relativas a um conjunto de movimentações de estoque
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Estoque_AtualizaMovimento
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUE_ATUALIZAMOVIMENTO", X)
+    If lErro <> SUCESSO Then Error 20445
+    
+    
+    Estoque_AtualizaMovimento = X.Estoque_AtualizaMovimento(objMovEst)
+
+    Exit Function
+    
+Erro_Estoque_AtualizaMovimento:
+    
+    Estoque_AtualizaMovimento = Err
+    
+    Select Case Err
+
+        Case 20445
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146190)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Estoque_AtualizaMovimento_Trans(objMovEst As ClassMovEstoque) As Long
+'grava as informações relativas a um conjunto de movimentações de estoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Estoque_AtualizaMovimento_Trans
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUE_ATUALIZAMOVIMENTO_TRANS", X)
+    If lErro <> SUCESSO Then Error 20446
+    
+    
+    Estoque_AtualizaMovimento_Trans = X.Estoque_AtualizaMovimento_Trans(objMovEst)
+
+    Exit Function
+    
+Erro_Estoque_AtualizaMovimento_Trans:
+    
+    Estoque_AtualizaMovimento_Trans = Err
+    
+    Select Case Err
+
+        Case 20446
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146191)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst_Le_Status(ByVal lComando As Long, objSldMesEst As ClassSldMesEst) As Long
+'le os dados de SldMesEst relativos ao Ano, FilialEmpresa e Produto passados como parametro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst_Le_Status
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST_LE_STATUS", X)
+    If lErro <> SUCESSO Then Error 20447
+    
+    
+    SldMesEst_Le_Status = X.SldMesEst_Le_Status(lComando, objSldMesEst)
+
+    Exit Function
+    
+Erro_SldMesEst_Le_Status:
+    
+    SldMesEst_Le_Status = Err
+    
+    Select Case Err
+
+        Case 20447
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146192)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function TiposMovEst_Le1(ByVal lComando As Long, objTipoMovEstoque As ClassTipoMovEst) As Long
+'Le a tabela de tipos de movimentos de estoque a partir do codigo fornecido em objTipoMovEstoque e devolve os dados neste mesmo obj.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TiposMovEst_Le1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TIPOSMOVEST_LE1", X)
+    If lErro <> SUCESSO Then Error 20448
+    
+    
+    TiposMovEst_Le1 = X.TiposMovEst_Le1(lComando, objTipoMovEstoque)
+
+    Exit Function
+    
+Erro_TiposMovEst_Le1:
+    
+    TiposMovEst_Le1 = Err
+    
+    Select Case Err
+
+        Case 20448
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146193)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Le_Estorno(ByVal lComando As Long, objItemMovEst As ClassItemMovEstoque) As Long
+'Verifica se o movimento a ser estornado está cadastrado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Le_Estorno
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_LE_ESTORNO", X)
+    If lErro <> SUCESSO Then Error 20449
+    
+    
+    MovimentoEstoque_Le_Estorno = X.MovimentoEstoque_Le_Estorno(lComando, objItemMovEst)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Le_Estorno:
+    
+    MovimentoEstoque_Le_Estorno = Err
+    
+    Select Case Err
+
+        Case 20449
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146194)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Excluir(ByVal lComando1 As Long, ByVal lComando2 As Long, objItemMovEst As ClassItemMovEstoque) As Long
+'exclui o movimento apontado por lComando2
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Excluir
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_EXCLUIR", X)
+    If lErro <> SUCESSO Then Error 20450
+    
+    
+    MovimentoEstoque_Excluir = X.MovimentoEstoque_Excluir(lComando1, lComando2, objItemMovEst)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Excluir:
+    
+    MovimentoEstoque_Excluir = Err
+    
+    Select Case Err
+
+        Case 20450
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146195)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Grava_Estorno(ByVal lComando1 As Long, ByVal lComando2 As Long, objItemMovEst As ClassItemMovEstoque) As Long
+'grava no movimento que será estornado o numero de documento de estorno
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Grava_Estorno
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_GRAVA_ESTORNO", X)
+    If lErro <> SUCESSO Then Error 20451
+    
+    
+    MovimentoEstoque_Grava_Estorno = X.MovimentoEstoque_Grava_Estorno(lComando1, lComando2, objItemMovEst)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Grava_Estorno:
+    
+    MovimentoEstoque_Grava_Estorno = Err
+    
+    Select Case Err
+
+        Case 20451
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146196)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Inserir(ByVal lComando1 As Long, objItemMovEst As ClassItemMovEstoque) As Long
+'insere um movimento de estoque na tabela MovimentoEstoque
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Inserir
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_INSERIR", X)
+    If lErro <> SUCESSO Then Error 20452
+    
+    
+    MovimentoEstoque_Inserir = X.MovimentoEstoque_Inserir(lComando1, objItemMovEst)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Inserir:
+    
+    MovimentoEstoque_Inserir = Err
+    
+    Select Case Err
+
+        Case 20452
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146197)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EstoqueProduto_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objEstoqueProduto As ClassEstoqueProduto, objTipoMovEstoque As ClassTipoMovEst, objItemMovEst As ClassItemMovEstoque, ByVal lComando As Long, ByVal iOperacao As Integer) As Long
+'Atualiza a tabela de EstoqueProduto utilizando os valores passados atraves de objEstoqueProduto.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Atualiza
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("ESTOQUEPRODUTO_ATUALIZA", X)
+    If lErro <> SUCESSO Then Error 20453
+    
+    
+    EstoqueProduto_Atualiza = X.EstoqueProduto_Atualiza(lComando1, lComando2, objEstoqueProduto, objTipoMovEstoque, objItemMovEst, lComando, iOperacao)
+
+    Exit Function
+    
+Erro_EstoqueProduto_Atualiza:
+    
+    EstoqueProduto_Atualiza = Err
+    
+    Select Case Err
+
+        Case 20453
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146198)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldDiaEst_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objSldDiaEst As ClassSldDiaEst) As Long
+'Atualiza a tabela de SldDiaEst utilizando os valores passados atraves de objSldDiaEst.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldDiaEst_Atualiza
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDDIAEST_ATUALIZA", X)
+    If lErro <> SUCESSO Then Error 20454
+    
+    
+    SldDiaEst_Atualiza = X.SldDiaEst_Atualiza(lComando1, lComando2, objSldDiaEst)
+
+    Exit Function
+    
+Erro_SldDiaEst_Atualiza:
+    
+    SldDiaEst_Atualiza = Err
+    
+    Select Case Err
+
+        Case 20454
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146199)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objSldDiaEst As ClassSldDiaEst, dCustoMedio As Double) As Long
+'Atualiza a tabela de SldMesEst utilizando os valores passados atraves de objSldDiaEst.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst_Atualiza
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST_ATUALIZA", X)
+    If lErro <> SUCESSO Then Error 20455
+    
+    
+    SldMesEst_Atualiza = X.SldMesEst_Atualiza(lComando1, lComando2, objSldDiaEst, dCustoMedio)
+
+    Exit Function
+    
+Erro_SldMesEst_Atualiza:
+    
+    SldMesEst_Atualiza = Err
+    
+    Select Case Err
+
+        Case 20455
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146200)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Le_Codigo(iFilialEmpresa As Integer, lCodigo As Long, dtData As Date) As Long
+'Verifica se o filial/codigo já está cadastrado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Le_Codigo
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_LE_CODIGO", X)
+    If lErro <> SUCESSO Then Error 36016
+    
+    
+    MovimentoEstoque_Le_Codigo = X.MovimentoEstoque_Le_Codigo(iFilialEmpresa, lCodigo, dtData)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Le_Codigo:
+    
+    MovimentoEstoque_Le_Codigo = Err
+    
+    Select Case Err
+
+        Case 36016
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146201)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Le_Ultima_Data(ByVal iFilialEmpresa As Integer, objItemMovEstoque As ClassItemMovEstoque) As Long
+'le a ultima data de movimento cadastrada
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Le_Ultima_Data
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_LE_ULTIMA_DATA", X)
+    If lErro <> SUCESSO Then Error 36031
+    
+    
+    MovimentoEstoque_Le_Ultima_Data = X.MovimentoEstoque_Le_Ultima_Data(iFilialEmpresa, objItemMovEstoque)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Le_Ultima_Data:
+    
+    MovimentoEstoque_Le_Ultima_Data = Err
+    
+    Select Case Err
+
+        Case 36031
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146202)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Le_ControleEstoque(ByVal lComando As Long, objProduto As ClassProduto) As Long
+'Lê o atributo controle de estoque do produto, cujo codigo foi passado como parâmetro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_ControleEstoque
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_CONTROLEESTOQUE", X)
+    If lErro <> SUCESSO Then Error 36035
+    
+    
+    Produto_Le_ControleEstoque = X.Produto_Le_ControleEstoque(lComando, objProduto)
+
+    Exit Function
+    
+Erro_Produto_Le_ControleEstoque:
+    
+    Produto_Le_ControleEstoque = Err
+    
+    Select Case Err
+
+        Case 36035
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146203)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function UM_Le1(ByVal lComando As Long, objUnidadeMedida As ClassUnidadeDeMedida) As Long
+'Lê a unidade de medida a partir da Classe e da Sigla -->
+'e devolve dados no Objeto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_UM_Le1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_UM_LE1", X)
+    If lErro <> SUCESSO Then Error 36111
+    
+    
+    UM_Le1 = X.UM_Le1(lComando, objUnidadeMedida)
+
+    Exit Function
+    
+Erro_UM_Le1:
+    
+    UM_Le1 = Err
+    
+    Select Case Err
+
+        Case 36111
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146204)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ProdutoFilial_Le1(lComando As Long, objProdutoFilial As ClassProdutoFilial) As Long
+'Lê os dados do Produto da Filial à partir da chave fornecida em objProdutoFilial. Retorna os dados em objProdutoFilial
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutoFilial_Le1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOFILIAL_LE1", X)
+    If lErro <> SUCESSO Then Error 36224
+    
+    
+    ProdutoFilial_Le1 = X.ProdutoFilial_Le1(lComando, objProdutoFilial)
+
+    Exit Function
+    
+Erro_ProdutoFilial_Le1:
+    
+    ProdutoFilial_Le1 = Err
+    
+    Select Case Err
+
+        Case 36224
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146205)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function TipoMovEstoque_Le(objTipoMovEstoque As ClassTipoMovEst) As Long
+'Lê o Tipo de MovEstoque a partir do Código
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TipoMovEstoque_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TIPOMOVESTOQUE_LE", X)
+    If lErro <> SUCESSO Then Error 16854
+    
+    
+    TipoMovEstoque_Le = X.TipoMovEstoque_Le(objTipoMovEstoque)
+
+    Exit Function
+    
+Erro_TipoMovEstoque_Le:
+    
+    TipoMovEstoque_Le = Err
+    
+    Select Case Err
+
+        Case 16854
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146206)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoqueItens_Le(objMovEstoque As ClassMovEstoque) As Long
+'Lê todos os Itens correspondentes a partir da FilialEmpresa, Código e do NumIntDocEst=0 e retorna no colItens do objeto
+'Ordena pelo Item.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoqueItens_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUEITENS_LE", X)
+    If lErro <> SUCESSO Then Error 16855
+    
+    
+    MovEstoqueItens_Le = X.MovEstoqueItens_Le(objMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoqueItens_Le:
+    
+    MovEstoqueItens_Le = Err
+    
+    Select Case Err
+
+        Case 16855
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146207)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Le(objMovEstoque As ClassMovEstoque) As Long
+'Lê o MovEstoque a partir do Código.
+'A função só pesquisa os MovEstoque com FilialEmpresa=giFilialEmpresa e NumIntDocEst=0
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_LE", X)
+    If lErro <> SUCESSO Then Error 16856
+    
+    
+    MovEstoque_Le = X.MovEstoque_Le(objMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoque_Le:
+    
+    MovEstoque_Le = Err
+    
+    Select Case Err
+
+        Case 16856
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146208)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Automatico(iFilialEmpresa As Integer, lCodigo As Long) As Long
+'retorna o número do próximo MovEstoque disponivel
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Automatico
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_AUTOMATICO", X)
+    If lErro <> SUCESSO Then Error 16857
+    
+    
+    MovEstoque_Automatico = X.MovEstoque_Automatico(iFilialEmpresa, lCodigo)
+
+    Exit Function
+    
+Erro_MovEstoque_Automatico:
+    
+    MovEstoque_Automatico = Err
+    
+    Select Case Err
+
+        Case 16857
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146209)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Interno_Grava(objMovEstoque As ClassMovEstoque, objContabil As ClassContabil) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Interno_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_INTERNO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 16864
+    
+    
+    MovEstoque_Interno_Grava = X.MovEstoque_Interno_Grava(objMovEstoque, objContabil)
+
+    Exit Function
+    
+Erro_MovEstoque_Interno_Grava:
+    
+    MovEstoque_Interno_Grava = Err
+    
+    Select Case Err
+
+        Case 16864
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146210)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function TiposMovEstoque_Le(colTipoMovEst As colTipoMovEst) As Long
+'Lê os Tipos de MovEstoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TiposMovEstoque_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TIPOSMOVESTOQUE_LE", X)
+    If lErro <> SUCESSO Then Error 16865
+    
+    
+    TiposMovEstoque_Le = X.TiposMovEstoque_Le(colTipoMovEst)
+
+    Exit Function
+    
+Erro_TiposMovEstoque_Le:
+    
+    TiposMovEstoque_Le = Err
+    
+    Select Case Err
+
+        Case 16865
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146211)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoqueInternoItens_Le(objMovEstoque As ClassMovEstoque) As Long
+'Lê todos os Itens correspondentes a partir da FilialEmpresa, Código e do NumIntDocEst=0 e retorna no colItens do objeto
+'Ordena pelo Item.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoqueInternoItens_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUEINTERNOITENS_LE", X)
+    If lErro <> SUCESSO Then Error 16866
+    
+    
+    MovEstoqueInternoItens_Le = X.MovEstoqueInternoItens_Le(objMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoqueInternoItens_Le:
+    
+    MovEstoqueInternoItens_Le = Err
+    
+    Select Case Err
+
+        Case 16866
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146212)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function OrdemProducao_Le(objOrdemProducao As ClassOrdemDeProducao) As Long
+'Lê a Ordem de Produção pelo Código e pela FilialEmpresa
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_OrdemProducao_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ORDEMPRODUCAO_LE", X)
+    If lErro <> SUCESSO Then Error 16867
+    
+    
+    OrdemProducao_Le = X.OrdemProducao_Le(objOrdemProducao)
+
+    Exit Function
+    
+Erro_OrdemProducao_Le:
+    
+    OrdemProducao_Le = Err
+    
+    Select Case Err
+
+        Case 16867
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146213)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ItensOrdemProducao_Le(objOrdemProducao As ClassOrdemDeProducao) As Long
+'Lê os Itens Ordem de Produção a partir do OPCódigo e da FilialEmpresa
+'Retorna os Itens na coleção
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ItensOrdemProducao_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ITENSORDEMPRODUCAO_LE", X)
+    If lErro <> SUCESSO Then Error 16868
+    
+    
+    ItensOrdemProducao_Le = X.ItensOrdemProducao_Le(objOrdemProducao)
+
+    Exit Function
+    
+Erro_ItensOrdemProducao_Le:
+    
+    ItensOrdemProducao_Le = Err
+    
+    Select Case Err
+
+        Case 16868
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146214)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function ItemOP_Le(objItemOP As ClassItemOP) As Long
+'Le de ItemOP com filtros objItemOP.iFilialEmpresa , objItemOP.sCodigo , objItemOP.sProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ItemOP_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ITEMOP_LE", X)
+    If lErro <> SUCESSO Then Error 16870
+    
+    
+    ItemOP_Le = X.ItemOP_Le(objItemOP)
+
+    Exit Function
+    
+Erro_ItemOP_Le:
+    
+    ItemOP_Le = Err
+    
+    Select Case Err
+
+        Case 16870
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146215)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoque_Producao_Grava(objMovEstoque As ClassMovEstoque, objContabil As ClassContabil) As Long
+'Grava a producao do movimento de estoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Producao_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_PRODUCAO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 16871
+    
+    
+    MovEstoque_Producao_Grava = X.MovEstoque_Producao_Grava(objMovEstoque, objContabil)
+
+    Exit Function
+    
+Erro_MovEstoque_Producao_Grava:
+    
+    MovEstoque_Producao_Grava = Err
+    
+    Select Case Err
+
+        Case 16871
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146216)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function OrdemDeProducao_TrataBaixaItem(objItemOP As ClassItemOP, alComando() As Long) As Long
+'Deve ser chamada qdo um item da OP acaba de ser baixado, se for o ultimo item nao baixado vai baixar a OP
+'De alComando(2) a alComando(8) devem estar "livres"
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_OrdemDeProducao_TrataBaixaItem
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ORDEMDEPRODUCAO_TRATABAIXAITEM", X)
+    If lErro <> SUCESSO Then Error 16872
+    
+    OrdemDeProducao_TrataBaixaItem = X.OrdemDeProducao_TrataBaixaItem(objItemOP, alComando())
+
+    Exit Function
+    
+Erro_OrdemDeProducao_TrataBaixaItem:
+    
+    OrdemDeProducao_TrataBaixaItem = Err
+    
+    Select Case Err
+
+        Case 16872
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146217)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ItemOP_Le_NumIntDoc(objItemOP As ClassItemOP) As Long
+'Lê os dados do item do empenho à partir de NumIntDoc
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ItemOP_Le_NumIntDoc
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ITEMOP_LE_NUMINTDOC", X)
+    If lErro <> SUCESSO Then Error 16895
+    
+    
+    ItemOP_Le_NumIntDoc = X.ItemOP_Le_NumIntDoc(objItemOP)
+
+    Exit Function
+    
+Erro_ItemOP_Le_NumIntDoc:
+    
+    ItemOP_Le_NumIntDoc = Err
+    
+    Select Case Err
+
+        Case 16895
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146218)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ItemOP_Le_Item(objItemOP As ClassItemOP) As Long
+'Lê os dados do Item da Ordem de Produção à partir do Código da OP e Código do Item de uma Filial da Empresa
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ItemOP_Le_Item
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ITEMOP_LE_ITEM", X)
+    If lErro <> SUCESSO Then Error 16896
+    
+    
+    ItemOP_Le_Item = X.ItemOP_Le_Item(objItemOP)
+
+    Exit Function
+    
+Erro_ItemOP_Le_Item:
+    
+    ItemOP_Le_Item = Err
+    
+    Select Case Err
+
+        Case 16896
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146219)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Empenho_Le(objEmpenho As ClassEmpenho) As Long
+'Lê os dados de Empenho à partir da chave fornecida em objEmpenho
+'objEmpenho.iFilialEmpresa e objEmpenho.lCodigo
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Empenho_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHO_LE", X)
+    If lErro <> SUCESSO Then Error 16897
+    
+    
+    Empenho_Le = X.Empenho_Le(objEmpenho)
+
+    Exit Function
+    
+Erro_Empenho_Le:
+    
+    Empenho_Le = Err
+    
+    Select Case Err
+
+        Case 16897
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146220)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Empenho_Automatico(lCodigo As Long, lComando1 As Long, lComando2 As Long) As Long
+'gera codigo para insercao de Empenho. O codigo é sequencial por filialempresa
+'TEM QUE SER CHAMADA EM TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Empenho_Automatico
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHO_AUTOMATICO", X)
+    If lErro <> SUCESSO Then Error 16898
+    
+    
+    Empenho_Automatico = X.Empenho_Automatico(lCodigo, lComando1, lComando2)
+
+    Exit Function
+    
+Erro_Empenho_Automatico:
+    
+    Empenho_Automatico = Err
+    
+    Select Case Err
+
+        Case 16898
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146221)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MATConfig_ObterNumInt(sCodigo As String, lNumInt As Long, Optional iQtde As Integer = 1) As Long
+'Obter um número automático a partir de um contador identificado por uma chave
+'iQtde identifica quantos numeros devem ser "liberados" a partir do lNumInt retornado
+'TEM QUE SER CHAMADA DENTRO DE TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MATConfig_ObterNumInt
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MATCONFIG_OBTERNUMINT", X)
+    If lErro <> SUCESSO Then Error 16899
+    
+    
+    MATConfig_ObterNumInt = X.MATConfig_ObterNumInt(sCodigo, lNumInt, iQtde)
+
+    Exit Function
+    
+Erro_MATConfig_ObterNumInt:
+    
+    MATConfig_ObterNumInt = Err
+    
+    Select Case Err
+
+        Case 16899
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146222)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Empenho_Grava(objEmpenho As ClassEmpenho) As Long
+'Grava o Empenho
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Empenho_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 16900
+    
+    
+    Empenho_Grava = X.Empenho_Grava(objEmpenho)
+
+    Exit Function
+    
+Erro_Empenho_Grava:
+    
+    Empenho_Grava = Err
+    
+    Select Case Err
+
+        Case 16900
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146223)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Empenho_Inserir_Batch(objEmpenho As ClassEmpenho, lComando As Long) As Long
+'Insere um empenho da tabela de empenhos
+'DEVE SER CHAMADO EM TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Empenho_Inserir_Batch
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHO_INSERIR_BATCH", X)
+    If lErro <> SUCESSO Then Error 16901
+    
+    
+    Empenho_Inserir_Batch = X.Empenho_Inserir_Batch(objEmpenho, lComando)
+
+    Exit Function
+    
+Erro_Empenho_Inserir_Batch:
+    
+    Empenho_Inserir_Batch = Err
+    
+    Select Case Err
+
+        Case 16901
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146224)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Empenho_Exclui(objEmpenho As ClassEmpenho) As Long
+'Exclui o Empenho
+'objEmpenho.iFilialEmpresa e objEmpenho.lCodigo tem que estar preenchidos
+    'nao deixar excluir se houver qtde requisitada
+    'diminuir a qtde empenhada na tabela EstoqueProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Empenho_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHO_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 16902
+    
+    
+    Empenho_Exclui = X.Empenho_Exclui(objEmpenho)
+
+    Exit Function
+    
+Erro_Empenho_Exclui:
+    
+    Empenho_Exclui = Err
+    
+    Select Case Err
+
+        Case 16902
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146225)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EstoqueProduto_AlterarEmpenho(objEstoqueProduto As ClassEstoqueProduto, dQtde As Double) As Long
+'Aumenta (ou diminui se dQtde for negativo) a qtde empenhada em um produto-almoxarifado
+'objEstoqueProduto.sProduto e objEstoqueProduto.iAlmoxarifado tem que estar preenchidos
+'DEVE SER CHAMADO EM TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_AlterarEmpenho
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_ALTERAREMPENHO", X)
+    If lErro <> SUCESSO Then Error 16903
+    
+    
+    EstoqueProduto_AlterarEmpenho = X.EstoqueProduto_AlterarEmpenho(objEstoqueProduto, dQtde)
+
+    Exit Function
+    
+Erro_EstoqueProduto_AlterarEmpenho:
+    
+    EstoqueProduto_AlterarEmpenho = Err
+    
+    Select Case Err
+
+        Case 16903
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146226)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Exclui(objProduto As ClassProduto) As Long
+'Exclui no BD o Produto passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 19669
+    
+    
+    Produto_Exclui = X.Produto_Exclui(objProduto)
+
+    Exit Function
+    
+Erro_Produto_Exclui:
+    
+    Produto_Exclui = Err
+    
+    Select Case Err
+
+        Case 19669
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146227)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Grava(objProduto As ClassProduto, colTabelaPrecoItem As Collection) As Long
+'Grava ou Alterar o Produto passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 19670
+    
+    
+    Produto_Grava = X.Produto_Grava(objProduto, colTabelaPrecoItem)
+
+    Exit Function
+    
+Erro_Produto_Grava:
+    
+    Produto_Grava = Err
+    
+    Select Case Err
+
+        Case 19670
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146228)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Le_Categorias(objProduto As ClassProduto, colCategoriaItem As Collection) As Long
+'Lê na tabela de ProdutoCategoria, todas as categorias de um  Produto, guardando na coleção colCategoriaItem
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_Categorias
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_CATEGORIAS", X)
+    If lErro <> SUCESSO Then Error 19671
+    
+    
+    Produto_Le_Categorias = X.Produto_Le_Categorias(objProduto, colCategoriaItem)
+
+    Exit Function
+    
+Erro_Produto_Le_Categorias:
+    
+    Produto_Le_Categorias = Err
+    
+    Select Case Err
+
+        Case 19671
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146229)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Lock(objProduto As ClassProduto) As Long
+'Lê e faz o "lock" no Produto passado por parâmetro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Lock
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LOCK", X)
+    If lErro <> SUCESSO Then Error 19672
+    
+    
+    Produto_Lock = X.Produto_Lock(objProduto)
+
+    Exit Function
+    
+Erro_Produto_Lock:
+    
+    Produto_Lock = Err
+    
+    Select Case Err
+
+        Case 19672
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146230)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_LerBloquear(sProduto As String, lComando As Long) As Long
+'Lê e faz o "lock" no Produto passado por parâmetro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_LerBloquear
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LERBLOQUEAR", X)
+    If lErro <> SUCESSO Then Error 19764
+    
+    
+    Produto_LerBloquear = X.Produto_LerBloquear(sProduto, lComando)
+
+    Exit Function
+    
+Erro_Produto_LerBloquear:
+    
+    Produto_LerBloquear = Err
+    
+    Select Case Err
+
+        Case 19764
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146231)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function UM_Le_Lock(objUnidadeMedida As ClassUnidadeDeMedida) As Long
+'Lê e "locka" a unidade de medida a partir da Classe e da SiglaUMBase -->
+'e devolve dados no Objeto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_UM_Le_Lock
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_UM_LE_LOCK", X)
+    If lErro <> SUCESSO Then Error 19674
+    
+    
+    UM_Le_Lock = X.UM_Le_Lock(objUnidadeMedida)
+
+    Exit Function
+    
+Erro_UM_Le_Lock:
+    
+    UM_Le_Lock = Err
+    
+    Select Case Err
+
+        Case 19674
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146232)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Le_NomeReduzido(objProduto As ClassProduto) As Long
+'Lê o Produto com o Nome Reduzido passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_NomeReduzido
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_NOMEREDUZIDO", X)
+    If lErro <> SUCESSO Then Error 19675
+    
+    
+    Produto_Le_NomeReduzido = X.Produto_Le_NomeReduzido(objProduto)
+
+    Exit Function
+    
+Erro_Produto_Le_NomeReduzido:
+    
+    Produto_Le_NomeReduzido = Err
+    
+    Select Case Err
+
+        Case 19675
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146233)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Le_ProdutoMaior(sProduto As String, objProduto As ClassProduto) As Long
+'Lê um Produto imediatamente maior que o produto passada como parametro. Devolve os dados em objProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_ProdutoMaior
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_PRODUTOMAIOR", X)
+    If lErro <> SUCESSO Then Error 19676
+    
+    
+    Produto_Le_ProdutoMaior = X.Produto_Le_ProdutoMaior(sProduto, objProduto)
+
+    Exit Function
+    
+Erro_Produto_Le_ProdutoMaior:
+    
+    Produto_Le_ProdutoMaior = Err
+    
+    Select Case Err
+
+        Case 19676
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146234)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Le_TabelaPrecoItem(objProduto As ClassProduto, colTabelaPrecoItem As Collection, iFilialEmpresa As Integer) As Long
+'Lê os preços de um produto para a giFilialEmpresa (filial corrente ou EMPRESA_TODA). Retorna os dados em colTabelaPrecoItem
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_TabelaPrecoItem
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_TABELAPRECOITEM", X)
+    If lErro <> SUCESSO Then Error 19677
+    
+    
+    Produto_Le_TabelaPrecoItem = X.Produto_Le_TabelaPrecoItem(objProduto, colTabelaPrecoItem, iFilialEmpresa)
+
+    Exit Function
+    
+Erro_Produto_Le_TabelaPrecoItem:
+    
+    Produto_Le_TabelaPrecoItem = Err
+    
+    Select Case Err
+
+        Case 19677
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146235)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Tem_Filho(sProduto As String, iTemFilho As Integer) As Long
+'testa se o Produto em questão tem Produtos abaixo dele, ou seja tem Produtos filho.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Tem_Filho
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_TEM_FILHO", X)
+    If lErro <> SUCESSO Then Error 19678
+    
+    
+    Produto_Tem_Filho = X.Produto_Tem_Filho(sProduto, iTemFilho)
+
+    Exit Function
+    
+Erro_Produto_Tem_Filho:
+    
+    Produto_Tem_Filho = Err
+    
+    Select Case Err
+
+        Case 19678
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146236)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Critica_ProdutoPai(sProduto As String, sSiglaModulo As String) As Long
+'verifica se o Produto tem um pai sintetico
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Critica_ProdutoPai
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_CRITICA_PRODUTOPAI", X)
+    If lErro <> SUCESSO Then Error 19679
+    
+    
+    Produto_Critica_ProdutoPai = X.Produto_Critica_ProdutoPai(sProduto, sSiglaModulo)
+
+    Exit Function
+    
+Erro_Produto_Critica_ProdutoPai:
+    
+    Produto_Critica_ProdutoPai = Err
+    
+    Select Case Err
+
+        Case 19679
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146237)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function AlmoxarifadoPadrao_Le(iFilialEmpresa As Integer, sProduto As String, iAlmoxarifadoPadrao As Integer) As Long
+'Lê Almoxarifado Padrão do Produto da iFilialEmpresa
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_AlmoxarifadoPadrao_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADOPADRAO_LE", X)
+    If lErro <> SUCESSO Then Error 19680
+    
+    
+    AlmoxarifadoPadrao_Le = X.AlmoxarifadoPadrao_Le(iFilialEmpresa, sProduto, iAlmoxarifadoPadrao)
+
+    Exit Function
+    
+Erro_AlmoxarifadoPadrao_Le:
+    
+    AlmoxarifadoPadrao_Le = Err
+    
+    Select Case Err
+
+        Case 19680
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146238)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Automatico_EmTransacao(iFilialEmpresa As Integer, lCodigo As Long) As Long
+'retorna o número do próximo MovEstoque disponivel
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Automatico_EmTransacao
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_AUTOMATICO_EMTRANSACAO", X)
+    If lErro <> SUCESSO Then Error 19681
+    
+    
+    MovEstoque_Automatico_EmTransacao = X.MovEstoque_Automatico_EmTransacao(iFilialEmpresa, lCodigo)
+
+    Exit Function
+    
+Erro_MovEstoque_Automatico_EmTransacao:
+    
+    MovEstoque_Automatico_EmTransacao = Err
+    
+    Select Case Err
+
+        Case 19681
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146239)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CategoriaProdutoItem_Lock(sCategoriaProduto As String, sItemCategoria As String, lComando As Long) As Long
+'faz lock shared de uma CategoriaProdutoItem para garantir a sua existencia
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CategoriaProdutoItem_Lock
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CATEGORIAPRODUTOITEM_LOCK", X)
+    If lErro <> SUCESSO Then Error 19752
+    
+    
+    CategoriaProdutoItem_Lock = X.CategoriaProdutoItem_Lock(sCategoriaProduto, sItemCategoria, lComando)
+
+    Exit Function
+    
+Erro_CategoriaProdutoItem_Lock:
+    
+    CategoriaProdutoItem_Lock = Err
+    
+    Select Case Err
+
+        Case 19752
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146240)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Almoxarifado_Lock(iAlmoxarifado As Integer, lComando As Long) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Almoxarifado_Lock
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADO_LOCK", X)
+    If lErro <> SUCESSO Then Error 19763
+    
+    
+    Almoxarifado_Lock = X.Almoxarifado_Lock(iAlmoxarifado, lComando)
+
+    Exit Function
+    
+Erro_Almoxarifado_Lock:
+    
+    Almoxarifado_Lock = Err
+    
+    Select Case Err
+
+        Case 19763
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146241)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst_Le_QuantidadeCusto(ByVal lComando As Long, objSldMesEst As ClassSldMesEst) As Long
+'le os dados de SldMesEst relativos ao Ano, FilialEmpresa e Produto passados como parametro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst_Le_QuantidadeCusto
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST_LE_QUANTIDADECUSTO", X)
+    If lErro <> SUCESSO Then Error 36486
+    
+    
+    SldMesEst_Le_QuantidadeCusto = X.SldMesEst_Le_QuantidadeCusto(lComando, objSldMesEst)
+
+    Exit Function
+    
+Erro_SldMesEst_Le_QuantidadeCusto:
+    
+    SldMesEst_Le_QuantidadeCusto = Err
+    
+    Select Case Err
+
+        Case 36486
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146242)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoque_Grava_Generico(objMovEstoque As ClassMovEstoque, objContabil As ClassContabil) As Long
+'Grava o movimento de estoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Grava_Generico
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_GRAVA_GENERICO", X)
+    If lErro <> SUCESSO Then Error 36496
+    
+    
+    MovEstoque_Grava_Generico = X.MovEstoque_Grava_Generico(objMovEstoque, objContabil)
+
+    Exit Function
+    
+Erro_MovEstoque_Grava_Generico:
+    
+    MovEstoque_Grava_Generico = Err
+    
+    Select Case Err
+
+        Case 36496
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146243)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EstoqueProduto_Le1(lComando As Long, objEstoqueProduto As ClassEstoqueProduto) As Long
+'Le as informacoes sobre o produto passado em objEstoqueProduto na tabela EstoqueProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Le1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_LE1", X)
+    If lErro <> SUCESSO Then Error 36665
+    
+    
+    EstoqueProduto_Le1 = X.EstoqueProduto_Le1(lComando, objEstoqueProduto)
+
+    Exit Function
+    
+Erro_EstoqueProduto_Le1:
+    
+    EstoqueProduto_Le1 = Err
+    
+    Select Case Err
+
+        Case 36665
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146244)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EstoqueProduto_Atualiza2(ByVal lComando1 As Long, ByVal lComando2 As Long, objEstoqueProduto As ClassEstoqueProduto) As Long
+'Atualiza a tabela de EstoqueProduto utilizando os valores passados atraves de objEstoqueProduto.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Atualiza2
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_ATUALIZA2", X)
+    If lErro <> SUCESSO Then Error 36670
+    
+    
+    EstoqueProduto_Atualiza2 = X.EstoqueProduto_Atualiza2(lComando1, lComando2, objEstoqueProduto)
+
+    Exit Function
+    
+Erro_EstoqueProduto_Atualiza2:
+    
+    EstoqueProduto_Atualiza2 = Err
+    
+    Select Case Err
+
+        Case 36670
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146245)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldDiaEstAlm_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objSldDiaEst As ClassSldDiaEst, ByVal iAlmoxarifado As Integer) As Long
+'Atualiza a tabela de SldDiaEstAlm utilizando os valores passados atraves de objSldDiaEst e iAlmoxarifado.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldDiaEstAlm_Atualiza
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDDIAESTALM_ATUALIZA", X)
+    If lErro <> SUCESSO Then Error 44119
+    
+    
+    SldDiaEstAlm_Atualiza = X.SldDiaEstAlm_Atualiza(lComando1, lComando2, objSldDiaEst, iAlmoxarifado)
+
+    Exit Function
+    
+Erro_SldDiaEstAlm_Atualiza:
+    
+    SldDiaEstAlm_Atualiza = Err
+    
+    Select Case Err
+
+        Case 44119
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146246)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objSldDiaEst As ClassSldDiaEst, ByVal iAlmoxarifado As Integer) As Long
+'Atualiza a tabela de SldMesEstAlm utilizando os valores passados atraves de objSldDiaEst e iAlmoxarifado.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm_Atualiza
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM_ATUALIZA", X)
+    If lErro <> SUCESSO Then Error 44120
+    
+    
+    SldMesEstAlm_Atualiza = X.SldMesEstAlm_Atualiza(lComando1, lComando2, objSldDiaEst, iAlmoxarifado)
+
+    Exit Function
+    
+Erro_SldMesEstAlm_Atualiza:
+    
+    SldMesEstAlm_Atualiza = Err
+    
+    Select Case Err
+
+        Case 44120
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146247)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EstoqueMes_Le_Mes(objEstoqueMes As ClassEstoqueMes) As Long
+'Le o Ano/Mes que está aberto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Le_Mes
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_LE_MES", X)
+    If lErro <> SUCESSO Then Error 45116
+    
+    
+    EstoqueMes_Le_Mes = X.EstoqueMes_Le_Mes(objEstoqueMes)
+
+    Exit Function
+    
+Erro_EstoqueMes_Le_Mes:
+    
+    EstoqueMes_Le_Mes = Err
+    
+    Select Case Err
+
+        Case 45116
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146248)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Almoxarifados_Le_FilialEmpresa(ByVal iFilialEmpresa As Integer, colAlmoxFilial As Collection) As Long
+'Le todos os almoxaridados da Filial iFilialEmpresa e coloca-os em colAlmoxFilial
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Almoxarifados_Le_FilialEmpresa
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADOS_LE_FILIALEMPRESA", X)
+    If lErro <> SUCESSO Then Error 44171
+    
+    
+    Almoxarifados_Le_FilialEmpresa = X.Almoxarifados_Le_FilialEmpresa(iFilialEmpresa, colAlmoxFilial)
+
+    Exit Function
+    
+Erro_Almoxarifados_Le_FilialEmpresa:
+    
+    Almoxarifados_Le_FilialEmpresa = Err
+    
+    Select Case Err
+
+        Case 44171
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146249)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ProdutoFilial_Le2(lComando As Long, objProdutoFilial As ClassProdutoFilial) As Long
+'Lê os dados do Produto da Filial à partir da chave fornecida em objProdutoFilial. Retorna os dados em objProdutoFilial
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutoFilial_Le2
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOFILIAL_LE2", X)
+    If lErro <> SUCESSO Then Error 44207
+    
+    
+    ProdutoFilial_Le2 = X.ProdutoFilial_Le2(lComando, objProdutoFilial)
+
+    Exit Function
+    
+Erro_ProdutoFilial_Le2:
+    
+    ProdutoFilial_Le2 = Err
+    
+    Select Case Err
+
+        Case 44207
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146250)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EstoqueProduto_Le_Exclusivo(lComando As Long, objEstoqueProduto As ClassEstoqueProduto) As Long
+'le o registro em EstoqueProduto cuja chave (Produto, Almoxarifado) foi passada como parametro em objEstoqueProduto.
+'Devolve os dados lidos em objEstoqueProduto.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Le_Exclusivo
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_LE_EXCLUSIVO", X)
+    If lErro <> SUCESSO Then Error 44341
+    
+    
+    EstoqueProduto_Le_Exclusivo = X.EstoqueProduto_Le_Exclusivo(lComando, objEstoqueProduto)
+
+    Exit Function
+    
+Erro_EstoqueProduto_Le_Exclusivo:
+    
+    EstoqueProduto_Le_Exclusivo = Err
+    
+    Select Case Err
+
+        Case 44341
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146251)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+
+'mario
+Function MovEstoque_Automatico_EmTransacao1(lComando As Long, lComando1 As Long, lComando2 As Long, iFilialEmpresa As Integer, lCodigo As Long) As Long
+'retorna o número do próximo MovEstoque disponivel
+'IMPORTANTE: TEM QUE SER CHAMADO DENTRO DE TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Automatico_EmTransacao1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_AUTOMATICO_EMTRANSACAO1", X)
+    If lErro <> SUCESSO Then Error 44357
+    
+    
+    MovEstoque_Automatico_EmTransacao1 = X.MovEstoque_Automatico_EmTransacao1(lComando, lComando1, lComando2, iFilialEmpresa, lCodigo)
+
+    Exit Function
+    
+Erro_MovEstoque_Automatico_EmTransacao1:
+    
+    MovEstoque_Automatico_EmTransacao1 = Err
+    
+    Select Case Err
+
+        Case 44357
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146252)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+'mario
+Function Produto_Lock1(lComando As Long, objProduto As ClassProduto) As Long
+'Lê o faz o "lock" no Produto passado por parâmetro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Lock1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LOCK1", X)
+    If lErro <> SUCESSO Then Error 44358
+    
+    
+    Produto_Lock1 = X.Produto_Lock1(lComando, objProduto)
+
+    Exit Function
+    
+Erro_Produto_Lock1:
+    
+    Produto_Lock1 = Err
+    
+    Select Case Err
+
+        Case 44358
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146253)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CustoMedioProducaoApurado_Le(sProduto As String, dCMPAtual As Double, iFilialEmpresa As Integer) As Long
+'Calcula último Custo Médio de Produção Apurado do Produto passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CustoMedioProducaoApurado_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CUSTOMEDIOPRODUCAOAPURADO_LE", X)
+    If lErro <> SUCESSO Then Error 45402
+    
+    
+    CustoMedioProducaoApurado_Le = X.CustoMedioProducaoApurado_Le(sProduto, dCMPAtual, iFilialEmpresa)
+    
+    Exit Function
+    
+Erro_CustoMedioProducaoApurado_Le:
+
+    CustoMedioProducaoApurado_Le = Err
+    
+    Select Case Err
+
+        Case 45402
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146254)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoquesProduto_Le_Filial(sProduto As String, colEstoqueProduto As colEstoqueProduto) As Long
+'??? documentar
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoquesProduto_Le_Filial
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUESPRODUTO_LE_FILIAL", X)
+    If lErro <> SUCESSO Then Error 45578
+    
+    
+    EstoquesProduto_Le_Filial = X.EstoquesProduto_Le_Filial(sProduto, colEstoqueProduto)
+    
+    Exit Function
+    
+Erro_EstoquesProduto_Le_Filial:
+
+    EstoquesProduto_Le_Filial = Err
+    
+    Select Case Err
+
+        Case 45578
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146255)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Almoxarifado_Grava(objAlmoxarifado As ClassAlmoxarifado, objEndereco As ClassEndereco) As Long
+'Grava o Almoxarifado no BD
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Almoxarifado_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45652
+    
+    
+    Almoxarifado_Grava = X.Almoxarifado_Grava(objAlmoxarifado, objEndereco)
+    
+    Exit Function
+    
+Erro_Almoxarifado_Grava:
+
+    Almoxarifado_Grava = Err
+    
+    Select Case Err
+
+        Case 45652
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146256)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Almoxarifado_Exclui(objAlmoxarifado As ClassAlmoxarifado) As Long
+'Exclui o Almoxarifado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Almoxarifado_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADO_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45653
+    
+    
+    Almoxarifado_Exclui = X.Almoxarifado_Exclui(objAlmoxarifado)
+    
+    Exit Function
+    
+Erro_Almoxarifado_Exclui:
+
+    Almoxarifado_Exclui = Err
+    
+    Select Case Err
+
+        Case 45653
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146257)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ClassificacaoABC_Exclui(objClassABC As ClassClassificacaoABC) As Long
+'Exclui Classificação ABC e seus ítens do Banco de Dados
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClassificacaoABC_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSIFICACAOABC_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45655
+    
+    
+    ClassificacaoABC_Exclui = X.ClassificacaoABC_Exclui(objClassABC)
+    
+    Exit Function
+    
+Erro_ClassificacaoABC_Exclui:
+
+    ClassificacaoABC_Exclui = Err
+    
+    Select Case Err
+
+        Case 45655
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146258)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ItensABC_Exclui(objClassABC As ClassClassificacaoABC) As Long
+'Exclui Itens da Classificação ABC do Banco de Dados
+'CHAMADA EM TRANSAÇÃO por ClassificacaoABC_Exclui
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ItensABC_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ITENSABC_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45656
+    
+    
+    ItensABC_Exclui = X.ItensABC_Exclui(objClassABC)
+    
+    Exit Function
+    
+Erro_ItensABC_Exclui:
+
+    ItensABC_Exclui = Err
+    
+    Select Case Err
+
+        Case 45656
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146259)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ClassificacaoABC_Eh_MaisRecente(objClassABC As ClassClassificacaoABC) As Long
+'Verifica se a ClassificacaoABC no BD eh a mais recente que atualizou produtos para o TipoProduto dela.
+'Passa NumInt, FilialEmpresa e TipoProduto da ClassABC
+'Retorna SUCESSO se for + recente
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClassificacaoABC_Eh_MaisRecente
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSIFICACAOABC_EH_MAISRECENTE", X)
+    If lErro <> SUCESSO Then Error 45657
+    
+    
+    ClassificacaoABC_Eh_MaisRecente = X.ClassificacaoABC_Eh_MaisRecente(objClassABC)
+    
+    Exit Function
+    
+Erro_ClassificacaoABC_Eh_MaisRecente:
+
+    ClassificacaoABC_Eh_MaisRecente = Err
+    
+    Select Case Err
+
+        Case 45657
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146260)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ClassificacaoABC_Grava(objClassABC As ClassClassificacaoABC) As Long
+'Grava Classificação ABC e seus ítens no Banco de Dados
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClassificacaoABC_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSIFICACAOABC_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45658
+    
+    
+    ClassificacaoABC_Grava = X.ClassificacaoABC_Grava(objClassABC)
+    
+    Exit Function
+    
+Erro_ClassificacaoABC_Grava:
+
+    ClassificacaoABC_Grava = Err
+    
+    Select Case Err
+
+        Case 45658
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146261)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function CurvaABC_LePontos(objClassABC As ClassClassificacaoABC, objCurvaABC As ClassCurvaABC) As Long
+'Lê dados da curva ABC no Banco de Dados e guarda os Pontos em objCurvaABC.colPontos
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CurvaABC_LePontos
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CURVAABC_LEPONTOS", X)
+    If lErro <> SUCESSO Then Error 45659
+    
+    
+    CurvaABC_LePontos = X.CurvaABC_LePontos(objClassABC, objCurvaABC)
+    
+    Exit Function
+    
+Erro_CurvaABC_LePontos:
+
+    CurvaABC_LePontos = Err
+    
+    Select Case Err
+
+        Case 45659
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146262)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ClassificacoesABC_Le(colNumIntCodigo As Collection) As Long
+'Lê todas as Classificações coloca-as em ColNumIntCodigo
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClassificacoesABC_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSIFICACOESABC_LE", X)
+    If lErro <> SUCESSO Then Error 45660
+    
+    
+    ClassificacoesABC_Le = X.ClassificacoesABC_Le(colNumIntCodigo)
+    
+    Exit Function
+    
+Erro_ClassificacoesABC_Le:
+
+    ClassificacoesABC_Le = Err
+    
+    Select Case Err
+
+        Case 45660
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146263)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ClassificacaoABC_Le(objClassABC As ClassClassificacaoABC) As Long
+'Lê a ClassificacaoABC no BD à partir do Código e Da FilialEmpresa passados em objClassABC
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClassificacaoABC_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSIFICACAOABC_LE", X)
+    If lErro <> SUCESSO Then Error 45661
+    
+    
+    ClassificacaoABC_Le = X.ClassificacaoABC_Le(objClassABC)
+    
+    Exit Function
+    
+Erro_ClassificacaoABC_Le:
+
+    ClassificacaoABC_Le = Err
+    
+    Select Case Err
+
+        Case 45661
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146264)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ClassificacaoABC_Le_NumInt(objClassABC As ClassClassificacaoABC) As Long
+'Lê a ClassificacaoABC no BD à partir do NumInt passado em objClassABC
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClassificacaoABC_Le_NumInt
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSIFICACAOABC_LE_NUMINT", X)
+    If lErro <> SUCESSO Then Error 45662
+    
+    
+    ClassificacaoABC_Le_NumInt = X.ClassificacaoABC_Le_NumInt(objClassABC)
+    
+    Exit Function
+    
+Erro_ClassificacaoABC_Le_NumInt:
+
+    ClassificacaoABC_Le_NumInt = Err
+    
+    Select Case Err
+
+        Case 45662
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146265)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Estoque_Grava(objProdutoFilial As ClassProdutoFilial, iControleEstoque As Integer) As Long
+'Grava o Estoque do Produto da Filial
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Estoque_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUE_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45663
+    
+    
+    Estoque_Grava = X.Estoque_Grava(objProdutoFilial, iControleEstoque)
+    
+    Exit Function
+    
+Erro_Estoque_Grava:
+
+    Estoque_Grava = Err
+    
+    Select Case Err
+
+        Case 45663
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146266)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueInicial_Grava(objEstoqueProduto As ClassEstoqueProduto, iAlmoxarifadoPadrao As Integer, colRastreamento As Collection) As Long
+'Grava o estoque inicial do produto
+'??? revisar p/evitar repetir codigo, simplificando-o e diminuindo o tamanho desta funcao
+'??? nao declarar uma variavel por linha (dim)
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueInicial_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEINICIAL_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45664
+    
+    
+    EstoqueInicial_Grava = X.EstoqueInicial_Grava(objEstoqueProduto, iAlmoxarifadoPadrao, colRastreamento)
+    
+    Exit Function
+    
+Erro_EstoqueInicial_Grava:
+
+    EstoqueInicial_Grava = Err
+    
+    Select Case Err
+
+        Case 45664
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146267)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueInicial_Exclui(objEstoqueProduto As ClassEstoqueProduto) As Long
+'Exclui o estoque inicial passado em objEstoqueProduto da tabela EstoqueProduto
+'??? nao usar 1 linha p/cada dim
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueInicial_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEINICIAL_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45665
+    
+    
+    EstoqueInicial_Exclui = X.EstoqueInicial_Exclui(objEstoqueProduto)
+    
+    Exit Function
+    
+Erro_EstoqueInicial_Exclui:
+
+    EstoqueInicial_Exclui = Err
+    
+    Select Case Err
+
+        Case 45665
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146268)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueProduto_Le_Almoxarifados(sProduto As String, colAlmoxarifados As Collection) As Long
+'Lê todos os Almoxarifados do Produto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Le_Almoxarifados
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_LE_ALMOXARIFADOS", X)
+    If lErro <> SUCESSO Then Error 45666
+    
+    
+    EstoqueProduto_Le_Almoxarifados = X.EstoqueProduto_Le_Almoxarifados(sProduto, colAlmoxarifados)
+    
+    Exit Function
+    
+Erro_EstoqueProduto_Le_Almoxarifados:
+
+    EstoqueProduto_Le_Almoxarifados = Err
+    
+    Select Case Err
+
+        Case 45666
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146269)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function SldMesEst_Atualiza_Mes(objTela As Object, iMes As Integer, objSldMesEst As ClassSldMesEst, iCancela As Integer, objEstoque As ClassEstoqueMes) As Long
+'Atualiza somente os mes, durante o decorrer do ano
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst_Atualiza_Mes
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST_ATUALIZA_MES", X)
+    If lErro <> SUCESSO Then Error 45667
+    
+    SldMesEst_Atualiza_Mes = X.SldMesEst_Atualiza_Mes(objTela, iMes, objSldMesEst, iCancela, objEstoque)
+    
+    Exit Function
+    
+Erro_SldMesEst_Atualiza_Mes:
+
+    SldMesEst_Atualiza_Mes = Err
+    
+    Select Case Err
+
+        Case 45667
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146270)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function SldMesEst_Atualiza_Ano(objTela As Object, objSldMesEst As ClassSldMesEst, iCancela As Integer) As Long
+'Atualiza Ano, abrindo um novo ano(Exercicio) para os produtos
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst_Atualiza_Ano
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST_ATUALIZA_ANO", X)
+    If lErro <> SUCESSO Then Error 45668
+    
+    
+    SldMesEst_Atualiza_Ano = X.SldMesEst_Atualiza_Ano(objTela, objSldMesEst, iCancela)
+    
+    Exit Function
+    
+Erro_SldMesEst_Atualiza_Ano:
+
+    SldMesEst_Atualiza_Ano = Err
+    
+    Select Case Err
+
+        Case 45668
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146271)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMes_Atualiza(objSldMesEst As ClassSldMesEst, iMes As Integer) As Long
+'Atualiza a tabela de Estoque mes para a insercao de um novo mes
+'IMPORTANTE: TEM QUE SER CHAMADO EM TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Atualiza
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_ATUALIZA", X)
+    If lErro <> SUCESSO Then Error 45669
+    
+    
+    EstoqueMes_Atualiza = X.EstoqueMes_Atualiza(objSldMesEst, iMes)
+    
+    Exit Function
+    
+Erro_EstoqueMes_Atualiza:
+
+    EstoqueMes_Atualiza = Err
+    
+    Select Case Err
+
+        Case 45669
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146272)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function FornecedorProduto_Le_Fornecedores(colFornecedores As Collection, objProduto As ClassProduto) As Long
+'Lê todos nomes reduzidos de Fornecedores associados a sProduto e coloca-os em colFornecedores
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProduto_Le_Fornecedores
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTO_LE_FORNECEDORES", X)
+    If lErro <> SUCESSO Then Error 45670
+    
+    
+    FornecedorProduto_Le_Fornecedores = X.FornecedorProduto_Le_Fornecedores(colFornecedores, objProduto)
+    
+    Exit Function
+    
+Erro_FornecedorProduto_Le_Fornecedores:
+
+    FornecedorProduto_Le_Fornecedores = Err
+    
+    Select Case Err
+
+        Case 45670
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146273)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function FornecedorProduto_Le(objFornecedorProduto As ClassFornecedorProduto) As Long
+'Lê dados da associacao Fornecedor-Produto à partir da chave fornecida em objFornecedorProduto. Retorna os dados em objFornecedorProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProduto_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTO_LE", X)
+    If lErro <> SUCESSO Then Error 45671
+    
+    
+    FornecedorProduto_Le = X.FornecedorProduto_Le(objFornecedorProduto)
+    
+    Exit Function
+    
+Erro_FornecedorProduto_Le:
+
+    FornecedorProduto_Le = Err
+    
+    Select Case Err
+
+        Case 45671
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146274)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function FornecedorProduto_Grava(objFornecedorProduto As ClassFornecedorProduto, iPadrao As Integer) As Long
+'Grava a associação Produto X Fornecedor
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProduto_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45672
+    
+    
+    FornecedorProduto_Grava = X.FornecedorProduto_Grava(objFornecedorProduto, iPadrao)
+    
+    Exit Function
+    
+Erro_FornecedorProduto_Grava:
+
+    FornecedorProduto_Grava = Err
+    
+    Select Case Err
+
+        Case 45672
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146275)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function FornecedorProduto_Exclui(objFornecedorProduto As ClassFornecedorProduto) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProduto_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTO_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45673
+    
+    
+    FornecedorProduto_Exclui = X.FornecedorProduto_Exclui(objFornecedorProduto)
+    
+    Exit Function
+    
+Erro_FornecedorProduto_Exclui:
+
+    FornecedorProduto_Exclui = Err
+    
+    Select Case Err
+
+        Case 45673
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146276)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ProdutoFilial_AtualizaFornPadrao(sProduto As String, lForn As Long, iPadrao As Integer, lComando1 As Long, lComando2 As Long) As Long
+'iPadrao indica se o fornecedor identificado por lForn está sendo atualizado para se tornar o fornecedor padrao ou nao.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutoFilial_AtualizaFornPadrao
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOFILIAL_ATUALIZAFORNPADRAO", X)
+    If lErro <> SUCESSO Then Error 45674
+    
+    
+    ProdutoFilial_AtualizaFornPadrao = X.ProdutoFilial_AtualizaFornPadrao(sProduto, lForn, iPadrao, lComando1, lComando2)
+    
+    Exit Function
+    
+Erro_ProdutoFilial_AtualizaFornPadrao:
+
+    ProdutoFilial_AtualizaFornPadrao = Err
+    
+    Select Case Err
+
+        Case 45674
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146277)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InventarioItens_Le(objInventario As ClassInventario) As Long
+'preenche a colecao de itens do inventario passado e a data de objInventario
+'os itens sao recuperados por ordem de numintdoc
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InventarioItens_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIOITENS_LE", X)
+    If lErro <> SUCESSO Then Error 45675
+    
+    
+    InventarioItens_Le = X.InventarioItens_Le(objInventario)
+    
+    Exit Function
+    
+Erro_InventarioItens_Le:
+
+    InventarioItens_Le = Err
+    
+    Select Case Err
+
+        Case 45675
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146278)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Inventario_Le(objInventario As ClassInventario) As Long
+'Le atributos de objInventario EXCETO colItens
+'Faz Select DISTINCT
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Inventario_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIO_LE", X)
+    If lErro <> SUCESSO Then Error 45676
+    
+    
+    Inventario_Le = X.Inventario_Le(objInventario)
+    
+    Exit Function
+    
+Erro_Inventario_Le:
+
+    Inventario_Le = Err
+    
+    Select Case Err
+
+        Case 45676
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146279)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Inventario_Grava(objInventario As ClassInventario, objContabil As ClassContabil) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Inventario_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIO_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45677
+    
+    
+    Inventario_Grava = X.Inventario_Grava(objInventario, objContabil)
+    
+    Exit Function
+    
+Erro_Inventario_Grava:
+
+    Inventario_Grava = Err
+    
+    Select Case Err
+
+        Case 45677
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146280)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function SldMesEst_Le_Custos(iMes As Integer, objSldMesEst As ClassSldMesEst) As Long
+'Le na tabela SldMesEst os custos relativos aos parametros passados : iMes e objSldMesEst
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst_Le_Custos
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST_LE_CUSTOS", X)
+    If lErro <> SUCESSO Then Error 45678
+    
+    
+    SldMesEst_Le_Custos = X.SldMesEst_Le_Custos(iMes, objSldMesEst)
+    
+    Exit Function
+    
+Erro_SldMesEst_Le_Custos:
+
+    SldMesEst_Le_Custos = Err
+    
+    Select Case Err
+
+        Case 45678
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146281)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function CustoMedioAtual_Le(sProduto As String, dCustoMedioAtual As Double, iFilialEmpresa As Integer) As Long
+'Parametros a serem passados: sProduto
+'Le o Ultimo CustoMedio do Ano-Mes aberto e retorna em dCustoMedioAtual
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CustoMedioAtual_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CUSTOMEDIOATUAL_LE", X)
+    If lErro <> SUCESSO Then Error 45679
+    
+    
+    CustoMedioAtual_Le = X.CustoMedioAtual_Le(sProduto, dCustoMedioAtual, iFilialEmpresa)
+    
+    Exit Function
+    
+Erro_CustoMedioAtual_Le:
+
+    CustoMedioAtual_Le = Err
+    
+    Select Case Err
+
+        Case 45679
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146282)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ItemInventario_Automatico_EmTrans(lCodigo As Long, ByVal iQtde As Integer) As Long
+'obtem numero interno para identificar um item de inventario
+'procurar em MATConfig por codigo = NUM_PROX_ITEM_INVENTARIO
+'TEM QUE SER CHAMADO EM TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ItemInventario_Automatico_EmTrans
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ITEMINVENTARIO_AUTOMATICO_EMTRANS", X)
+    If lErro <> SUCESSO Then Error 45680
+    
+    
+    ItemInventario_Automatico_EmTrans = X.ItemInventario_Automatico_EmTrans(lCodigo, iQtde)
+    
+    Exit Function
+    
+Erro_ItemInventario_Automatico_EmTrans:
+
+    ItemInventario_Automatico_EmTrans = Err
+    
+    Select Case Err
+
+        Case 45680
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146283)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLotePendente_Le(objInvLote As ClassInvLote) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLotePendente_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTEPENDENTE_LE", X)
+    If lErro <> SUCESSO Then Error 45685
+    
+    
+    InvLotePendente_Le = X.InvLotePendente_Le(objInvLote)
+    
+    Exit Function
+    
+Erro_InvLotePendente_Le:
+
+    InvLotePendente_Le = Err
+    
+    Select Case Err
+
+        Case 45685
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146284)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLote_Le(objInvLote As ClassInvLote) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLote_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTE_LE", X)
+    If lErro <> SUCESSO Then Error 45686
+    
+    
+    InvLote_Le = X.InvLote_Le(objInvLote)
+    
+    Exit Function
+    
+Erro_InvLote_Le:
+
+    InvLote_Le = Err
+    
+    Select Case Err
+
+        Case 45686
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146285)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InventarioPendenteItens_Le(objInventario As ClassInventario) As Long
+'preenche a colecao de itens do inventario pendente passado e a data de objInventario
+'os itens sao recuperados por ordem de numintdoc
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InventarioPendenteItens_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIOPENDENTESITENS_LE", X)
+    If lErro <> SUCESSO Then Error 45687
+    
+    
+    InventarioPendenteItens_Le = X.InventarioPendenteItens_Le(objInventario)
+    
+    Exit Function
+    
+Erro_InventarioPendenteItens_Le:
+
+    InventarioPendenteItens_Le = Err
+    
+    Select Case Err
+
+        Case 45687
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146286)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InventarioPendente_Le(objInventario As ClassInventario) As Long
+'Le atributos de objInventario EXCETO colItens
+'Faz Select DISTINCT
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InventarioPendente_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIOPENDENTE_LE", X)
+    If lErro <> SUCESSO Then Error 45688
+    
+    
+    InventarioPendente_Le = X.InventarioPendente_Le(objInventario)
+    
+    Exit Function
+    
+Erro_InventarioPendente_Le:
+
+    InventarioPendente_Le = Err
+    
+    Select Case Err
+
+        Case 45688
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146287)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InventarioPendente_Grava(objInventario As ClassInventario) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InventarioPendente_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIOPENDENTES_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45689
+    
+    
+    InventarioPendente_Grava = X.InventarioPendente_Grava(objInventario)
+    
+    Exit Function
+    
+Erro_InventarioPendente_Grava:
+
+    InventarioPendente_Grava = Err
+    
+    Select Case Err
+
+        Case 45689
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146288)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InventarioPendente_Exclui(objInventario As ClassInventario)
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InventarioPendente_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIOPENDENTE_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45690
+    
+    
+    InventarioPendente_Exclui = X.InventarioPendente_Exclui(objInventario)
+    
+    Exit Function
+    
+Erro_InventarioPendente_Exclui:
+
+    InventarioPendente_Exclui = Err
+    
+    Select Case Err
+
+        Case 45690
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146289)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLote_Critica_Atualizado(objInvLote As ClassInvLote, iLoteAtualizado As Integer) As Long
+'testa se o Invlote já foi atualizado. Se já foi iLoteAtualizado = LOTE_ATUALIZADO senao retorna 0.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLote_Critica_Atualizado
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTE_CRITICA_ATUALIZADO", X)
+    If lErro <> SUCESSO Then Error 45691
+    
+    
+    InvLote_Critica_Atualizado = X.InvLote_Critica_Atualizado(objInvLote, iLoteAtualizado)
+    
+    Exit Function
+    
+Erro_InvLote_Critica_Atualizado:
+
+    InvLote_Critica_Atualizado = Err
+    
+    Select Case Err
+
+        Case 45691
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146290)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLote_Automatico(lLote As Long) As Long
+'retorna o número do proximo lote disponivel
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLote_Automatico
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTE_AUTOMATICO", X)
+    If lErro <> SUCESSO Then Error 45692
+    
+    
+    InvLote_Automatico = X.InvLote_Automatico(lLote)
+    
+    Exit Function
+    
+Erro_InvLote_Automatico:
+
+    InvLote_Automatico = Err
+    
+    Select Case Err
+
+        Case 45692
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146291)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLotePendente_Exclui(objInvLote As ClassInvLote) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLotePendente_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTEPENDENTE_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45693
+    
+    
+    InvLotePendente_Exclui = X.InvLotePendente_Exclui(objInvLote)
+    
+    Exit Function
+    
+Erro_InvLotePendente_Exclui:
+
+    InvLotePendente_Exclui = Err
+    
+    Select Case Err
+
+        Case 45693
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146292)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLotePendente_Grava(objInvLote As ClassInvLote) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLotePendente_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTEPENDENTE_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45694
+    
+    
+    InvLotePendente_Grava = X.InvLotePendente_Grava(objInvLote)
+    
+    Exit Function
+    
+Erro_InvLotePendente_Grava:
+
+    InvLotePendente_Grava = Err
+    
+    Select Case Err
+
+        Case 45694
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146293)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLotePendente_Le_Desatualizados(iFilialEmpresa As Integer, colInvLote As Collection, iIncluiLotesAtualizando As Integer) As Long
+'Le todos os lotes com IdAtualizacao = LOTE_DESATUALIZADO ou todos pendentes
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLotePendente_Le_Desatualizados
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTEPENDENTE_LE_DESATUALIZADOS", X)
+    If lErro <> SUCESSO Then Error 45695
+    
+    
+    InvLotePendente_Le_Desatualizados = X.InvLotePendente_Le_Desatualizados(iFilialEmpresa, colInvLote, iIncluiLotesAtualizando)
+    
+    Exit Function
+    
+Erro_InvLotePendente_Le_Desatualizados:
+
+    InvLotePendente_Le_Desatualizados = Err
+    
+    Select Case Err
+
+        Case 45695
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146294)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLotePendente_Atualiza(colInvLote As Collection, iIDAtualizacao As Integer) As Long
+'atualiza o IdAtualizacao das tabelas Configuracao e LotePendente
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLotePendente_Atualiza
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTEPENDENTE_ATUALIZA", X)
+    If lErro <> SUCESSO Then Error 45696
+    
+    
+    InvLotePendente_Atualiza = X.InvLotePendente_Atualiza(colInvLote, iIDAtualizacao)
+    
+    Exit Function
+    
+Erro_InvLotePendente_Atualiza:
+
+    InvLotePendente_Atualiza = Err
+    
+    Select Case Err
+
+        Case 45696
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146295)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function InvLotePendente_Le1(iFilialEmpresa As Integer) As Long
+'Lê todos os lotes de uma FilialEmpresa
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLotePendente_Le1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTEPENDENTE_LE1", X)
+    If lErro <> SUCESSO Then Error 45697
+    
+    
+    InvLotePendente_Le1 = X.InvLotePendente_Le1(iFilialEmpresa)
+    
+    Exit Function
+    
+Erro_InvLotePendente_Le1:
+
+    InvLotePendente_Le1 = Err
+    
+    Select Case Err
+
+        Case 45697
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146296)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function OrdemDeProducao_Le_ComItens(objOrdemDeProducao As ClassOrdemDeProducao) As Long
+'carrega do bd a ordem de producao inclusive os seus itens
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_OrdemDeProducao_Le_ComItens
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ORDEMDEPRODUCAO_LE_COMITENS", X)
+    If lErro <> SUCESSO Then Error 45711
+    
+    
+    OrdemDeProducao_Le_ComItens = X.OrdemDeProducao_Le_ComItens(objOrdemDeProducao)
+    
+    Exit Function
+    
+Erro_OrdemDeProducao_Le_ComItens:
+
+    OrdemDeProducao_Le_ComItens = Err
+    
+    Select Case Err
+
+        Case 45711
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146297)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Empenhos_Excluir_ItemOP(objItemOP As ClassItemOP) As Long
+'Exclui os empenhos associados a um item de OP
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Empenhos_Excluir_ItemOP
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHOS_EXCLUIR_ITEMOP", X)
+    If lErro <> SUCESSO Then Error 45714
+    
+    
+    Empenhos_Excluir_ItemOP = X.Empenhos_Excluir_ItemOP(objItemOP)
+    
+    Exit Function
+    
+Erro_Empenhos_Excluir_ItemOP:
+
+    Empenhos_Excluir_ItemOP = Err
+    
+    Select Case Err
+
+        Case 45714
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146298)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+
+Function EstoqueProduto_AlterarQtdOP(objEstoqueProduto As ClassEstoqueProduto, dQtde As Double) As Long
+'Aumenta (ou diminui se dQtde for negativo) a qtde a ser produzida em um produto-almoxarifado
+'objEstoqueProduto.sProduto e objEstoqueProduto.iAlmoxarifado tem que estar preenchidos
+'DEVE SER CHAMADO EM TRANSACAO
+'??? sugestao: poderia ser criada uma funcao generica pela passagem do nome do campo "qtde" a ser alterado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_AlterarQtdOP
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_ALTERARQTDOP", X)
+    If lErro <> SUCESSO Then Error 45716
+    
+    
+    EstoqueProduto_AlterarQtdOP = X.EstoqueProduto_AlterarQtdOP(objEstoqueProduto, dQtde)
+    
+    Exit Function
+    
+Erro_EstoqueProduto_AlterarQtdOP:
+
+    EstoqueProduto_AlterarQtdOP = Err
+    
+    Select Case Err
+
+        Case 45716
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146299)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueProdutoCC_Le(objEstoqueProduto As ClassEstoqueProduto) As Long
+'le a conta contabil que está em estoque produto se não encontrou
+'le a conta contabil que está em almoxarifado para ser preenchida como Padrão
+'Devolve a contacontabil dentro do objEstoqueProduto.sContaContabil
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProdutoCC_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTOCC_LE", X)
+    If lErro <> SUCESSO Then Error 45728
+    
+    
+    EstoqueProdutoCC_Le = X.EstoqueProdutoCC_Le(objEstoqueProduto)
+    
+    Exit Function
+    
+Erro_EstoqueProdutoCC_Le:
+
+    EstoqueProdutoCC_Le = Err
+    
+    Select Case Err
+
+        Case 45728
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146300)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function TabelaPrecoItem_Le(objTabelaPrecoItem As ClassTabelaPrecoItem) As Long
+'Lê a tabela de preço a partir da chave fornecida em objTabelaPreco. Retorna os dados em objTabelaPreco
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TabelaPrecoItem_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TABELAPRECOITEM_LE", X)
+    If lErro <> SUCESSO Then Error 45747
+    
+    
+    TabelaPrecoItem_Le = X.TabelaPrecoItem_Le(objTabelaPrecoItem)
+    
+    Exit Function
+    
+Erro_TabelaPrecoItem_Le:
+
+    TabelaPrecoItem_Le = Err
+    
+    Select Case Err
+
+        Case 45747
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146301)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function TabelaPrecoItem_Exclui(objTabelaPrecoItem As ClassTabelaPrecoItem) As Long
+'Exclui a Tabela e Preço do BD
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TabelaPrecoItem_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TABELAPRECOITEM_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45751
+    
+    
+    TabelaPrecoItem_Exclui = X.TabelaPrecoItem_Exclui(objTabelaPrecoItem)
+    
+    Exit Function
+    
+Erro_TabelaPrecoItem_Exclui:
+
+    TabelaPrecoItem_Exclui = Err
+    
+    Select Case Err
+
+        Case 45751
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146302)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function TabelaPrecoItem_Grava(objTabelaPrecoItem As ClassTabelaPrecoItem) As Long
+'Rotina que grava Tabela de Preço Item
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TabelaPrecoItem_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TABELAPRECOITEM_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45752
+    
+    
+    TabelaPrecoItem_Grava = X.TabelaPrecoItem_Grava(objTabelaPrecoItem)
+    
+    Exit Function
+    
+Erro_TabelaPrecoItem_Grava:
+
+    TabelaPrecoItem_Grava = Err
+    
+    Select Case Err
+
+        Case 45752
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146303)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueProduto_TestaAssociacao(sProduto As String, Almoxarifado As Object) As Long
+'Verifica associação entre Produto e almoxarifado na filial corrente
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_TestaAssociacao
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_TESTAASSOCIACAO", X)
+    If lErro <> SUCESSO Then Error 45755
+    
+    
+    EstoqueProduto_TestaAssociacao = X.EstoqueProduto_TestaAssociacao(sProduto, Almoxarifado)
+    
+    Exit Function
+    
+Erro_EstoqueProduto_TestaAssociacao:
+
+    EstoqueProduto_TestaAssociacao = Err
+    
+    Select Case Err
+
+        Case 45755
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146304)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ProdutosProduzidosCustos_Grava(iAno As Integer, iMes As Integer, colProdutoCustoAtual As ColProdutoCusto) As Long
+'Atualiza os Custo de Producao dos produtos na tabela de SldMesEst
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutosProduzidosCustos_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOSPRODUZIDOSCUSTOS_GRAVA", X)
+    If lErro <> SUCESSO Then Error 45756
+    
+    
+    ProdutosProduzidosCustos_Grava = X.ProdutosProduzidosCustos_Grava(iAno, iMes, colProdutoCustoAtual)
+    
+    Exit Function
+    
+Erro_ProdutosProduzidosCustos_Grava:
+
+    ProdutosProduzidosCustos_Grava = Err
+    
+    Select Case Err
+
+        Case 45756
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146305)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ProdProduzidos_Custos_Mes_Le(iMes As Integer, iAno As Integer, colProdutosProduzidos As Collection) As Long
+'Função criada em 13/06/2001 por Luiz Gustavo de Freitas Nogueira
+'Usada para preenchimento do grid na tela 'Custo de Produção'
+'Essa função lê no BD todos os produtos produzidos dentro de iMes / iAno
+'E preenche uma coleção global à tela com os produtos lidos
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdProduzidos_Custos_Mes_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODPRODUZIDOS_CUSTOS_MESANT_LE", X)
+    If lErro <> SUCESSO Then Error 45757
+   
+    ProdProduzidos_Custos_Mes_Le = X.ProdProduzidos_Custos_Mes_Le(iMes, iAno, colProdutosProduzidos)
+    
+    Exit Function
+    
+Erro_ProdProduzidos_Custos_Mes_Le:
+
+    ProdProduzidos_Custos_Mes_Le = Err
+    
+    Select Case Err
+
+        Case 45757
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146306)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ProdProduzidos_Custos_MesAnt_Le(iMes As Integer, iAno As Integer, colProdutosProduzidos As Collection) As Long
+'Função criada em 13/06/2001 por Luiz Gustavo de Freitas Nogueira
+'Usada para preenchimento do grid na tela 'Custo de Produção'
+'Essa função recebe uma coleção os produtos para os quais se deseja obter o custo de produção
+'e lê no BD os custos (em iMes / iAno) de todos os produtos produzíveis
+'e então, para os produtos que foram passados na coleção, guarda os custos lidos
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdProduzidos_Custos_MesAnt_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODPRODUZIDOS_CUSTOS_MESANT_LE", X)
+    If lErro <> SUCESSO Then Error 45758
+    
+    ProdProduzidos_Custos_MesAnt_Le = X.ProdProduzidos_Custos_MesAnt_Le(iMes, iAno, colProdutosProduzidos)
+    
+    Exit Function
+    
+Erro_ProdProduzidos_Custos_MesAnt_Le:
+
+    ProdProduzidos_Custos_MesAnt_Le = Err
+    
+    Select Case Err
+
+        Case 45758
+        
+        Case Else
+            Call Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146307)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMesNaoApurado_Le(objEstoqueMes As ClassEstoqueMes) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMesNaoApurado_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMESNAOAPURADO_LE", X)
+    If lErro <> SUCESSO Then Error 45759
+    
+    
+    EstoqueMesNaoApurado_Le = X.EstoqueMesNaoApurado_Le(objEstoqueMes)
+    
+    Exit Function
+    
+Erro_EstoqueMesNaoApurado_Le:
+
+    EstoqueMesNaoApurado_Le = Err
+    
+    Select Case Err
+
+        Case 45759
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146308)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMes_Le_Anos(colAnos As Collection) As Long
+'Le todos os anos da tabela EstoqueMes com FilialEmpresa = giFilialEmpresa
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Le_Anos
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_LE_ANOS", X)
+    If lErro <> SUCESSO Then Error 45760
+    
+    
+    EstoqueMes_Le_Anos = X.EstoqueMes_Le_Anos(colAnos)
+    
+    Exit Function
+    
+Erro_EstoqueMes_Le_Anos:
+
+    EstoqueMes_Le_Anos = Err
+    
+    Select Case Err
+
+        Case 45760
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146309)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMes_Le_Meses(iAno As Integer, colMeses As Collection) As Long
+'Le todos os meses da tabela EstoqueMes com Ano = iAno e FilialEmpresa = giFilialEmpresa
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Le_Meses
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_LE_MESES", X)
+    If lErro <> SUCESSO Then Error 45761
+    
+    
+    EstoqueMes_Le_Meses = X.EstoqueMes_Le_Meses(iAno, colMeses)
+    
+    Exit Function
+    
+Erro_EstoqueMes_Le_Meses:
+
+    EstoqueMes_Le_Meses = Err
+    
+    Select Case Err
+
+        Case 45761
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146310)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ProdutoFilial_Le_Lock(lComando As Long, objProdutoFilial As ClassProdutoFilial) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutoFilial_Le_Lock
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOFILIAL_LE_LOCK", X)
+    If lErro <> SUCESSO Then Error 45762
+    
+    
+    ProdutoFilial_Le_Lock = X.ProdutoFilial_Le_Lock(lComando, objProdutoFilial)
+    
+    Exit Function
+    
+Erro_ProdutoFilial_Le_Lock:
+
+    ProdutoFilial_Le_Lock = Err
+    
+    Select Case Err
+
+        Case 45762
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146311)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMes_Le_Lock(lComando As Long, objEstoqueMes As ClassEstoqueMes) As Long
+'Le a tabela EstoqueMes e loca o registro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Le_Lock
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_LE_LOCK", X)
+    If lErro <> SUCESSO Then Error 45763
+    
+    
+    EstoqueMes_Le_Lock = X.EstoqueMes_Le_Lock(lComando, objEstoqueMes)
+    
+    Exit Function
+    
+Erro_EstoqueMes_Le_Lock:
+
+    EstoqueMes_Le_Lock = Err
+    
+    Select Case Err
+
+        Case 45763
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146312)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function MovEstoque_Le_ProdutoMes(iMes As Integer, iAno As Integer, objItemMovEstoque As ClassItemMovEstoque) As Long
+'Le o primeiro Movimento de Estoque do Mes-Ano em questão
+'com parametros e o sProduto passado dentro do objMovEstoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Le_ProdutoMes
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_LE_PRODUTOMES", X)
+    If lErro <> SUCESSO Then Error 45764
+    
+    
+    MovEstoque_Le_ProdutoMes = X.MovEstoque_Le_ProdutoMes(iMes, iAno, objItemMovEstoque)
+    
+    Exit Function
+    
+Erro_MovEstoque_Le_ProdutoMes:
+
+    MovEstoque_Le_ProdutoMes = Err
+    
+    Select Case Err
+
+        Case 45764
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146313)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_Le_Almoxarifados_Filial(sProduto As String, colAlmoxarifados As Collection) As Long
+'Lê todos os Almoxarifados do Produto para a filial corrente ou EMPRESA_TODA
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_Almoxarifados_Filial
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_ALMOXARIFADOS_FILIAL", X)
+    If lErro <> SUCESSO Then Error 45836
+    
+    
+    Produto_Le_Almoxarifados_Filial = X.Produto_Le_Almoxarifados_Filial(sProduto, colAlmoxarifados)
+    
+    Exit Function
+    
+Erro_Produto_Le_Almoxarifados_Filial:
+
+    Produto_Le_Almoxarifados_Filial = Err
+    
+    Select Case Err
+
+        Case 45836
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146314)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueProduto_Exclui(objEstoqueProduto As ClassEstoqueProduto) As Long
+'Exclui Estoque X Produto passado como parâmetro
+'??? nao exclui sldmesest ???? nao testa se tem movto ? Acho que deveria ser a exclusao igual a de estoqueinicial
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Exclui
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 45837
+    
+    
+    EstoqueProduto_Exclui = X.EstoqueProduto_Exclui(objEstoqueProduto)
+    
+    Exit Function
+    
+Erro_EstoqueProduto_Exclui:
+
+    EstoqueProduto_Exclui = Err
+    
+    Select Case Err
+
+        Case 45837
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146315)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueProduto_AtualizaAlmoxarifado(objEstoqueProduto As ClassEstoqueProduto, iAlmoxarifadoPadraoFilial As Integer) As Long
+'iAlmoxarifadoPadraoFilial com 1(um) ou 0(zero) p/indicar se o almoxarifado é ou nao o padrao p/(filial,produto)
+'   permitirá alterar o almoxarifado padrao a nivel de filialEmpresa ou EMPRESA_TODA,
+'   (dependendo de como o usuario tiver se logado), e a localizacao fisica no almoxarifado
+'       se o registro nao existir em EstoqueProduto sera criado
+'   o almoxarifado padrao ficara na tabela ProdutoFilial
+'       se nao existir o reg este sera criado
+'??? será que deve ter esta funcionalidade toda ?
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_AtualizaAlmoxarifado
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_ATUALIZAALMOXARIFADO", X)
+    If lErro <> SUCESSO Then Error 45838
+    
+    
+    EstoqueProduto_AtualizaAlmoxarifado = X.EstoqueProduto_AtualizaAlmoxarifado(objEstoqueProduto, iAlmoxarifadoPadraoFilial)
+    
+    Exit Function
+    
+Erro_EstoqueProduto_AtualizaAlmoxarifado:
+
+    EstoqueProduto_AtualizaAlmoxarifado = Err
+    
+    Select Case Err
+
+        Case 45838
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146316)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_ExisteProduto(iExiste As Integer) As Long
+'verifica se tem algum produto cadastrado.
+'se existir iExiste = POSSUI_PRODUTO , caso contrario iExiste = NAO_POSSUI_PRODUTO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_ExisteProduto
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_EXISTEPRODUTO", X)
+    If lErro <> SUCESSO Then Error 44843
+    
+    
+    Produto_ExisteProduto = X.Produto_ExisteProduto(iExiste)
+    
+    Exit Function
+    
+Erro_Produto_ExisteProduto:
+
+    Produto_ExisteProduto = Err
+    
+    Select Case Err
+
+        Case 44843
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146317)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Segmento_Grava_Produto(colSegmentos As Collection) As Long
+'grava os registros da colecao na tabela Segmento
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Segmento_Grava_Produto
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SEGMENTO_GRAVA_PRODUTO", X)
+    If lErro <> SUCESSO Then Error 44844
+    
+    
+    Segmento_Grava_Produto = X.Segmento_Grava_Produto(colSegmentos)
+    
+    Exit Function
+    
+Erro_Segmento_Grava_Produto:
+
+    Segmento_Grava_Produto = Err
+    
+    Select Case Err
+
+        Case 44844
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146318)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Segmento_Grava_Produto_Trans(colSegmentos As Collection) As Long
+'grava os registros da colecao na tabela Segmento de Produto
+'IMPORTANTE: TEM QUE SER CHAMADO EM TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Segmento_Grava_Produto_Trans
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SEGMENTO_GRAVA_PRODUTO_TRANS", X)
+    If lErro <> SUCESSO Then Error 44845
+    
+    
+    Segmento_Grava_Produto_Trans = X.Segmento_Grava_Produto_Trans(colSegmentos)
+    
+    Exit Function
+    
+Erro_Segmento_Grava_Produto_Trans:
+
+    Segmento_Grava_Produto_Trans = Err
+    
+    Select Case Err
+
+        Case 44845
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146319)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Empenho_Le_SemCodigo(objEmpenho As ClassEmpenho) As Long
+'Lê os dados de Empenho à partir da chave candidata fornecida em objEmpenho, com os seguintes campos preenchidos:
+'objEmpenho.iFilialEmpresa, objEmpenho.sCodigoOP, objEmpenho.iItemOP, objEmpenho.sProduto, objEmpenho.iAlmoxarifado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Empenho_Le_SemCodigo
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHO_LE_SEMCODIGO", X)
+    If lErro <> SUCESSO Then Error 45879
+    
+    
+    Empenho_Le_SemCodigo = X.Empenho_Le_SemCodigo(objEmpenho)
+    
+    Exit Function
+    
+Erro_Empenho_Le_SemCodigo:
+
+    Empenho_Le_SemCodigo = Err
+    
+    Select Case Err
+
+        Case 45879
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146320)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Kit_Le_Empenho(objKit As ClassKit) As Long
+'Lê uma versão mais recente na tabela de Kits de Produtos à partir do produto passado em objKit
+'e devolve os dados do Kit em objKit
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Kit_Le_Empenho
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_KIT_LE_EMPENHO", X)
+    If lErro <> SUCESSO Then Error 45880
+    
+    
+    Kit_Le_Empenho = X.Kit_Le_Empenho(objKit)
+    
+    Exit Function
+    
+Erro_Kit_Le_Empenho:
+
+    Kit_Le_Empenho = Err
+    
+    Select Case Err
+
+        Case 45880
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146321)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function AlmoxarifadoPadrao_Le_NomeReduzido(sProduto As String, sNomeReduzidoAlmox As String) As Long
+'Retorna o Nome reduzido do Almoxarifado Padrão do Produto em Questão com a Filial Empresa
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_AlmoxarifadoPadrao_Le_NomeReduzido
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADOPADRAO_LE_NOMEREDUZIDO", X)
+    If lErro <> SUCESSO Then Error 45962
+    
+    
+    AlmoxarifadoPadrao_Le_NomeReduzido = X.AlmoxarifadoPadrao_Le_NomeReduzido(sProduto, sNomeReduzidoAlmox)
+    
+    Exit Function
+    
+Erro_AlmoxarifadoPadrao_Le_NomeReduzido:
+
+    AlmoxarifadoPadrao_Le_NomeReduzido = Err
+    
+    Select Case Err
+
+        Case 45962
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146322)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMes_Insere(objEstoqueMes As ClassEstoqueMes) As Long
+'Insere um novo mes aberto na tabela de EstoqueMes
+'IMPORTANTE: TEM QUE SER CHAMADO EM TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Insere
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_INSERE", X)
+    If lErro <> SUCESSO Then Error 44967
+    
+    
+    EstoqueMes_Insere = X.EstoqueMes_Insere(objEstoqueMes)
+    
+    Exit Function
+    
+Erro_EstoqueMes_Insere:
+
+    EstoqueMes_Insere = Err
+    
+    Select Case Err
+
+        Case 44967
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146323)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMes_Le_Aberto(objEstoqueMes As ClassEstoqueMes) As Long
+'Le o mes em aberto do Estoque para a filial em questão (giFilialEmpresa).
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Le_Aberto
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_LE_ABERTO", X)
+    If lErro <> SUCESSO Then Error 55029
+    
+    
+    EstoqueMes_Le_Aberto = X.EstoqueMes_Le_Aberto(objEstoqueMes)
+    
+    Exit Function
+    
+Erro_EstoqueMes_Le_Aberto:
+
+    EstoqueMes_Le_Aberto = Err
+    
+    Select Case Err
+
+        Case 55029
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146324)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMes_Le_PrimeiroAnoMes(objEstoqueMes As ClassEstoqueMes) As Long
+'Le o primeiro ano/mes do Estoque para a filial em questão (giFilialEmpresa).
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Le_PrimeiroAnoMes
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_LE_PRIMEIROANOMES", X)
+    If lErro <> SUCESSO Then Error 55036
+    
+    
+    EstoqueMes_Le_PrimeiroAnoMes = X.EstoqueMes_Le_PrimeiroAnoMes(objEstoqueMes)
+    
+    Exit Function
+    
+Erro_EstoqueMes_Le_PrimeiroAnoMes:
+
+    EstoqueMes_Le_PrimeiroAnoMes = Err
+    
+    Select Case Err
+
+        Case 55036
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146325)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function CustoStandard_Le(sProduto As String, dCustoStandard As Double, iFilialEmpresa As Integer) As Long
+'Parametros a serem passados: sProduto
+'Le o CustoStandard do Ano-Mes aberto e retorna em dCustoStandard
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CustoStandard_Le
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CUSTOSTANDARD_LE", X)
+    If lErro <> SUCESSO Then Error 55042
+    
+    
+    CustoStandard_Le = X.CustoStandard_Le(sProduto, dCustoStandard, iFilialEmpresa)
+    
+    Exit Function
+    
+Erro_CustoStandard_Le:
+
+    CustoStandard_Le = Err
+    
+    Select Case Err
+
+        Case 55042
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146326)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Public Function Calcula_Custo(dCusto As Double, ByVal iFilialEmpresa As Integer, ByVal iApropriacaoCusto As Integer, ByVal iAnoEstAberto As Integer, ByVal iMesEstAberto As Integer, ByVal iAnoEstApurado As Integer, ByVal iMesEstApurado As Integer, ByVal sProduto As String) As Long
+'devolve o custo do produto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Calcula_Custo
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CALCULA_CUSTO", X)
+    If lErro <> SUCESSO Then Error 55056
+    
+    
+    Calcula_Custo = X.Calcula_Custo(dCusto, iFilialEmpresa, iApropriacaoCusto, iAnoEstAberto, iMesEstAberto, iAnoEstApurado, iMesEstApurado, sProduto)
+    
+    Exit Function
+    
+Erro_Calcula_Custo:
+
+    Calcula_Custo = Err
+    
+    Select Case Err
+
+        Case 55056
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146327)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Sub Converte_NaturezaProduto(ByVal iNatureza As Integer, sNatureza As String)
+'converte a natureza do produto do valor inteiro para o seu correspondente textual (materia prima/produto intermadiario, ...)
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Converte_NaturezaProduto
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CONVERTE_NATUREZAPRODUTO", X)
+    If lErro <> SUCESSO Then Error 55168
+    
+    
+    Call X.Converte_NaturezaProduto(iNatureza, sNatureza)
+    
+    Exit Sub
+    
+Erro_Converte_NaturezaProduto:
+
+    Select Case Err
+
+        Case 55168
+            
+    
+        Case Else
+            Call Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146328)
+        
+    End Select
+    
+    Exit Sub
+    
+End Sub
+
+Function Produto_Lock_Shared(lComando As Long, objProduto As ClassProduto) As Long
+'Lê o faz o "lock compartilhado" no Produto passado por parâmetro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Lock_Shared
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LOCK_SHARED", X)
+    If lErro <> SUCESSO Then Error 55236
+    
+    
+    Produto_Lock_Shared = X.Produto_Lock_Shared(lComando, objProduto)
+
+    Exit Function
+    
+Erro_Produto_Lock_Shared:
+    
+    Produto_Lock_Shared = Err
+    
+    Select Case Err
+
+        Case 55236
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146329)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function OrdemDeProducao_Baixa(sOPCodigo As String) As Long
+'Baixa a ordem de producao, seus itens e seus empenhos
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_OrdemDeProducao_Baixa
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ORDEMDEPRODUCAO_BAIXA", X)
+    If lErro <> SUCESSO Then Error 55274
+    
+    
+    OrdemDeProducao_Baixa = X.OrdemDeProducao_Baixa(sOPCodigo)
+
+    Exit Function
+    
+Erro_OrdemDeProducao_Baixa:
+    
+    OrdemDeProducao_Baixa = Err
+    
+    Select Case Err
+
+        Case 55274
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146330)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Empenhos_Excluir_ItemOP1(objItemOP As ClassItemOP, lComando As Long, lComando1 As Long) As Long
+'Exclui os empenhos associados a um item de OP
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Empenhos_Excluir_ItemOP1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHOS_EXCLUIR_ITEMOP1", X)
+    If lErro <> SUCESSO Then Error 55275
+    
+    
+    Empenhos_Excluir_ItemOP1 = X.Empenhos_Excluir_ItemOP1(objItemOP, lComando, lComando1)
+
+    Exit Function
+    
+Erro_Empenhos_Excluir_ItemOP1:
+    
+    Empenhos_Excluir_ItemOP1 = Err
+    
+    Select Case Err
+
+        Case 55275
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146331)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function OrdemDeProducao_Baixa1(alComando() As Long, sOPCodigo As String) As Long
+'Verifica se todos os itens da OP estão baixados, se tiverem ==> Baixa a ordem de producao, seus itens e seus empenhos
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_OrdemDeProducao_Baixa1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ORDEMDEPRODUCAO_BAIXA1", X)
+    If lErro <> SUCESSO Then Error 55297
+    
+    
+    OrdemDeProducao_Baixa1 = X.OrdemDeProducao_Baixa1(alComando, sOPCodigo)
+
+    Exit Function
+    
+Erro_OrdemDeProducao_Baixa1:
+    
+    OrdemDeProducao_Baixa1 = Err
+    
+    Select Case Err
+
+        Case 55297
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146332)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EmpenhoQtdRequisitada_Grava(lComando As Long, lComando1 As Long, objMovEstoque As ClassMovEstoque) As Long
+'atualiza o valor da quantidade requisitada no registro de empenho
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EmpenhoQtdRequisitada_Grava
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_EMPENHOQTDREQUISITADA_GRAVA", X)
+    If lErro <> SUCESSO Then Error 55304
+    
+    
+    EmpenhoQtdRequisitada_Grava = X.EmpenhoQtdRequisitada_Grava(lComando, lComando1, objMovEstoque)
+
+    Exit Function
+    
+Erro_EmpenhoQtdRequisitada_Grava:
+    
+    EmpenhoQtdRequisitada_Grava = Err
+    
+    Select Case Err
+
+        Case 55304
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146333)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_ReqProducao_Grava1(lComando As Long, lComando1 As Long, lComando2 As Long, objItemMovEstoque As ClassItemMovEstoque) As Long
+'Grava o Movimento de Estoque de Requisição de Produção
+'IMPORTANTE: TEM QUE SER CHAMADO DENTRO DE TRANSACAO
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_ReqProducao_Grava1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_REQPRODUCAO_GRAVA1", X)
+    If lErro <> SUCESSO Then Error 55310
+    
+    
+    MovEstoque_ReqProducao_Grava1 = X.MovEstoque_ReqProducao_Grava1(lComando, lComando1, lComando2, objItemMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoque_ReqProducao_Grava1:
+    
+    MovEstoque_ReqProducao_Grava1 = Err
+    
+    Select Case Err
+
+        Case 55310
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146334)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function InventarioPendente_Critica_Lote(objInvLote As ClassInvLote, iNumIguais As Integer) As Long
+'verifica se o numero de lotes em InventarioLotePedente é igual ao de InvLotePendente
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InventarioPendente_Critica_Lote
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIOPENDENTE_CRITICA_LOTE", X)
+    If lErro <> SUCESSO Then Error 54707
+    
+    
+    InventarioPendente_Critica_Lote = X.InventarioPendente_Critica_Lote(objInvLote, iNumIguais)
+
+    Exit Function
+    
+Erro_InventarioPendente_Critica_Lote:
+    
+    InventarioPendente_Critica_Lote = Err
+    
+    Select Case Err
+
+        Case 54707
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146335)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function InvLotePendente_Atualiza1(objInvLotePendente As ClassInvLote) As Long
+'Atualiza o campo de InvLotePendente que indica o numero de lotes "NumItensAtual"
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_InvLotePendente_Atualiza1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVLOTEPENDENTE_ATUALIZA1", X)
+    If lErro <> SUCESSO Then Error 54708
+    
+    
+    InvLotePendente_Atualiza1 = X.InvLotePendente_Atualiza1(objInvLotePendente)
+
+    Exit Function
+    
+Erro_InvLotePendente_Atualiza1:
+    
+    InvLotePendente_Atualiza1 = Err
+    
+    Select Case Err
+
+        Case 54708
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146336)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Kit_Le_Produto(objKit As ClassKit, colKits As Collection) As Long
+'Função que le todos os kits, produtos iguais ao codigo passado e diferente da versao passada
+'retornado na coleção
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Kit_Le_Produto
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_KIT_LE_PRODUTO", X)
+    If lErro <> SUCESSO Then Error 54709
+    
+    
+    Kit_Le_Produto = X.Kit_Le_Produto(objKit, colKits)
+
+    Exit Function
+    
+Erro_Kit_Le_Produto:
+    
+    Kit_Le_Produto = Err
+    
+    Select Case Err
+
+        Case 54709
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146337)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function EstoqueProduto_Le_Todos_Almoxarifados(objEstoqueProduto As ClassEstoqueProduto) As Long
+'Lê a soma das Quantidades de todos Almoxarifados que pertence ao Produto passado em objEstoqueProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Le_Todos_Almoxarifados
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_LE_TODOS_ALMOXARIFADO", X)
+    If lErro <> SUCESSO Then Error 54710
+    
+    
+    EstoqueProduto_Le_Todos_Almoxarifados = X.EstoqueProduto_Le_Todos_Almoxarifados(objEstoqueProduto)
+
+    Exit Function
+    
+Erro_EstoqueProduto_Le_Todos_Almoxarifados:
+    
+    EstoqueProduto_Le_Todos_Almoxarifados = Err
+    
+    Select Case Err
+
+        Case 54710
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146338)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoqueItens_Le1(objMovEstoque As ClassMovEstoque, ByVal iTipoMov As Integer) As Long
+'Le os Ítens do MovimentodeEstoque relacionados ao Tipo de Movimento passado como parametro e que possuem o codigo especificado em objMovEstoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoqueItens_Le1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUEITENS_LE1", X)
+    If lErro <> SUCESSO Then Error 55382
+    
+    
+    MovEstoqueItens_Le1 = X.MovEstoqueItens_Le1(objMovEstoque, iTipoMov)
+
+    Exit Function
+    
+Erro_MovEstoqueItens_Le1:
+    
+    MovEstoqueItens_Le1 = Err
+    
+    Select Case Err
+
+        Case 55382
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146339)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoqueItem_Le_Primeiro(objItemMovEstoque As ClassItemMovEstoque) As Long
+'Lê o primeiro item correspondentes a partir da FilialEmpresa, Código e retorna no colItens do objeto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoqueItem_Le_Primeiro
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUEITEM_LE_PRIMEIRO", X)
+    If lErro <> SUCESSO Then Error 55406
+    
+    
+    MovEstoqueItem_Le_Primeiro = X.MovEstoqueItem_Le_Primeiro(objItemMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoqueItem_Le_Primeiro:
+    
+    MovEstoqueItem_Le_Primeiro = Err
+    
+    Select Case Err
+
+        Case 55406
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146340)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoque_Le_NomeTela(objMovEstoque As ClassMovEstoque, sTela As String) As Long
+'Esta função retorna o nome da tela
+'Relacionada com o Movimento Estoque passado no parametro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Le_NomeTela
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_LE_NOMETELA", X)
+    If lErro <> SUCESSO Then Error 55407
+    
+    
+    MovEstoque_Le_NomeTela = X.MovEstoque_Le_NomeTela(objMovEstoque, sTela)
+
+    Exit Function
+    
+Erro_MovEstoque_Le_NomeTela:
+    
+    MovEstoque_Le_NomeTela = Err
+    
+    Select Case Err
+
+        Case 55407
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146341)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoque_Le_NomeTela_Inventario(objMovEstoque As ClassMovEstoque, sTela As String, sCodigoInv As String) As Long
+'Esta função retorna o nome da tela e Codigo do Inventario
+'Relacionada com o Movimento Estoque passado no parametro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Le_NomeTela_Inventario
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_LE_NOMETELA_INVENTARIO", X)
+    If lErro <> SUCESSO Then Error 55408
+    
+    
+    MovEstoque_Le_NomeTela_Inventario = X.MovEstoque_Le_NomeTela_Inventario(objMovEstoque, sTela, sCodigoInv)
+
+    Exit Function
+    
+Erro_MovEstoque_Le_NomeTela_Inventario:
+    
+    MovEstoque_Le_NomeTela_Inventario = Err
+    
+    Select Case Err
+
+        Case 55408
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146342)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function Calcula_Custo_Atual(objProduto As ClassProduto, dCusto As Double, sTipo As String) As Long
+'calcula o custo atual do produto passado como parametro e devolve-o de dCusto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Calcula_Custo_Atual
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CALCULA_CUSTO_ATUAL", X)
+    If lErro <> SUCESSO Then Error 55429
+    
+    
+    Calcula_Custo_Atual = X.Calcula_Custo_Atual(objProduto, dCusto, sTipo)
+    
+    Exit Function
+    
+Erro_Calcula_Custo_Atual:
+
+    Calcula_Custo_Atual = Err
+    
+    Select Case Err
+
+        Case 55429
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146343)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueProduto_Le_Almoxarifados1(sProduto As String, colAlmoxarifados As Collection) As Long
+'Lê todos os Almoxarifados do Produto para todas as filiais e seus nomes reduzidos
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Le_Almoxarifados1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEPRODUTO_LE_ALMOXARIFADOS1", X)
+    If lErro <> SUCESSO Then Error 55491
+    
+    
+    EstoqueProduto_Le_Almoxarifados1 = X.EstoqueProduto_Le_Almoxarifados1(sProduto, colAlmoxarifados)
+    
+    Exit Function
+    
+Erro_EstoqueProduto_Le_Almoxarifados1:
+
+    EstoqueProduto_Le_Almoxarifados1 = Err
+    
+    Select Case Err
+
+        Case 55491
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146344)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_ObterRelMesMedia12Meses(sProduto As String, iFilialEmpresa As Integer, dConsumoMedioQtde As Double, dVendaMediaQtde As Double, alComando() As Long) As Long
+'IMPORTANTE: especifica para classe ClassRelMesEst de apoio a execucao de relatorios
+'obtem consumo medio de um produto em uma filial considerando os 12 meses anteriores ao atual
+'Os meses anteriores a implantacao do produto na filial sao desprezados
+'ATENCAO: se o alComando() vier zerado, será aberto nesta funcao e ficará aberto.
+'poderia retornar -1 p/indicar que nao houve consumo calculado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_ObterRelMesMedia12Meses
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_OBTERRELMESMEDIA12MESES", X)
+    If lErro <> SUCESSO Then Error 54817
+    
+    
+    Produto_ObterRelMesMedia12Meses = X.Produto_ObterRelMesMedia12Meses(sProduto, iFilialEmpresa, dConsumoMedioQtde, dVendaMediaQtde, alComando())
+    
+    Exit Function
+    
+Erro_Produto_ObterRelMesMedia12Meses:
+
+    Produto_ObterRelMesMedia12Meses = Err
+    
+    Select Case Err
+
+        Case 54817
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146345)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_ObterRelMesEstMedio(sProduto As String, dtDataInicial As Date, dtDataFinal As Date, iFilialEmpresa As Integer, dQuantidadeMedia As Double, dValorMedio As Double, alComando() As Long) As Long
+'IMPORTANTE: especifica para classe ClassRelMesEst de apoio a execucao de relatorios
+'Obtém a quantidade e o valores medios de um Produto num periodo para uma filial
+'ATENCAO: se o alComando() vier zerado, será aberto nesta funcao e ficará aberto.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_ObterRelMesEstMedio
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_OBTERRELMESESTMEDIO", X)
+    If lErro <> SUCESSO Then Error 54818
+    
+    
+    Produto_ObterRelMesEstMedio = X.Produto_ObterRelMesEstMedio(sProduto, dtDataInicial, dtDataFinal, iFilialEmpresa, dQuantidadeMedia, dValorMedio, alComando())
+    
+    Exit Function
+    
+Erro_Produto_ObterRelMesEstMedio:
+
+    Produto_ObterRelMesEstMedio = Err
+    
+    Select Case Err
+
+        Case 54818
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146346)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_ObterRelMesEst(sProduto As String, dtDataInicial As Date, dtDataFinal As Date, iFilialEmpresa As Integer, dQuantidadeVendida As Double, dCustoTotal As Double, dQuantidadeEntrada As Double, dQuantidadeSaida As Double, dValorEntrada As Double, dValorSaida As Double, lComando As Long) As Long
+'IMPORTANTE: especifica para classe ClassRelMesEst de apoio a execucao de relatorios
+'Obtém a quantidade vendida, o custo total (custo do material vendido) e outros dados do Produto correspondentes a um periodo
+'ATENCAO: se o lComando vier zerado, será aberto nesta funcao e ficará aberto.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_ObterRelMesEst
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_OBTERRELMESEST", X)
+    If lErro <> SUCESSO Then Error 54819
+    
+    
+    Produto_ObterRelMesEst = X.Produto_ObterRelMesEst(sProduto, dtDataInicial, dtDataFinal, iFilialEmpresa, dQuantidadeVendida, dCustoTotal, dQuantidadeEntrada, dQuantidadeSaida, dValorEntrada, dValorSaida, lComando)
+    
+    Exit Function
+    
+Erro_Produto_ObterRelMesEst:
+
+    Produto_ObterRelMesEst = Err
+    
+    Select Case Err
+
+        Case 54819
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146347)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_ObterRelMesFat(sProduto As String, dtDataInicial As Date, dtDataFinal As Date, iFilialEmpresa As Integer, dValorFaturado As Double, dDesconto As Double, dQuantidadePedida As Double, dQuantidadeFaturada As Double, dQuantidadeDevolvida As Double, lComando As Long) As Long
+'IMPORTANTE: especifica para classe ClassRelMesFat de apoio a execucao de relatorios
+'Obtém as quantidades pedida e faturada, o desconto e valor total faturado por Produto entre datas
+'ATENCAO: se o lComando vier zerado, será aberto nesta funcao e ficará aberto.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_ObterRelMesFat
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_OBTERRELMESFAT", X)
+    If lErro <> SUCESSO Then Error 54820
+    
+    
+    Produto_ObterRelMesFat = X.Produto_ObterRelMesFat(sProduto, dtDataInicial, dtDataFinal, iFilialEmpresa, dValorFaturado, dDesconto, dQuantidadePedida, dQuantidadeFaturada, dQuantidadeDevolvida, lComando)
+    
+    Exit Function
+    
+Erro_Produto_ObterRelMesFat:
+
+    Produto_ObterRelMesFat = Err
+    
+    Select Case Err
+
+        Case 54820
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146348)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_ObterRelQtdSldIni(sProduto As String, iAlmoxarifado As Integer, dtDataInicial As Date, dtDataFinal As Date, dQuantInicial As Double, dValorInicial As Double, alComando() As Long, ByVal iApropriacaoCusto As Integer, ByVal iAnoEstApurado As Integer, ByVal iMesEstApurado As Integer) As Long
+'IMPORTANTE: especifica para classe ClassRelMesEstAlm de apoio a execucao de relatorios
+'Obtém a quantidade inicial e o valor inicial do Produto/Almoxarifado correspondentes até a data anterior a data inicial
+'ATENCAO: se o lComando vier zerado, será aberto nesta funcao e ficará aberto.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_ObterRelQtdSldIni
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_OBTERRELQTDSLDINI", X)
+    If lErro <> SUCESSO Then Error 54821
+    
+    
+    Produto_ObterRelQtdSldIni = X.Produto_ObterRelQtdSldIni(sProduto, iAlmoxarifado, dtDataInicial, dtDataFinal, dQuantInicial, dValorInicial, alComando(), iApropriacaoCusto, iAnoEstApurado, iMesEstApurado)
+    
+    Exit Function
+    
+Erro_Produto_ObterRelQtdSldIni:
+
+    Produto_ObterRelQtdSldIni = Err
+    
+    Select Case Err
+
+        Case 54821
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146349)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_ObterDataUltEmpenho(sProduto As String, dtDataUltEmpenho As Date, lComando As Long) As Long
+'obtem a data do ultimo empenho de um produto, se nao houver nenhum empenho retornar DATA_NULA
+'ATENCAO: se o lComando vier zerado, será aberto nesta funcao e ficará aberto.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_ObterDataUltEmpenho
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_OBTERDATAULTEMPENHO", X)
+    If lErro <> SUCESSO Then Error 54822
+    
+    
+    Produto_ObterDataUltEmpenho = X.Produto_ObterDataUltEmpenho(sProduto, dtDataUltEmpenho, lComando)
+    
+    Exit Function
+    
+Erro_Produto_ObterDataUltEmpenho:
+
+    Produto_ObterDataUltEmpenho = Err
+    
+    Select Case Err
+
+        Case 54822
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146350)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function TabelaDePrecoItens_Le_DatasVigentes(objTabelaPrecoItem As ClassTabelaPrecoItem, colDatasVigentes As Collection) As Long
+'Lê todas as Datas De Vigência colocando em ordem na Colecao
+'Parametros: Produto, Tabela, FilialEmpresa
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TabelaDePrecoItens_Le_DatasVigentes
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TABELADEPRECOITENS_LE_DATASVIGENTES", X)
+    If lErro <> SUCESSO Then Error 54917
+    
+    
+    TabelaDePrecoItens_Le_DatasVigentes = X.TabelaDePrecoItens_Le_DatasVigentes(objTabelaPrecoItem, colDatasVigentes)
+    
+    Exit Function
+    
+Erro_TabelaDePrecoItens_Le_DatasVigentes:
+
+    TabelaDePrecoItens_Le_DatasVigentes = Err
+    
+    Select Case Err
+
+        Case 54917
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146351)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function TabelaPrecoItem_Le_DataVigente(objTabelaPrecoItem As ClassTabelaPrecoItem) As Long
+'Lê a tabela de preço a partir da chave fornecida em objTabelaPreco. Retorna os dados em objTabelaPreco
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_TabelaPrecoItem_Le_DataVigente
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_TABELAPRECOITEM_LE_DATAVIGENTE", X)
+    If lErro <> SUCESSO Then Error 54918
+    
+    
+    TabelaPrecoItem_Le_DataVigente = X.TabelaPrecoItem_Le_DataVigente(objTabelaPrecoItem)
+    
+    Exit Function
+    
+Erro_TabelaPrecoItem_Le_DataVigente:
+
+    TabelaPrecoItem_Le_DataVigente = Err
+    
+    Select Case Err
+
+        Case 54918
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146352)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_Le_SituacaoTrib(sSituacaoTrib As String, sProduto As String, iTipoTribICMS As Integer, lComando As Long) As Long
+'Le a Situacao Tributaria
+'Concatena a OrigemMercadoria da Tabela de Produtos com TipoTribCst da Tabela de TiposTribICMS
+'IMPORTANTE : O lComando somente é aberto se vier aberto e permanecerá fechado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_SituacaoTrib
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_SITUACAOTRIB", X)
+    If lErro <> SUCESSO Then Error 54928
+    
+    Produto_Le_SituacaoTrib = X.Produto_Le_SituacaoTrib(sSituacaoTrib, sProduto, iTipoTribICMS, lComando)
+    
+    Exit Function
+    
+Erro_Produto_Le_SituacaoTrib:
+
+    Produto_Le_SituacaoTrib = Err
+    
+    Select Case Err
+
+        Case 54928
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146353)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function SldMesEstAlm_Atualiza_Ano(objTela As Object, objSldMesEst As ClassSldMesEst, iCancela As Integer) As Long
+'Atualiza Ano, abrindo um novo ano(Exercicio) para os produtos/almoxarifado da Filial em questao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm_Atualiza_Ano
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM_ATUALIZA_ANO", X)
+    If lErro <> SUCESSO Then Error 60525
+    
+    SldMesEstAlm_Atualiza_Ano = X.SldMesEstAlm_Atualiza_Ano(objTela, objSldMesEst, iCancela)
+    
+    Exit Function
+    
+Erro_SldMesEstAlm_Atualiza_Ano:
+
+    SldMesEstAlm_Atualiza_Ano = Err
+    
+    Select Case Err
+
+        Case 60525
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146354)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function SldMesEstAlm_Atualiza_Mes(objTela As Object, iMes As Integer, objSldMesEst As ClassSldMesEst, iCancela As Integer, objEstoque As ClassEstoqueMes) As Long
+'Atualiza somente os mes, durante o decorrer do ano
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm_Atualiza_Mes
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM_ATUALIZA_MES", X)
+    If lErro <> SUCESSO Then Error 60526
+    
+    SldMesEstAlm_Atualiza_Mes = X.SldMesEstAlm_Atualiza_Mes(objTela, iMes, objSldMesEst, iCancela, objEstoque)
+    
+    Exit Function
+    
+Erro_SldMesEstAlm_Atualiza_Mes:
+
+    SldMesEstAlm_Atualiza_Mes = Err
+    
+    Select Case Err
+
+        Case 60526
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146355)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Estoque_Grava_Trans(objProdutoFilial As ClassProdutoFilial, iControleEstoque As Integer) As Long
+'Grava o Estoque do Produto da Filial
+'ATENÇÃO: Tem que ser chamado dentro de Transação
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Estoque_Grava_Trans
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUE_GRAVA_TRANS", X)
+    If lErro <> SUCESSO Then Error 59858
+    
+    Estoque_Grava_Trans = X.Estoque_Grava_Trans(objProdutoFilial, iControleEstoque)
+    
+    Exit Function
+    
+Erro_Estoque_Grava_Trans:
+
+    Estoque_Grava_Trans = Err
+    
+    Select Case Err
+
+        Case 59858
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146356)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_Grava_Trans(objProduto As ClassProduto, colTabelaPrecoItem As Collection) As Long
+'Grava ou Alterar o Produto passado
+'ATENÇÃO: Tem que ser chamado dentro de Transação
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Grava_Trans
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_GRAVA_TRANS", X)
+    If lErro <> SUCESSO Then Error 59859
+    
+    Produto_Grava_Trans = X.Produto_Grava_Trans(objProduto, colTabelaPrecoItem)
+    
+    Exit Function
+    
+Erro_Produto_Grava_Trans:
+
+    Produto_Grava_Trans = Err
+    
+    Select Case Err
+
+        Case 59859
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146357)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ProdutoFiliais_Le(sProduto As String, colProdutoFilial As Collection) As Long
+'Passa o Produto e obtem uma coleção do Produto para todas as Filiais
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutoFiliais_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOFILIAIS_LE", X)
+    If lErro <> SUCESSO Then Error 59860
+    
+    ProdutoFiliais_Le = X.ProdutoFiliais_Le(sProduto, colProdutoFilial)
+    
+    Exit Function
+    
+Erro_ProdutoFiliais_Le:
+
+    ProdutoFiliais_Le = Err
+    
+    Select Case Err
+
+        Case 59860
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146358)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Produto_Grava_Light(objProduto As ClassProduto, colTabelaPrecoItem As Collection, objProdutoFilial As ClassProdutoFilial, iControleEstoque As Integer) As Long
+'Grava ou Alterar o Produto da versão light passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Grava_Light
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_GRAVA_LIGHT", X)
+    If lErro <> SUCESSO Then Error 59861
+    
+    Produto_Grava_Light = X.Produto_Grava_Light(objProduto, colTabelaPrecoItem, objProdutoFilial, iControleEstoque)
+    
+    Exit Function
+    
+Erro_Produto_Grava_Light:
+
+    Produto_Grava_Light = Err
+    
+    Select Case Err
+
+        Case 59861
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146359)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function ClasseUM_Le_Total(iTotalClasseUM As Integer) As Long
+'Le a quantidade de ClasseUM já gravados na Tabela de ClasseUM
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ClasseUM_Le_Total
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CLASSEUM_LE_TOTAL", X)
+    If lErro <> SUCESSO Then Error 59862
+    
+    ClasseUM_Le_Total = X.ClasseUM_Le_Total(iTotalClasseUM)
+    
+    Exit Function
+    
+Erro_ClasseUM_Le_Total:
+
+    ClasseUM_Le_Total = Err
+    
+    Select Case Err
+
+        Case 59862
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146360)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function Almoxarifado_Le_Total(iTotalAlmox As Integer) As Long
+'Le a quantidade de Almoxarifados já gravados na Tabela de Almoxarifados
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Almoxarifado_Le_Total
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ALMOXARIFADO_LE_TOTAL", X)
+    If lErro <> SUCESSO Then Error 59863
+    
+    Almoxarifado_Le_Total = X.Almoxarifado_Le_Total(iTotalAlmox)
+    
+    Exit Function
+    
+Erro_Almoxarifado_Le_Total:
+
+    Almoxarifado_Le_Total = Err
+    
+    Select Case Err
+
+        Case 59863
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146361)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function FornecedorProduto_Le_Total(objFornecedorProduto As ClassFornecedorProduto, iTotalFornProduto As Integer) As Long
+'Le a quantidade de Fornecedores já gravados na Tabela de FornecedorProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProduto_Le_Total
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTO_LE_TOTAL", X)
+    If lErro <> SUCESSO Then Error 59864
+    
+    FornecedorProduto_Le_Total = X.FornecedorProduto_Le_Total(objFornecedorProduto, iTotalFornProduto)
+    
+    Exit Function
+    
+Erro_FornecedorProduto_Le_Total:
+
+    FornecedorProduto_Le_Total = Err
+    
+    Select Case Err
+
+        Case 59864
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146362)
+        
+    End Select
+    
+    Exit Function
+    
+End Function
+
+Function EstoqueMes_Le_Mes1(objEstoqueMes As ClassEstoqueMes) As Long
+'Le o Ano/Mes que está aberto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueMes_Le_Mes1
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUEMES_LE_MES1", X)
+    If lErro <> SUCESSO Then Error 60862
+    
+    
+    EstoqueMes_Le_Mes1 = X.EstoqueMes_Le_Mes1(objEstoqueMes)
+
+    Exit Function
+    
+Erro_EstoqueMes_Le_Mes1:
+    
+    EstoqueMes_Le_Mes1 = Err
+    
+    Select Case Err
+
+        Case 60862
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146363)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Rotina_FechamentoMes(objEstoque As ClassEstoqueMes, iCancela As Integer, objTela As Object) As Long
+'Rotina que Chamara as funcoes do BD
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Rotina_FechamentoMes
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ROTINA_FECHAMENTOMES", X)
+    If lErro <> SUCESSO Then Error 60862
+    
+    
+    Rotina_FechamentoMes = X.Rotina_FechamentoMes(objEstoque, iCancela, objTela)
+
+    Exit Function
+    
+Erro_Rotina_FechamentoMes:
+    
+    Rotina_FechamentoMes = Err
+    
+    Select Case Err
+
+        Case 60862
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146364)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+
+Function EstoqueProduto_Le_Todos_Almoxarifados_Filial(objEstoqueProduto As ClassEstoqueProduto, iFilialEmpresa As Integer) As Long
+'Lê a soma das Quantidades de todos Almoxarifados da Filial que pertence ao Produto passado em objEstoqueProduto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_EstoqueProduto_Le_Todos_Almoxarifados_Filial
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTPROD_LE_TODOS_ALMOXARIFADO_FILIAL", X)
+    If lErro <> SUCESSO Then Error 65087
+    
+    EstoqueProduto_Le_Todos_Almoxarifados_Filial = X.EstoqueProduto_Le_Todos_Almoxarifados_Filial(objEstoqueProduto, iFilialEmpresa)
+
+    Exit Function
+    
+Erro_EstoqueProduto_Le_Todos_Almoxarifados_Filial:
+    
+    EstoqueProduto_Le_Todos_Almoxarifados_Filial = Err
+    
+    Select Case Err
+
+        Case 65087
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146365)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Le_Ccl(sCcl As String) As Long
+'Verifica se existe algum centro de custo com o centro de custo passado como parametro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Le_Ccl
+    
+    
+    
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_LE_CCL", X)
+    If lErro <> SUCESSO Then Error 60869
+    
+    
+    MovimentoEstoque_Le_Ccl = X.MovimentoEstoque_Le_Ccl(sCcl)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Le_Ccl:
+    
+    MovimentoEstoque_Le_Ccl = Err
+    
+    Select Case Err
+
+        Case 60869
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146366)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function UMEstoque_Conversao(sProduto As String, sUM As String, dQuantidade As Double, dQuantidadeConvertida As Double) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_UMEstoque_Conversao
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_UMESTOQUE_CONVERSAO", X)
+    If lErro <> SUCESSO Then Error 65270
+    
+    UMEstoque_Conversao = X.UMEstoque_Conversao(sProduto, sUM, dQuantidade, dQuantidadeConvertida)
+
+    Exit Function
+    
+Erro_UMEstoque_Conversao:
+    
+    UMEstoque_Conversao = Err
+    
+    Select Case Err
+
+        Case 65270
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146367)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst1_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objSldDiaEst As ClassSldDiaEst, objTipoMovEstoque As ClassTipoMovEst, ByVal dCustoMedioConsig3 As Double, ByVal dCustoMedioDemo3 As Double, ByVal dCustoMedioConserto3 As Double, ByVal dCustoMedioOutros3 As Double, ByVal dCustoMedioBenef3 As Double) As Long
+'Atualiza a tabela de SldMesEst1 utilizando os valores passados atraves de objSldDiaEst.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst1_Atualiza
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST1_ATUALIZA", X)
+    If lErro <> SUCESSO Then gError 71246
+
+    SldMesEst1_Atualiza = X.SldMesEst1_Atualiza(lComando1, lComando2, objSldDiaEst, objTipoMovEstoque, dCustoMedioConsig3, dCustoMedioDemo3, dCustoMedioConserto3, dCustoMedioOutros3, dCustoMedioBenef3)
+
+    Exit Function
+    
+Erro_SldMesEst1_Atualiza:
+    
+    SldMesEst1_Atualiza = gErr
+    
+    Select Case gErr
+
+        Case 71246
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146368)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm1_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objSldDiaEst As ClassSldDiaEst, ByVal iAlmoxarifado As Integer, objTipoMovEstoque As ClassTipoMovEst) As Long
+'Atualiza a tabela de SldMesEstAlm1 utilizando os valores passados atraves de objSldDiaEst.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm1_Atualiza
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM1_ATUALIZA", X)
+    If lErro <> SUCESSO Then gError 71247
+
+    SldMesEstAlm1_Atualiza = X.SldMesEstAlm1_Atualiza(lComando1, lComando2, objSldDiaEst, iAlmoxarifado, objTipoMovEstoque)
+
+    Exit Function
+    
+Erro_SldMesEstAlm1_Atualiza:
+    
+    SldMesEstAlm1_Atualiza = gErr
+    
+    Select Case gErr
+
+        Case 71247
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146369)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objSldDiaEst As ClassSldDiaEst, objTipoMovEstoque As ClassTipoMovEst, ByVal dCustoMedioConsig As Double, ByVal dCustoMedioDemo As Double, ByVal dCustoMedioConserto As Double, ByVal dCustoMedioOutros As Double, ByVal dCustoMedioBenef As Double) As Long
+'Atualiza a tabela de SldMesEst1 utilizando os valores passados atraves de objSldDiaEst.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Atualiza
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_ATUALIZA", X)
+    If lErro <> SUCESSO Then gError 71248
+
+    SldMesEst2_Atualiza = X.SldMesEst2_Atualiza(lComando1, lComando2, objSldDiaEst, objTipoMovEstoque, dCustoMedioConsig, dCustoMedioDemo, dCustoMedioConserto, dCustoMedioOutros, dCustoMedioBenef)
+
+    Exit Function
+    
+Erro_SldMesEst2_Atualiza:
+    
+    SldMesEst2_Atualiza = gErr
+    
+    Select Case gErr
+
+        Case 71248
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146370)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm2_Atualiza(ByVal lComando1 As Long, ByVal lComando2 As Long, objSldDiaEst As ClassSldDiaEst, ByVal iAlmoxarifado As Integer, objTipoMovEstoque As ClassTipoMovEst) As Long
+'Atualiza a tabela de SldMesEstAlm1 utilizando os valores passados atraves de objSldDiaEst.
+'ATENCAO: Esta Funcao tem que ser chamada dentro de transacao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm2_Atualiza
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM2_ATUALIZA", X)
+    If lErro <> SUCESSO Then gError 71249
+
+    SldMesEstAlm2_Atualiza = X.SldMesEstAlm2_Atualiza(lComando1, lComando2, objSldDiaEst, iAlmoxarifado, objTipoMovEstoque)
+
+    Exit Function
+    
+Erro_SldMesEstAlm2_Atualiza:
+    
+    SldMesEstAlm2_Atualiza = gErr
+    
+    Select Case gErr
+
+        Case 71249
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146371)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantConserto(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, dQuantConsertoAtual As Double) As Long
+'calcula a quantidade de material em conserto nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantConserto
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTCONSERTO", X)
+    If lErro <> SUCESSO Then gError 71251
+
+    SldMesEst2_Le_QuantConserto = X.SldMesEst2_Le_QuantConserto(lComando, iFilialEmpresa, iAno, sProduto, iMes, dQuantConsertoAtual)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantConserto:
+    
+    SldMesEst2_Le_QuantConserto = gErr
+    
+    Select Case gErr
+
+        Case 71251
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146372)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantDemo(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, dQuantDemoAtual As Double) As Long
+'calcula a quantidade de material em Demonstração nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantDemo
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTDEMO", X)
+    If lErro <> SUCESSO Then gError 71252
+
+    SldMesEst2_Le_QuantDemo = X.SldMesEst2_Le_QuantDemo(lComando, iFilialEmpresa, iAno, sProduto, iMes, dQuantDemoAtual)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantDemo:
+    
+    SldMesEst2_Le_QuantDemo = gErr
+    
+    Select Case gErr
+
+        Case 71252
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146373)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantOutros(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, dQuantOutrosAtual As Double) As Long
+'calcula a quantidade de Outros materiais nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantOutros
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTOUTROS", X)
+    If lErro <> SUCESSO Then gError 71253
+
+    SldMesEst2_Le_QuantOutros = X.SldMesEst2_Le_QuantOutros(lComando, iFilialEmpresa, iAno, sProduto, iMes, dQuantOutrosAtual)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantOutros:
+    
+    SldMesEst2_Le_QuantOutros = gErr
+    
+    Select Case gErr
+
+        Case 71253
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146374)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantBenef(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, dQuantBenefAtual As Double) As Long
+'calcula a quantidade de material em Beneficiamento nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantBenef
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTBENEF", X)
+    If lErro <> SUCESSO Then gError 71254
+
+    SldMesEst2_Le_QuantBenef = X.SldMesEst2_Le_QuantBenef(lComando, iFilialEmpresa, iAno, sProduto, iMes, dQuantBenefAtual)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantBenef:
+    
+    SldMesEst2_Le_QuantBenef = gErr
+    
+    Select Case gErr
+
+        Case 71254
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146375)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantConsig(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, dQuantConsigAtual As Double) As Long
+'calcula a quantidade de material em Consignação nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantConsig
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTCONSIG", X)
+    If lErro <> SUCESSO Then gError 71255
+
+    SldMesEst2_Le_QuantConsig = X.SldMesEst2_Le_QuantConsig(lComando, iFilialEmpresa, iAno, sProduto, iMes, dQuantConsigAtual)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantConsig:
+    
+    SldMesEst2_Le_QuantConsig = gErr
+    
+    Select Case gErr
+
+        Case 71255
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146376)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+'*** VERSÃO 2 ***
+
+Function Produto_Critica_Compra(ByVal sProduto As String, objProduto As ClassProduto, iProdutoPreenchido As Integer) As Long
+'Verifica se o Produto existe é ATIVO e não é GERENCIAL e é COMPRÁVEL.
+'Devolve os dados do Produto em objProduto
+'Devolve PRODUTO_PREENCHIDO ou PRODUTO_VAZIO em iProdutoPreenchido
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Critica_Compra
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_CRITICA_COMPRA", X)
+    If lErro <> SUCESSO Then Error 65269
+    
+    Produto_Critica_Compra = X.Produto_Critica_Compra(sProduto, objProduto, iProdutoPreenchido)
+
+    Exit Function
+    
+Erro_Produto_Critica_Compra:
+    
+    Produto_Critica_Compra = Err
+    
+    Select Case Err
+
+        Case 65269
+            
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146377)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Le(objFornecedorProdutoFF As ClassFornecedorProdutoFF) As Long
+'Lê dados da associacao Fornecedor-Produto à partir da chave fornecida em ObjFornecedorProdutoFF. Retorna os dados em ObjFornecedorProdutoFF
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_LE", X)
+    If lErro <> SUCESSO Then Error 65481
+    
+    FornecedorProdutoFF_Le = X.FornecedorProdutoFF_Le(objFornecedorProdutoFF)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Le:
+    
+    FornecedorProdutoFF_Le = Err
+    
+    Select Case Err
+
+        Case 65481
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146378)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Le_Fornecedores(colFornecedores As AdmCollCodigoNome, objProduto As ClassProduto) As Long
+'Lê todos nomes reduzidos de Fornecedores associados a sProduto e coloca-os em colFornecedores
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Le_Fornecedores
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_LE_FORNECEDORES", X)
+    If lErro <> SUCESSO Then Error 65482
+    
+    FornecedorProdutoFF_Le_Fornecedores = X.FornecedorProdutoFF_Le_Fornecedores(colFornecedores, objProduto)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Le_Fornecedores:
+    
+    FornecedorProdutoFF_Le_Fornecedores = Err
+    
+    Select Case Err
+
+        Case 65482
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146379)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Grava(objFornecedorProdutoFF As ClassFornecedorProdutoFF, iPadrao As Integer) As Long
+'Grava a associação Produto X Fornecedor
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Grava
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_GRAVA", X)
+    If lErro <> SUCESSO Then Error 65483
+    
+    FornecedorProdutoFF_Grava = X.FornecedorProdutoFF_Grava(objFornecedorProdutoFF, iPadrao)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Grava:
+    
+    FornecedorProdutoFF_Grava = Err
+    
+    Select Case Err
+
+        Case 65483
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146380)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Exclui(objFornecedorProdutoFF As ClassFornecedorProdutoFF) As Long
+'Exclui a Associação Produto X Fornecedor da tabela FornecedorProdutoFF a partir da Filial, Filial Empresa, Produto e Fornecedor
+'passados por objFornecedorProdutoFF
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Exclui
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_EXCLUI", X)
+    If lErro <> SUCESSO Then Error 65484
+    
+    FornecedorProdutoFF_Exclui = X.FornecedorProdutoFF_Exclui(objFornecedorProdutoFF)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Exclui:
+    
+    FornecedorProdutoFF_Exclui = Err
+    
+    Select Case Err
+
+        Case 65484
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146381)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Existe_Relacionamento(objFornecedorProdutoFF As ClassFornecedorProdutoFF)
+'Verifica se existe relacionamento com as tabelas: PedidoCompra, RequisicaoCompra, Concorrencia
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Existe_Relacionamento
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_EXISTE_RELACIONA", X)
+    If lErro <> SUCESSO Then Error 65485
+    
+    FornecedorProdutoFF_Existe_Relacionamento = X.FornecedorProdutoFF_Existe_Relacionamento(objFornecedorProdutoFF)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Existe_Relacionamento:
+    
+    FornecedorProdutoFF_Existe_Relacionamento = Err
+    
+    Select Case Err
+
+        Case 65485
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146382)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedoresProdutoFF_Le(colFornecedorProdutoFF As Collection, objProduto As ClassProduto) As Long
+'Le os registros da tabela FornecedorProdutoFF de acordo com giFilial e código do Produto e armazena na colecao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedoresProdutoFF_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORESPRODUTOFF_LE", X)
+    If lErro <> SUCESSO Then Error 65486
+    
+    FornecedoresProdutoFF_Le = X.FornecedoresProdutoFF_Le(colFornecedorProdutoFF, objProduto)
+
+    Exit Function
+    
+Erro_FornecedoresProdutoFF_Le:
+    
+    FornecedoresProdutoFF_Le = Err
+    
+    Select Case Err
+
+        Case 65486
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146383)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Le_FilForn(sProduto As String, lFornecedor As Long, colCodigoNome As AdmColCodigoNome) As Long
+'Lê código e nome das Filiais do Fornecedor das tabelas FornedorProdutoFF e FiliaisFornecedores
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Le_FilForn
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_LE_FILFORN", X)
+    If lErro <> SUCESSO Then Error 65487
+    
+    FornecedorProdutoFF_Le_FilForn = X.FornecedorProdutoFF_Le_FilForn(sProduto, lFornecedor, colCodigoNome)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Le_FilForn:
+    
+    FornecedorProdutoFF_Le_FilForn = Err
+    
+    Select Case Err
+
+        Case 65487
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146384)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Le_CotacaoProdutoForn(objCotacaoProduto As ClassCotacaoProduto, colFornecedorProdutoFF As Collection) As Long
+'Lê a tabela FornecedorProdutoFF em busca dos fornecedores associados ao produto passado como parametro
+'cria itens com o par Fornecedor-Produto encontrado e armazena-os em colCotacaoProdutoFornecedor
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Le_CotacaoProdutoForn
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_LE_COTACAOPRODUT", X)
+    If lErro <> SUCESSO Then Error 65488
+    
+    FornecedorProdutoFF_Le_CotacaoProdutoForn = X.FornecedorProdutoFF_Le_CotacaoProdutoForn(objCotacaoProduto, colFornecedorProdutoFF)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Le_CotacaoProdutoForn:
+    
+    FornecedorProdutoFF_Le_CotacaoProdutoForn = Err
+    
+    Select Case Err
+
+        Case 65488
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146385)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Le_NomeRed(sFornNomeRed As String, sNomeFilial As String, objFornecedorProdutoFF As ClassFornecedorProdutoFF) As Long
+'Verifica se existe associação entre a Filial de um Fornecedor e um Produto
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Le_NomeRed
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_LE_NOMERED", X)
+    If lErro <> SUCESSO Then Error 65489
+    
+    FornecedorProdutoFF_Le_NomeRed = X.FornecedorProdutoFF_Le_NomeRed(sFornNomeRed, sNomeFilial, objFornecedorProdutoFF)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Le_NomeRed:
+    
+    FornecedorProdutoFF_Le_NomeRed = Err
+    
+    Select Case Err
+
+        Case 65489
+            
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 146386)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function ProdutoFilial_AtualizaFilialFornPadrao(objFornecedorProdutoFF As ClassFornecedorProdutoFF, iPadrao As Integer) As Long
+'iPadrao indica se o fornecedor identificado por lForn está sendo atualizado para se tornar o fornecedor padrao ou nao.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ProdutoFilial_AtualizaFilialFornPadrao
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTOFILIAL_ATUALIZAFILIALFORNPADR", X)
+    If lErro <> SUCESSO Then gError 71085
+    
+    ProdutoFilial_AtualizaFilialFornPadrao = X.ProdutoFilial_AtualizaFilialFornPadrao(objFornecedorProdutoFF, iPadrao)
+
+    Exit Function
+    
+Erro_ProdutoFilial_AtualizaFilialFornPadrao:
+    
+    ProdutoFilial_AtualizaFilialFornPadrao = gErr
+    
+    Select Case gErr
+
+        Case 71085
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146387)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+
+Function ItensPedCotacao_Baixa(objFornecedorProdutoFF As ClassFornecedorProdutoFF, colPedCotacao As Collection) As Long
+'Faz Baixa de Itens Pedidos de Cotação
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_ItensPedCotacao_Baixa
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ITENSPEDCOTACAO_BAIXA", X)
+    If lErro <> SUCESSO Then gError 71030
+    
+    ItensPedCotacao_Baixa = X.ItensPedCotacao_Baixa(objFornecedorProdutoFF, colPedCotacao)
+
+    Exit Function
+    
+Erro_ItensPedCotacao_Baixa:
+    
+    ItensPedCotacao_Baixa = gErr
+    
+    Select Case gErr
+
+        Case 71030
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146388)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function PedsCotacao_Baixa(objFornecedorProdutoFF As ClassFornecedorProdutoFF, colPedCotacao As Collection, colCotacao As Collection) As Long
+'Se Baixar todos os Itens Pedido Cotação de algum Pedido Cotação --> Baixa o Pedido Cotação
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_PedsCotacao_Baixa
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PEDSCOTACAO_BAIXA", X)
+    If lErro <> SUCESSO Then gError 71031
+    
+    PedsCotacao_Baixa = X.PedsCotacao_Baixa(objFornecedorProdutoFF, colPedCotacao, colCotacao)
+
+    Exit Function
+    
+Erro_PedsCotacao_Baixa:
+    
+    PedsCotacao_Baixa = gErr
+    
+    Select Case gErr
+
+        Case 71031
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146389)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Cotacoes_Baixa(colCotacao As Collection) As Long
+'Se Baixar todos os PedidosCotação ligados a uma cotação, baixa a Cotação
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Cotacoes_Baixa
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_COTACOES_BAIXA", X)
+    If lErro <> SUCESSO Then gError 71032
+    
+    Cotacoes_Baixa = X.Cotacoes_Baixa(colCotacao)
+
+    Exit Function
+    
+Erro_Cotacoes_Baixa:
+    
+    Cotacoes_Baixa = gErr
+    
+    Select Case gErr
+
+        Case 71032
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146390)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Le_FilialForn(sProduto As String, lFornecedor As Long, iFilialEmpresa As Integer, colCodigoNome As AdmColCodigoNome) As Long
+'Carrega em colCodigoNome o código e o nome das filiais que possuem associação com o produto passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Le_FilialForn
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_LE_FILIALFORN", X)
+    If lErro <> SUCESSO Then gError 71176
+
+    FornecedorProdutoFF_Le_FilialForn = X.FornecedorProdutoFF_Le_FilialForn(sProduto, lFornecedor, iFilialEmpresa, colCodigoNome)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Le_FilialForn:
+    
+    FornecedorProdutoFF_Le_FilialForn = gErr
+    
+    Select Case gErr
+
+        Case 71176
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146391)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function FornecedorProdutoFF_Lock(objFornecedorProdutoFF As ClassFornecedorProdutoFF) As Long
+'Lê e Faz "LockShared" do FornecedorProdutoFF passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_FornecedorProdutoFF_Lock
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_FORNECEDORPRODUTOFF_LOCK", X)
+    If lErro <> SUCESSO Then gError 71177
+
+    FornecedorProdutoFF_Lock = X.FornecedorProdutoFF_Lock(objFornecedorProdutoFF)
+
+    Exit Function
+    
+Erro_FornecedorProdutoFF_Lock:
+    
+    FornecedorProdutoFF_Lock = gErr
+    
+    Select Case gErr
+
+        Case 71177
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146392)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_Le_Descricao(objProduto As ClassProduto) As Long
+'Lê o Produto com a Descricao Passada
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_Le_Descricao
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_LE_DESCRICAO", X)
+    If lErro <> SUCESSO Then gError 71184
+
+    Produto_Le_Descricao = X.Produto_Le_Descricao(objProduto)
+
+    Exit Function
+    
+Erro_Produto_Le_Descricao:
+    
+    Produto_Le_Descricao = gErr
+    
+    Select Case gErr
+
+        Case 71184
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146393)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MatConfig_Atualiza_IntervaloProducao(sIntervaloProducao As String) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MatConfig_Atualiza_IntervaloProducao
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MATCONFIG_ATUALIZA_INTERVALOPRODUCAO", X)
+    If lErro <> SUCESSO Then gError 71263
+
+    MatConfig_Atualiza_IntervaloProducao = X.MatConfig_Atualiza_IntervaloProducao(sIntervaloProducao)
+
+    Exit Function
+    
+Erro_MatConfig_Atualiza_IntervaloProducao:
+    
+    MatConfig_Atualiza_IntervaloProducao = gErr
+    
+    Select Case gErr
+
+        Case 71263
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146394)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm2_Le_QuantConserto(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, ByVal iAlmoxarifado As Integer, dQuantConsertoAtual As Double) As Long
+'calcula a quantidade de material em conserto nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm2_Le_QuantConserto
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM2_LE_QUANTCONSERTO", X)
+    If lErro <> SUCESSO Then gError 71264
+
+    SldMesEstAlm2_Le_QuantConserto = X.SldMesEstAlm2_Le_QuantConserto(lComando, iFilialEmpresa, iAno, sProduto, iMes, iAlmoxarifado, dQuantConsertoAtual)
+
+    Exit Function
+    
+Erro_SldMesEstAlm2_Le_QuantConserto:
+    
+    SldMesEstAlm2_Le_QuantConserto = gErr
+    
+    Select Case gErr
+
+        Case 71264
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146395)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm2_Le_QuantDemo(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, ByVal iAlmoxarifado As Integer, dQuantDemoAtual As Double) As Long
+'calcula a quantidade de material em Demonstração nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm2_Le_QuantDemo
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM2_LE_QUANTDEMO", X)
+    If lErro <> SUCESSO Then gError 71265
+
+    SldMesEstAlm2_Le_QuantDemo = X.SldMesEstAlm2_Le_QuantDemo(lComando, iFilialEmpresa, iAno, sProduto, iMes, iAlmoxarifado, dQuantDemoAtual)
+
+    Exit Function
+    
+Erro_SldMesEstAlm2_Le_QuantDemo:
+    
+    SldMesEstAlm2_Le_QuantDemo = gErr
+    
+    Select Case gErr
+
+        Case 71265
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146396)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm2_Le_QuantOutros(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, ByVal iAlmoxarifado As Integer, dQuantOutrosAtual As Double) As Long
+'calcula a quantidade de Outros materiais nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm2_Le_QuantOutros
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM2_LE_QUANTOUTROS", X)
+    If lErro <> SUCESSO Then gError 71266
+
+    SldMesEstAlm2_Le_QuantOutros = X.SldMesEstAlm2_Le_QuantOutros(lComando, iFilialEmpresa, iAno, sProduto, iMes, iAlmoxarifado, dQuantOutrosAtual)
+
+    Exit Function
+    
+Erro_SldMesEstAlm2_Le_QuantOutros:
+    
+    SldMesEstAlm2_Le_QuantOutros = gErr
+    
+    Select Case gErr
+
+        Case 71266
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146397)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm2_Le_QuantBenef(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, ByVal iAlmoxarifado As Integer, dQuantBenefAtual As Double) As Long
+'calcula a quantidade de material em Beneficiamento nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm2_Le_QuantBenef
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM2_LE_QUANTBENEF", X)
+    If lErro <> SUCESSO Then gError 71267
+
+    SldMesEstAlm2_Le_QuantBenef = X.SldMesEstAlm2_Le_QuantBenef(lComando, iFilialEmpresa, iAno, sProduto, iMes, iAlmoxarifado, dQuantBenefAtual)
+
+    Exit Function
+    
+Erro_SldMesEstAlm2_Le_QuantBenef:
+    
+    SldMesEstAlm2_Le_QuantBenef = gErr
+    
+    Select Case gErr
+
+        Case 71267
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146398)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm2_Le_QuantConsig(ByVal lComando As Long, ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, sProduto As String, ByVal iMes As Integer, ByVal iAlmoxarifado As Integer, dQuantConsigAtual As Double) As Long
+'calcula a quantidade de material em Consignação nosso em poder de terceiros.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm2_Le_QuantConsig
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM2_LE_QUANTCONSIG", X)
+    If lErro <> SUCESSO Then gError 71268
+
+    SldMesEstAlm2_Le_QuantConsig = X.SldMesEstAlm2_Le_QuantConsig(lComando, iFilialEmpresa, iAno, sProduto, iMes, iAlmoxarifado, dQuantConsigAtual)
+
+    Exit Function
+    
+Erro_SldMesEstAlm2_Le_QuantConsig:
+    
+    SldMesEstAlm2_Le_QuantConsig = gErr
+    
+    Select Case gErr
+
+        Case 71268
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146399)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Le_QuantVendConsig(objItemMovEstoque As ClassItemMovEstoque) As Long
+'Verifica se a NF movimentou produto consig e retorna a quantidade
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Le_QuantVendConsig
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_LE_QUANTVENDCONSIG", X)
+    If lErro <> SUCESSO Then gError 71277
+
+    MovEstoque_Le_QuantVendConsig = X.MovEstoque_Le_QuantVendConsig(objItemMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoque_Le_QuantVendConsig:
+    
+    MovEstoque_Le_QuantVendConsig = gErr
+    
+    Select Case gErr
+
+        Case 71277
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146400)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst1_Le_QuantValorConsig3(ByVal lComando As Long, objSldMesEst1 As ClassSldMesEst1) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst1_Le_QuantValorConsig3
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST1_LE_QUANTVALORCONSIG3", X)
+    If lErro <> SUCESSO Then gError 71328
+
+    SldMesEst1_Le_QuantValorConsig3 = X.SldMesEst1_Le_QuantValorConsig3(lComando, objSldMesEst1)
+
+    Exit Function
+    
+Erro_SldMesEst1_Le_QuantValorConsig3:
+    
+    SldMesEst1_Le_QuantValorConsig3 = gErr
+    
+    Select Case gErr
+
+        Case 71328
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146401)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst1_Le_QuantValorDemo3(ByVal lComando As Long, objSldMesEst1 As ClassSldMesEst1) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst1_Le_QuantValorDemo3
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST1_LE_QUANTVALORDEMO3", X)
+    If lErro <> SUCESSO Then gError 71329
+
+    SldMesEst1_Le_QuantValorDemo3 = X.SldMesEst1_Le_QuantValorDemo3(lComando, objSldMesEst1)
+
+    Exit Function
+    
+Erro_SldMesEst1_Le_QuantValorDemo3:
+    
+    SldMesEst1_Le_QuantValorDemo3 = gErr
+    
+    Select Case gErr
+
+        Case 71329
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146402)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst1_Le_QuantValorConserto3(ByVal lComando As Long, objSldMesEst1 As ClassSldMesEst1) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst1_Le_QuantValorConserto3
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST1_LE_QUANTVALORCONSERTO3", X)
+    If lErro <> SUCESSO Then gError 71330
+
+    SldMesEst1_Le_QuantValorConserto3 = X.SldMesEst1_Le_QuantValorConserto3(lComando, objSldMesEst1)
+
+    Exit Function
+    
+Erro_SldMesEst1_Le_QuantValorConserto3:
+    
+    SldMesEst1_Le_QuantValorConserto3 = gErr
+    
+    Select Case gErr
+
+        Case 71330
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146403)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst1_Le_QuantValorOutros3(ByVal lComando As Long, objSldMesEst1 As ClassSldMesEst1) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst1_Le_QuantValorOutros3
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST1_LE_QUANTVALOROUTROS3", X)
+    If lErro <> SUCESSO Then gError 71331
+
+    SldMesEst1_Le_QuantValorOutros3 = X.SldMesEst1_Le_QuantValorOutros3(lComando, objSldMesEst1)
+
+    Exit Function
+    
+Erro_SldMesEst1_Le_QuantValorOutros3:
+    
+    SldMesEst1_Le_QuantValorOutros3 = gErr
+    
+    Select Case gErr
+
+        Case 71331
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146404)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst1_Le_QuantValorBenef3(ByVal lComando As Long, objSldMesEst1 As ClassSldMesEst1) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst1_Le_QuantValorBenef3
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST1_LE_QUANTVALORBENEF3", X)
+    If lErro <> SUCESSO Then gError 71332
+
+    SldMesEst1_Le_QuantValorBenef3 = X.SldMesEst1_Le_QuantValorBenef3(lComando, objSldMesEst1)
+
+    Exit Function
+    
+Erro_SldMesEst1_Le_QuantValorBenef3:
+    
+    SldMesEst1_Le_QuantValorBenef3 = gErr
+    
+    Select Case gErr
+
+        Case 71332
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146405)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantValorConsig(ByVal lComando As Long, objSldMesEst2 As ClassSldMesEst2) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantValorConsig
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTVALORCONSIG", X)
+    If lErro <> SUCESSO Then gError 71333
+
+    SldMesEst2_Le_QuantValorConsig = X.SldMesEst2_Le_QuantValorConsig(lComando, objSldMesEst2)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantValorConsig:
+    
+    SldMesEst2_Le_QuantValorConsig = gErr
+    
+    Select Case gErr
+
+        Case 71333
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146406)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantValorDemo(ByVal lComando As Long, objSldMesEst2 As ClassSldMesEst2) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantValorDemo
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTVALORDEMO", X)
+    If lErro <> SUCESSO Then gError 71334
+
+    SldMesEst2_Le_QuantValorDemo = X.SldMesEst2_Le_QuantValorDemo(lComando, objSldMesEst2)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantValorDemo:
+    
+    SldMesEst2_Le_QuantValorDemo = gErr
+    
+    Select Case gErr
+
+        Case 71334
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146407)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantValorConserto(ByVal lComando As Long, objSldMesEst2 As ClassSldMesEst2) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantValorConserto
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTVALORCONSERTO", X)
+    If lErro <> SUCESSO Then gError 71335
+
+    SldMesEst2_Le_QuantValorConserto = X.SldMesEst2_Le_QuantValorConserto(lComando, objSldMesEst2)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantValorConserto:
+    
+    SldMesEst2_Le_QuantValorConserto = gErr
+    
+    Select Case gErr
+
+        Case 71335
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146408)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantValorOutros(ByVal lComando As Long, objSldMesEst2 As ClassSldMesEst2) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantValorOutros
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTVALOROUTROS", X)
+    If lErro <> SUCESSO Then gError 71336
+
+    SldMesEst2_Le_QuantValorOutros = X.SldMesEst2_Le_QuantValorOutros(lComando, objSldMesEst2)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantValorOutros:
+    
+    SldMesEst2_Le_QuantValorOutros = gErr
+    
+    Select Case gErr
+
+        Case 71336
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146409)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEst2_Le_QuantValorBenef(ByVal lComando As Long, objSldMesEst2 As ClassSldMesEst2) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEst2_Le_QuantValorBenef
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESEST2_LE_QUANTVALORBENEF", X)
+    If lErro <> SUCESSO Then gError 71337
+
+    SldMesEst2_Le_QuantValorBenef = X.SldMesEst2_Le_QuantValorBenef(lComando, objSldMesEst2)
+
+    Exit Function
+    
+Erro_SldMesEst2_Le_QuantValorBenef:
+    
+    SldMesEst2_Le_QuantValorBenef = gErr
+    
+    Select Case gErr
+
+        Case 71337
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146410)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoqueItens_Le_Desc(objMovEstoque As ClassMovEstoque) As Long
+'Lê todos os Itens em Ordem Descendente de NumIntDoc correspondentes a partir da FilialEmpresa, Código e do NumIntDocEst=0 e retorna no colItens do objeto
+'Ordena pelo Item.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoqueItens_Le_Desc
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUEITENS_LE_DESC", X)
+    If lErro <> SUCESSO Then gError 71348
+
+    MovEstoqueItens_Le_Desc = X.MovEstoqueItens_Le_Desc(objMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoqueItens_Le_Desc:
+    
+    MovEstoqueItens_Le_Desc = gErr
+    
+    Select Case gErr
+
+        Case 71348
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146411)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Produto_ObterRelMesFatVendCli(sProduto As String, dtDataInicial As Date, dtDataFinal As Date, iFilialEmpresa As Integer, iVendedor As Integer, lCliente As Long, dValorFaturado As Double, dQuantidadeFaturada As Double, dQuantidadeDevolvida As Double, lComando As Long, lComando2 As Long) As Long
+'IMPORTANTE: especifica para classe ClassRelMesFat de apoio a execucao de relatorios
+'Obtém as quantidades  faturada e devolvida e valor total faturado por Produto entre datas passadas, relacionados ao Vendedor e Cliente passados
+'ATENCAO: se o lComando vier zerado, será aberto nesta funcao e ficará aberto.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Produto_ObterRelMesFatVendCli
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_PRODUTO_OBTERRELMESFATVENDCLI", X)
+    If lErro <> SUCESSO Then gError 71388
+
+    Produto_ObterRelMesFatVendCli = X.Produto_ObterRelMesFatVendCli(sProduto, dtDataInicial, dtDataFinal, iFilialEmpresa, iVendedor, lCliente, dValorFaturado, dQuantidadeFaturada, dQuantidadeDevolvida, lComando, lComando2)
+
+    Exit Function
+    
+Erro_Produto_ObterRelMesFatVendCli:
+    
+    Produto_ObterRelMesFatVendCli = gErr
+    
+    Select Case gErr
+
+        Case 71388
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146412)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MATConfig_Le_Lock(objMATConfig As ClassMATConfig, ByVal lComando As Long) As Long
+'Lê registro em MATConfig.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MATConfig_Le_Lock
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MATCONFIG_LE_LOCK", X)
+    If lErro <> SUCESSO Then gError 83547
+
+    MATConfig_Le_Lock = X.MATConfig_Le_Lock(objMATConfig, lComando)
+
+    Exit Function
+    
+Erro_MATConfig_Le_Lock:
+    
+    MATConfig_Le_Lock = gErr
+    
+    Select Case gErr
+
+        Case 83547
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146413)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MATConfig_Grava(objMATConfig As ClassMATConfig) As Long
+'Insere ou Atualiza registro em MATConfig.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MATConfig_Grava
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MATCONFIG_GRAVA", X)
+    If lErro <> SUCESSO Then gError 83553
+
+    MATConfig_Grava = X.MATConfig_Grava(objMATConfig)
+
+    Exit Function
+    
+Erro_MATConfig_Grava:
+    
+    MATConfig_Grava = gErr
+    
+    Select Case gErr
+
+        Case 83553
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146414)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Estoque_Reprocessamento(alComando() As Long, objItemMovEst As ClassItemMovEstoque, ByVal iOperacao As Integer) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Estoque_Reprocessamento
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUE_REPROCESSAMENTO", X)
+    If lErro <> SUCESSO Then gError 83575
+
+    Estoque_Reprocessamento = X.Estoque_Reprocessamento(alComando, objItemMovEst, iOperacao)
+
+    Exit Function
+    
+Erro_Estoque_Reprocessamento:
+    
+    Estoque_Reprocessamento = gErr
+    
+    Select Case gErr
+
+        Case 83575
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146415)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function SldMesEstAlm_Le_QuantidadeCusto(ByVal lComando As Long, objSldMesEstAlm As ClassSldMesEstAlm) As Long
+'le os dados de SldMesEstAlm relativos ao Ano, Almoxarifado e Produto passados como parametro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_SldMesEstAlm_Le_QuantidadeCusto
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_SLDMESESTALM_LE_QUANTIDADECUSTO", X)
+    If lErro <> SUCESSO Then gError 83589
+    
+    SldMesEstAlm_Le_QuantidadeCusto = X.SldMesEstAlm_Le_QuantidadeCusto(lComando, objSldMesEstAlm)
+
+    Exit Function
+    
+Erro_SldMesEstAlm_Le_QuantidadeCusto:
+    
+    SldMesEstAlm_Le_QuantidadeCusto = gErr
+    
+    Select Case gErr
+
+        Case 83589
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146416)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Le_ProdutoData(ByVal iFilialEmpresa As Integer, sProduto As String, ByVal dtData As Date) As Long
+'verifica se há movimento para o produto a partir da data especificada
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Le_ProdutoData
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_LE_PRODUTODATA", X)
+    If lErro <> SUCESSO Then gError 83597
+    
+    MovimentoEstoque_Le_ProdutoData = X.MovimentoEstoque_Le_ProdutoData(iFilialEmpresa, sProduto, dtData)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Le_ProdutoData:
+    
+    MovimentoEstoque_Le_ProdutoData = gErr
+    
+    Select Case gErr
+
+        Case 83597
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146417)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Estoque_ReprocAjusteStd(alComando() As Long, objMovEst As ClassMovEstoque, lNumIntDoc As Long) As Long
+'insere as informações relativas a um conjunto de movimentações de estoque
+'utilizado no reprocessamento para inserir os novos movimentos de estoque de ajuste do custo std
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Estoque_ReprocAjusteStd
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ESTOQUE_REPROCAJUSTESTD", X)
+    If lErro <> SUCESSO Then gError 83654
+    
+    Estoque_ReprocAjusteStd = X.Estoque_ReprocAjusteStd(alComando, objMovEst, lNumIntDoc)
+
+    Exit Function
+    
+Erro_Estoque_ReprocAjusteStd:
+    
+    Estoque_ReprocAjusteStd = gErr
+    
+    Select Case gErr
+
+        Case 83654
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146418)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Rotina_FechamentoAno_Reproc(ByVal iAno As Integer, ByVal iFilialEmpresa As Integer) As Long
+'Rotina que transfere os saldos de um ano para outro para fins de reprocessamento.
+'iAno é o ano que está terminando.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Rotina_FechamentoAno_Reproc
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ROTINA_FECHAMENTOANO_REPROC", X)
+    If lErro <> SUCESSO Then gError 83742
+    
+    Rotina_FechamentoAno_Reproc = X.Rotina_FechamentoAno_Reproc(iAno, iFilialEmpresa)
+
+    Exit Function
+    
+Erro_Rotina_FechamentoAno_Reproc:
+    
+    Rotina_FechamentoAno_Reproc = gErr
+    
+    Select Case gErr
+
+        Case 83742
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146419)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovimentoEstoque_Le_NumIntDoc(ByVal lComando As Long, objItemMovEst As ClassItemMovEstoque) As Long
+'Carrega os dados do movimento com o NumIntDoc passado como parametro
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Le_NumIntDoc
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_LE_NUMINTDOC", X)
+    If lErro <> SUCESSO Then gError 83749
+    
+    MovimentoEstoque_Le_NumIntDoc = X.MovimentoEstoque_Le_NumIntDoc(lComando, objItemMovEst)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Le_NumIntDoc:
+    
+    MovimentoEstoque_Le_NumIntDoc = gErr
+    
+    Select Case gErr
+
+        Case 83749
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146420)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MATConfig_Le_Lock1(objMATConfig As ClassMATConfig, lComando As Long) As Long
+'Lê registro em MATConfig.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MATConfig_Le_Lock1
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MATCONFIG_LE_LOCK1", X)
+    If lErro <> SUCESSO Then gError 83778
+
+    MATConfig_Le_Lock1 = X.MATConfig_Le_Lock1(objMATConfig, lComando)
+
+    Exit Function
+    
+Erro_MATConfig_Le_Lock1:
+    
+    MATConfig_Le_Lock1 = gErr
+    
+    Select Case gErr
+
+        Case 83778
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146421)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Le_ItemNF(objItemMovEstoque As ClassItemMovEstoque, colMovEstoque As Collection) As Long
+'Lê o NumIntDoc e Código do MovimentoEstoque a partir do NumIntDoc do ItemNF passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Le_ItemNF
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_LE_ITEMNF", X)
+    If lErro <> SUCESSO Then gError 88009
+
+    MovEstoque_Le_ItemNF = X.MovEstoque_Le_ItemNF(objItemMovEstoque, colMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoque_Le_ItemNF:
+    
+    MovEstoque_Le_ItemNF = gErr
+    
+    Select Case gErr
+
+        Case 88009
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146422)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+
+Function RastreamentoMovto_Le_DocOrigem(lNumIntDocOrigem As Long, iTipoDocOrigem As Integer, colRastreamentoMovto As Collection) As Long
+'Lê a tabela de RastreamentoMovto através do Movimento de Estoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_RastreamentoMovto_Le_DocOrigem
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_RASTREAMENTOMOVTO_LE_DOCORIGEM", X)
+    If lErro <> SUCESSO Then gError 88011
+
+    RastreamentoMovto_Le_DocOrigem = X.RastreamentoMovto_Le_DocOrigem(lNumIntDocOrigem, iTipoDocOrigem, colRastreamentoMovto)
+
+    Exit Function
+    
+Erro_RastreamentoMovto_Le_DocOrigem:
+    
+    RastreamentoMovto_Le_DocOrigem = gErr
+    
+    Select Case gErr
+
+        Case 88011
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146423)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function RastreamentoLote_Le(objRastroLote As ClassRastreamentoLote) As Long
+'Lê rastreamento do lote a partir do produto, filialOP e código do lote passados
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_RastreamentoLote_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_RASTREAMENTOLOTE_LE", X)
+    If lErro <> SUCESSO Then gError 88012
+
+    RastreamentoLote_Le = X.RastreamentoLote_Le(objRastroLote)
+
+    Exit Function
+    
+Erro_RastreamentoLote_Le:
+    
+    RastreamentoLote_Le = gErr
+    
+    Select Case gErr
+
+        Case 88012
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146424)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function RastreamentoLote_Grava(objRastroLote As ClassRastreamentoLote) As Long
+'Grava o RastreamentoLote
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_RastreamentoLote_Grava
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_RASTREAMENTOLOTE_GRAVA", X)
+    If lErro <> SUCESSO Then gError 88013
+
+    RastreamentoLote_Grava = X.RastreamentoLote_Grava(objRastroLote)
+
+    Exit Function
+    
+Erro_RastreamentoLote_Grava:
+    
+    RastreamentoLote_Grava = gErr
+    
+    Select Case gErr
+
+        Case 88013
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146425)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function RastreamentoLote_Le1(ByVal lComando As Long, objRastroLote As ClassRastreamentoLote) As Long
+'Lê rastreamento do lote a partir do produto, filialOP e código do lote passados
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_RastreamentoLote_Le1
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_RASTREAMENTOLOTE_LE1", X)
+    If lErro <> SUCESSO Then gError 88014
+
+    RastreamentoLote_Le1 = X.RastreamentoLote_Le1(lComando, objRastroLote)
+
+    Exit Function
+    
+Erro_RastreamentoLote_Le1:
+    
+    RastreamentoLote_Le1 = gErr
+    
+    Select Case gErr
+
+        Case 88014
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146426)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function RastreamentoLote_Automatico(lNumIntDoc As Long) As Long
+'Devolve o proximo número interno de RastreamentoLote disponível
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_RastreamentoLote_Automatico
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_RASTREAMENTOLOTE_AUTOMATICO", X)
+    If lErro <> SUCESSO Then gError 88015
+
+    RastreamentoLote_Automatico = X.RastreamentoLote_Automatico(lNumIntDoc)
+
+    Exit Function
+    
+Erro_RastreamentoLote_Automatico:
+    
+    RastreamentoLote_Automatico = gErr
+    
+    Select Case gErr
+
+        Case 88015
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146427)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function RastreamentoLote_Exclui(objRastroLote As ClassRastreamentoLote) As Long
+'Exclui RastreamentoLote
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_RastreamentoLote_Exclui
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_RASTREAMENTOLOTE_EXCLUI", X)
+    If lErro <> SUCESSO Then gError 88016
+
+    RastreamentoLote_Exclui = X.RastreamentoLote_Exclui(objRastroLote)
+
+    Exit Function
+    
+Erro_RastreamentoLote_Exclui:
+    
+    RastreamentoLote_Exclui = gErr
+    
+    Select Case gErr
+
+        Case 88016
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146428)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoqueItens_Le_Verifica_Estorno(objMovEstoque As ClassMovEstoque, Optional iTipoMovPassado As Integer = 0) As Long
+'Lê todos os Itens correspondentes a partir da FilialEmpresa, Código e Opcional(TipoMov) retorna no colItens do objeto
+'Ordena pelo Item.
+'Verifica se todos os Movimentos estão estornados
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoqueItens_Le_Verifica_Estorno
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUEITENS_LE_VERIFICA_ESTORNO", X)
+    If lErro <> SUCESSO Then gError 88017
+
+    MovEstoqueItens_Le_Verifica_Estorno = X.MovEstoqueItens_Le_Verifica_Estorno(objMovEstoque, iTipoMovPassado)
+
+    Exit Function
+    
+Erro_MovEstoqueItens_Le_Verifica_Estorno:
+    
+    MovEstoqueItens_Le_Verifica_Estorno = gErr
+    
+    Select Case gErr
+
+        Case 88017
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146429)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function RastreamentoLoteSaldo_Le(objRastroLoteSaldo As ClassRastreamentoLoteSaldo) As Long
+'Lê a tabela de Rastreamento Lote Saldo
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_RastreamentoLoteSaldo_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_RASTREAMENTOLOTESALDO_LE", X)
+    If lErro <> SUCESSO Then gError 88018
+
+    RastreamentoLoteSaldo_Le = X.RastreamentoLoteSaldo_Le(objRastroLoteSaldo)
+
+    Exit Function
+    
+Erro_RastreamentoLoteSaldo_Le:
+    
+    RastreamentoLoteSaldo_Le = gErr
+    
+    Select Case gErr
+
+        Case 88018
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146430)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function CustoMedioProducaoApurado_Le_Escaninhos(sProduto As String, dCustoConsig As Double, dCustoDemo As Double, dCustoConserto As Double, dCustoOutras As Double, dCustoBenef As Double, dCustoConsig3 As Double, dCustoDemo3 As Double, dCustoConserto3 As Double, dCustoOutras3 As Double, dCustoBenef3 As Double, iFilialEmpresa As Integer) As Long
+'Calcula último Custo Médio de Produção Apurado do Produto passado
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_CustoMedioProducaoApurado_Le_Escaninhos
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_CUSTOMEDIOPRODUCAOAPURADO_LE_ESCANIN", X)
+    If lErro <> SUCESSO Then gError 88019
+
+    CustoMedioProducaoApurado_Le_Escaninhos = X.CustoMedioProducaoApurado_Le_Escaninhos(sProduto, dCustoConsig, dCustoDemo, dCustoConserto, dCustoOutras, dCustoBenef, dCustoConsig3, dCustoDemo3, dCustoConserto3, dCustoOutras3, dCustoBenef3, iFilialEmpresa)
+
+    Exit Function
+    
+Erro_CustoMedioProducaoApurado_Le_Escaninhos:
+    
+    CustoMedioProducaoApurado_Le_Escaninhos = gErr
+    
+    Select Case gErr
+
+        Case 88019
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146431)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function RastroEstIni_Le(sProduto As String, iAlmoxarifado As Integer, colRastreamento As Collection) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_RastroEstIni_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_RASTROESTINI_LE", X)
+    If lErro <> SUCESSO Then gError 88020
+
+    RastroEstIni_Le = X.RastroEstIni_Le(sProduto, iAlmoxarifado, colRastreamento)
+
+    Exit Function
+    
+Erro_RastroEstIni_Le:
+    
+    RastroEstIni_Le = gErr
+    
+    Select Case gErr
+
+        Case 88020
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146432)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoqueItens_Le_Desc1(objMovEstoque As ClassMovEstoque) As Long
+'Lê todos os Itens (inclusive os estornados) em Ordem Descendente de NumIntDoc correspondentes a partir da FilialEmpresa, Código e retorna no colItens do objeto
+'Ordena pelo Item.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoqueItens_Le_Desc1
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUEITENS_LE_DESC1", X)
+    If lErro <> SUCESSO Then gError 89051
+
+    MovEstoqueItens_Le_Desc1 = X.MovEstoqueItens_Le_Desc1(objMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoqueItens_Le_Desc1:
+    
+    MovEstoqueItens_Le_Desc1 = gErr
+    
+    Select Case gErr
+
+        Case 89051
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146433)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MATConfig_Grava_Trans(objMATConfig As ClassMATConfig) As Long
+'Insere ou Atualiza registro em MATConfig.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MATConfig_Grava_Trans
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MATCONFIG_GRAVA_TRANS", X)
+    If lErro <> SUCESSO Then gError 89113
+
+    MATConfig_Grava_Trans = X.MATConfig_Grava_Trans(objMATConfig)
+
+    Exit Function
+    
+Erro_MATConfig_Grava_Trans:
+    
+    MATConfig_Grava_Trans = gErr
+    
+    Select Case gErr
+
+        Case 89113
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146434)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MATConfig_Le(objMATConfig As ClassMATConfig) As Long
+'Lê registro em MATConfig.
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MATConfig_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MATCONFIG_LE", X)
+    If lErro <> SUCESSO Then gError 89114
+
+    MATConfig_Le = X.MATConfig_Le(objMATConfig)
+
+    Exit Function
+    
+Erro_MATConfig_Le:
+    
+    MATConfig_Le = gErr
+    
+    Select Case gErr
+
+        Case 89114
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146435)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function Rotina_FechamentoMes_Reproc(ByVal iFilialEmpresa As Integer, ByVal iAno As Integer, ByVal iMes As Integer) As Long
+'Rotina que fecha o mes passado como parametro para a rotina de reprocessamento
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Rotina_FechamentoMes_Reproc
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_ROTINA_FECHAMENTOMES_REPROC", X)
+    If lErro <> SUCESSO Then gError 89212
+    
+    Rotina_FechamentoMes_Reproc = X.Rotina_FechamentoMes_Reproc(iFilialEmpresa, iAno, iMes)
+
+    Exit Function
+    
+Erro_Rotina_FechamentoMes_Reproc:
+    
+    Rotina_FechamentoMes_Reproc = gErr
+    
+    Select Case gErr
+
+        Case 89212
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146436)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+'Function FilialFornFilEmp_Cancela_NF(objNFiscal As ClassNFiscal, objFilFornFilEmp As ClassFilFornFilEmp) As Long
+''Atualiza a Estatistica de Compras
+''Tem que ser chamado dentro de Transacao
+'
+'Dim X As Object, lErro As Long
+'
+'On Error GoTo Erro_FilialFornFilEmp_Cancela_NF
+'
+'    lErro = Rotina_ObterObjetoFuncao("MAT_FILIALFORNFILEMP_CANCELA_NF", X)
+'    If lErro <> SUCESSO Then gError 71180
+'
+'    FilialFornFilEmp_Cancela_NF = X.FilialFornFilEmp_Cancela_NF(objNFiscal, objFilFornFilEmp)
+'
+'    Exit Function
+'
+'Erro_FilialFornFilEmp_Cancela_NF:
+'
+'    FilialFornFilEmp_Cancela_NF = gErr
+'
+'    Select Case gErr
+'
+'        Case 71180
+'
+'        Case Else
+'            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146437)
+'
+'    End Select
+'
+'    Exit Function
+'
+'End Function
+
+Function MovimentoEstoque_Alterar(objItemMovEst As ClassItemMovEstoque) As Long
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Alterar
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_ALTERAR", X)
+    If lErro <> SUCESSO Then gError 89694
+    
+    MovimentoEstoque_Alterar = X.MovimentoEstoque_Alterar(objItemMovEst)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Alterar:
+    
+    MovimentoEstoque_Alterar = gErr
+    
+    Select Case gErr
+
+        Case 89694
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146438)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_NFiscal_Le(objNFiscal As Object, objMovEstoque As ClassMovEstoque) As Long
+'Lê o codigo do movimento de estoque associado aos itens da Nota Fiscal passada
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_NFiscal_Le
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_NFISCAL_LE", X)
+    If lErro <> SUCESSO Then gError 89700
+    
+    MovEstoque_NFiscal_Le = X.MovEstoque_NFiscal_Le(objNFiscal, objMovEstoque)
+
+    Exit Function
+    
+Erro_MovEstoque_NFiscal_Le:
+    
+    MovEstoque_NFiscal_Le = gErr
+    
+    Select Case gErr
+
+        Case 89700
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146439)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Function MovEstoque_Le_NumIntDocOrigem(objMovEstoque As ClassMovEstoque, ByVal iTipoNumIntDocOrigem As Integer, ByVal lNumIntDocOrigem As Long) As Long
+'Lê os movimentos de estoque associados ao NumIntDocOrigem, TipoNumIntDocOrigem em questão
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Le_NumIntDocOrigem
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_LE_NUMINTDOCORIGEM", X)
+    If lErro <> SUCESSO Then gError 89851
+    
+    MovEstoque_Le_NumIntDocOrigem = X.MovEstoque_Le_NumIntDocOrigem(objMovEstoque, iTipoNumIntDocOrigem, lNumIntDocOrigem)
+
+    Exit Function
+    
+Erro_MovEstoque_Le_NumIntDocOrigem:
+    
+    MovEstoque_Le_NumIntDocOrigem = gErr
+    
+    Select Case gErr
+
+        Case 89851
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146440)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovimentoEstoque_Trata_Exclusao(objMovEstoque As ClassMovEstoque, objContabil As ClassContabil) As Long
+'trata a exclusão do movimento de estoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovimentoEstoque_Trata_Exclusao
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVIMENTOESTOQUE_TRATA_EXCLUSAO", X)
+    If lErro <> SUCESSO Then gError 89893
+    
+    MovimentoEstoque_Trata_Exclusao = X.MovimentoEstoque_Trata_Exclusao(objMovEstoque, objContabil)
+
+    Exit Function
+    
+Erro_MovimentoEstoque_Trata_Exclusao:
+    
+    MovimentoEstoque_Trata_Exclusao = gErr
+    
+    Select Case gErr
+
+        Case 89893
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146441)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoque_Producao_Exclui(objMovEstoque As ClassMovEstoque, objContabil As ClassContabil) As Long
+'Exclui a producao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Producao_Exclui
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_PRODUCAO_EXCLUI", X)
+    If lErro <> SUCESSO Then gError 89901
+    
+    MovEstoque_Producao_Exclui = X.MovEstoque_Producao_Exclui(objMovEstoque, objContabil)
+
+    Exit Function
+    
+Erro_MovEstoque_Producao_Exclui:
+    
+    MovEstoque_Producao_Exclui = gErr
+    
+    Select Case gErr
+
+        Case 89901
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146442)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoque_ReqProducao_Exclui(objMovEstoque As ClassMovEstoque, objContabil As ClassContabil) As Long
+'Exclui a Requisição de producao
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_ReqProducao_Exclui
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_REQPRODUCAO_EXCLUI", X)
+    If lErro <> SUCESSO Then gError 89912
+    
+    MovEstoque_ReqProducao_Exclui = X.MovEstoque_ReqProducao_Exclui(objMovEstoque, objContabil)
+
+    Exit Function
+    
+Erro_MovEstoque_ReqProducao_Exclui:
+    
+    MovEstoque_ReqProducao_Exclui = gErr
+    
+    Select Case gErr
+
+        Case 89912
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146443)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function MovEstoque_Exclui(objMovEstoque As ClassMovEstoque, objContabil As ClassContabil) As Long
+'trata a exclusão do movimento de estoque
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_MovEstoque_Exclui
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_MOVESTOQUE_EXCLUI", X)
+    If lErro <> SUCESSO Then gError 89917
+    
+    MovEstoque_Exclui = X.MovEstoque_Exclui(objMovEstoque, objContabil)
+
+    Exit Function
+    
+Erro_MovEstoque_Exclui:
+    
+    MovEstoque_Exclui = gErr
+    
+    Select Case gErr
+
+        Case 89917
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146444)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+
+Public Function Inventario_Exclui(objInventario As ClassInventario, objContabil As ClassContabil) As Long
+'Exclui o inventário
+
+Dim X As Object, lErro As Long
+    
+On Error GoTo Erro_Inventario_Exclui
+    
+    lErro = Rotina_ObterObjetoFuncao("MAT_INVENTARIO_EXCLUI", X)
+    If lErro <> SUCESSO Then gError 89941
+    
+    Inventario_Exclui = X.Inventario_Exclui(objInventario, objContabil)
+
+    Exit Function
+    
+Erro_Inventario_Exclui:
+    
+    Inventario_Exclui = gErr
+    
+    Select Case gErr
+
+        Case 89941
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 146445)
+        
+    End Select
+    
+    Exit Function
+
+End Function
+

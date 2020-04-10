@@ -1,0 +1,19 @@
+Arquivo de Registro de Ocorrências do Sistema SGE
+
+
+Empresa: Corporator Informatica Ltda. Filial: Matriz - 21/11/2010 20:13:42 - Usuário: usuario1
+   ERRO: O Caminho do arquivo de lock do ADM100.ini difere do registrado como padrão no banco de dados. Ini=%s e BD=%s Local: 141623 Descrição: (141623)
+
+O Caminho do arquivo de lock do ADM100.ini difere do registrado como padrão no banco de dados. Ini=\\MARIO-PC\C\adlock.dat e BD=\\asp22\DadosDemo\adlock.dat
+Empresa: Tour & Andersson Ltda. Filial: Matriz - 19/12/2010 11:47:25 - Usuário: supervisor
+   ERRO: O Pedido de Venda com o código %s da Filial Empresa %s já está baixado. Local: 46876 Descrição: (46876)
+
+O Pedido de Venda com o código 1 da Filial Empresa 1 já está baixado.
+Empresa: Tour & Andersson Ltda. Filial: Matriz - 19/12/2010 17:50:35 - Usuário: supervisor
+   ERRO: A quantidade do item não pode ultrapassar a quantidade a ser faturada que é %s. Local: 46934 Descrição: (46934)
+
+A quantidade do item não pode ultrapassar a quantidade a ser faturada que é 5.
+Empresa: Actua Controls Ltda. Filial: Matriz - 20/12/2010 12:29:36 - Usuário: supervisor
+   ERRO: Erro fornecido pelo VB: %s. (%s) Local: 383 Descrição: (383)
+
+Erro fornecido pelo VB: 'Text' property is read-only. (174467)

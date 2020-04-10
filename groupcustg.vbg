@@ -1,0 +1,7 @@
+VBGROUP 5.0
+StartupProject=GlobaisAdmTRV.vbp
+Project=GlobaisContabTRV.vbp
+Project=GlobaisCRFATTRV.vbp
+Project=GlobaisFATTRV.vbp
+Project=GlobaisAdmArtmill.vbp
+Project=GlobaisPVPar.vbp

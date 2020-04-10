@@ -1,0 +1,13 @@
+VBGROUP 5.0
+StartupProject=RotinasAdmTRV.vbp
+Project=RotinasContabTRV.vbp
+Project=RotinasCPRTRV.vbp
+Project=RotinasCRFATTRV.vbp
+Project=RotinasFATTRV.vbp
+Project=RotinasMATTRV.vbp
+Project=RotinasAdmArtmill.vbp
+Project=RotinasCRFATArtmill.vbp
+Project=RotinasESTArtmill.vbp
+Project=RotinasFATArtmill.vbp
+Project=RotinasMATArtmill.vbp
+Project=RotinasPVArtmill.vbp

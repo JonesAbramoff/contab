@@ -1,0 +1,253 @@
+00001NFV  Nota Fiscal de Venda                                                                                
+00002NFEDVNota Fiscal de Entrada Devolução de Venda                                                           
+00003NFEODNota Fiscal de Entrada - Outras Devol. Mat em 3os                                                   
+00004NFE  Nota Fiscal de Entrada                                                                              
+00005NFDC Nota Fiscal de Devolução de Compra                                                                  
+00006REQPRRequisição para Produção                                                                            
+00007PROD Produção                                                                                            
+00008CONS Consumo                                                                                             
+00009ETDISEntrada por Transferência Disponivel                                                                
+00010STDISSaída por Transferência Disponivel                                                                  
+00011AAIDNAcréscimo por Ajuste de Inventário Disponivel Nossa                                                 
+00012DAIDNDecréscimo por Ajuste de Inventário Disponivel Nossa                                                
+00013NFEORNota Fiscal de Entrada - Outras Remessas de 3os                                                     
+00014DCONSDevolução de Consumo                                                                                
+00015DMPRODevolução de Requisição de Material para Produção                                                   
+00016EPRODEstorno de Produção                                                                                 
+00017ECONSEstorno de Consumo                                                                                  
+00018EDCONEstorno de Devolução de Consumo                                                                     
+00019ERPROEstorno de Requisicao para Produção                                                                 
+00020EDMPREstorno de Devolução de Requisição de Material para Produção                                        
+00021PROC Processo                                                                                            
+00022DPROCDevolução de Processo                                                                               
+00023EPROCEstorno de Processo                                                                                 
+00024ETDEFEntrada por Transferencia Defeituoso                                                                
+00025STDEFSaida por Transferencia Defeituoso                                                                  
+00026ETINDEntrada por Transferencia Indisponivel                                                              
+00027STINDSaida por Tranferencia Indisponivel                                                                 
+00028NFECONota Fiscal Entrada - Consignação                                                                   
+00029NFVMCNota Fiscal de Venda de Material em Consignacao                                                     
+00030AAIRIAcrescimo por Ajuste de Inventário Recebida e Indisponível                                          
+00031NFSDCNota Fiscal de Saida - Devolucao de Consignacao                                                     
+00032NFSRCNota Fiscal de Saida - Remessa em Consignacao                                                       
+00033NFEDENota Fiscal de Entrada - Demonstração                                                               
+00034NFEDDNota Fiscal de Entrada - Devolução de Demonstração                                                  
+00035NFSRDNota Fiscal de Saida - Remessa em Demonstração                                                      
+00036NFSDDNota Fiscal de Saida - Devolução de Demonstração                                                    
+00037NFEC Nota Fiscal de Entrada - Conserto                                                                   
+00038NFEDCNota Fiscal de Entrada - Devolução de Conserto                                                      
+00039NFSCRNota Fiscal de Saida - Remessa para Conserto                                                        
+00040NFSCDNota Fiscal de Saida - Devolução de Conserto                                                        
+00041EDPROEstorno de Devolucao de Processo                                                                    
+00042NFSORNota Fiscal Saida - Outras Remessas para Terceiros                                                  
+00043NFSODNota Fiscal Saida - Outras Devoluções Mat. De 3os                                                   
+00044AAID Acrescimo por Ajuste de Inventário Defeituoso                                                       
+00045DAID Decrescimo por Ajuste de Inventário Defeituoso                                                      
+00046AAICTAcrescimo por Ajuste de Inventário Conserto 3os                                                     
+00047DAICTDecrescimo por Ajuste de Inventário Conserto 3os                                                    
+00048AAIC Acrescimo por Ajuste de Inventário Consig 3os                                                       
+00049DAIC Decrescimo por Ajuste de Inventário Consig 3os                                                      
+00050AAIDTAcrescimo por Ajuste de Inventário Demo 3os                                                         
+00051DAIDTDecrescimo por Ajuste de Inventário Demo 3os                                                        
+00052AAIOTAcrescimo por Ajuste de Inventário Outros 3os                                                       
+00053DAIOTDecrescimo por Ajuste de Inventário Outros 3os                                                      
+00054AAIIOAcrescimo por Ajuste de Inventário Indisponivel Outras                                              
+00055DAIIODecrescimo por Ajuste de Inventário Indisponivel Outras                                             
+00056REMATRecebimento de Material                                                                             
+00057EETDIEstorno de Entrada por Transferência Disponivel                                                     
+00058ESTDIEstorno de Saída por Transferência Disponivel                                                       
+00059EETDEEstorno de Entrada por Transferencia Defeituoso                                                     
+00060ESTDEEstorno de Saida por Transferencia Defeituoso                                                       
+00061EETINEstorno de Entrada por Transferencia Indisponivel                                                   
+00062ESTINEstorno de Saida por Tranferencia Indisponivel                                                      
+00063ERMATExclusão Recebimento de Material                                                                    
+00064EXNFEExclusao de Nota Fiscal Entrada                                                                     
+00065BRMATBaixa de Recebimento de Material                                                                    
+00066ENFEMExclusão de Nota Fiscal de Entrada - Outras Devol. Mat em 3os                                       
+00067ENFERExclusão de Nota Fiscal de Entrada - Outras Remessas de 3os                                         
+00068ENFEDExclusão de Nota Fiscal de Entrada - Demonstração                                                   
+00069ENFDDExclusão de Nota Fiscal de Entrada - Devolução de Demonstração                                      
+00070ENFECExclusão de Nota Fiscal de Entrada - Conserto                                                       
+00071ENFDCExclusão de Nota Fiscal de Entrada - Devolução de Conserto                                          
+00072ENFCOExclusão de Nota Fiscal Entrada - Consignação                                                       
+00073NFDCONota Fiscal Entrada - Devolução de Consignação                                                      
+00074ENFDEExclusão de Nota Fiscal Entrada - Devolução de Consignação                                          
+00075ENFDVExclusão de Nota Fiscal de Entrada Devolução de Venda                                               
+00076BMATDBaixa de Material Defeituoso                                                                        
+00077DAIRIDecrescimo por Ajuste de Inventário Recebida e Indisponível                                         
+00078RESERReservado                                                                                           
+00079EETCTEstorno Entrada por Transferencia Consignacao de Terceiros                                          
+00080ESTCTEstorno Saida por Transferencia Consignacao de Terceiros                                            
+00081ETCT Entrada por Transferencia Consignacao de Terceiros                                                  
+00082STCT Saida por Transferencia Consignacao de Terceiros                                                    
+00083VMATRDisponibilização de Material Reservado - Primeiro no disp nosso e depois em consig3                 
+00084RMAT Reserva de Material - Primeiro em disp nosso e depois em consig3                                    
+00085CANRECancelamento de Reserva - Primeiro em consig3 e depois na nossa                                     
+00086INDTEIndustrialização para Terceiros - Entrada de Material                                               
+00087INDTSIndustrialização para Terceiros - Saida de Material                                                 
+00090INDE Industrialização em Terceiros de Mat. Prima Nossa- Entrada                                          
+00091INDS Industrialização em Terceiros de Mat. Prima Nossa - Saida                                           
+00092AAIITAcrescimo por Ajuste de Inventário Industrializacao para Terceiros                                  
+00093DAIITDescrescimo por Ajuste de Inventário Industrializacao para Terceiros                                
+00094ETC  Entrada por Transferencia Consignacao                                                               
+00095STC  Saida por Transferencia Consignacao                                                                 
+00096EETC Estorno Entrada por Transferencia Consignacao                                                       
+00097ESTC Estorno Saida por Transferencia Consignacao                                                         
+00098CVMC Cancelamento de Venda de Material em Consignação                                                    
+00099CBREMCancelamento da Baixa de Recebimento de Material                                                    
+00100ETDS1Entrada por Transferência Disponivel (Origem Consig 3)                                              
+00101CNFSVCancelamento de Nota Fiscal de Venda                                                                
+00102CNISCCancelamento de Nota Fiscal Interna de Saida Consignação                                            
+00103CISCTCancelamento Nota Fiscal Interna de Saida Conserto                                                  
+00104CISDMCancelamento de Nota Fiscal Interna de Saida Demonstração                                           
+00105CISDCCancelamento de Nota Fiscal Interna de Saida Devolução Consignação                                  
+00106CISDPCancelamento de Nota Fiscal Interna de Saida Devolução de Compra                                    
+00107CISDTCancelamento Nota Fiscal Interna Saida Devolução Conserto                                           
+00108CISDDCancelamento Nota Fiscal Interna Saida Devolução Demonstração                                       
+00109CISOCCancelamento Nota Fiscal Interna Saida Interna Outras Saidas para Cliente                           
+00110CSODCCancelamento NF interna de saida outras devoluções para cliente                                     
+00111CSODFCancelamento NF interna de saida outras devoluções para fornecedor                                  
+00112CISOFCancelamento NF interna de saida outras saidas para fornecedor                                      
+00113CISSRCancelamento NF interna de saida simples remessa                                                    
+00114CIEC Cancelamento NF interna de entrada em consignacao                                                   
+00115CIECTCancelamento NF interna de entrada para conserto                                                    
+00116CIEDMCancelamento NF interna de entrada em demonstração                                                  
+00117CIEDCCancelamento NF interna de entrada devolucao de consignacao                                         
+00118CDCNTCancelamento NF interna de entrada devolucao de conserto                                            
+00119CIEDDCancelamento NF interna de entrada devolução de demonstração                                        
+00120CIEDVCancelamento NF interna de entrada devolução de venda                                               
+00121CIEN Cancelamento NF interna de entrada normal                                                           
+00122ETDS2Entrada por Transferência Disponivel Origem Consignação de Terceiros                                
+00123ETDS3Entrada por Transferência Disponivel Origem Nossa Consignação                                       
+00124CIEOCCancelamento NF interna de entrada outras entradas de cliente                                       
+00125CEODCCancelamento NF interna de entrada outras devoluções de cliente                                     
+00126CEODFCancelamento NF interna de entrada outras devoluções de forn.                                       
+00127CIEOFCancelamento NF interna de entrada outras entradas de forn.                                         
+00128CIESRCancelamento NF interna de entrada simples remessa                                                  
+00129CIEFNCancelamento NF interna de entrada fatura normal                                                    
+00130CEBENCancelamento NF interna de entrada material beneficiado                                             
+00131CFBENCancelamento NF interna de entrada fatura material beneficiado                                      
+00132CENCOCancelamento NF interna de entrada normal compras                                                   
+00133CEFCOCancelamento NF interna de entrada fatura normal compras                                            
+00134CIEBFCancelamento NF interna de entrada mat. Prima p/beneficiamento                                      
+00135CEFBFCancelamento NF interna de entrada fatura mat. Prima p/benef.                                       
+00136CEBFCCancelamento NF interna de entrada mat. Prima p/beneficiamento Compras                              
+00137CFBFCCancelamento NF interna de entrada fatura mat. Prima p/benef. Compras                               
+00138NFESRNota Fiscal de Entrada Simples Remessa                                                              
+00139NEBENNota Fiscal de Entrada Material Beneficiado                                                         
+00140CIECPCancelamento NF interna de entrada complemento de preço                                             
+00141STESTAjuste do Custo Standard - Material nosso em Estoque                                                
+00142STCSGAjuste do Custo Standard - Material em Consignacao                                                  
+00143STDMOAjuste do Custo Standard - Material em Demonstração                                                 
+00144STCSTAjuste do Custo Standard - Material em Conserto                                                     
+00145STOUTAjuste do Custo Standard - Outros Materiais em Poder de terceiros                                   
+00146STBNFAjuste do Custo Standard - Material em Beneficiamento                                               
+00147NFSPCNota Fiscal Saida - Cobrança Mat. Em Consignação                                                    
+00148CNSPCCancelamento de Nota Fiscal Saida - Cobrança Mat. Em Consignação                                    
+00149NFSSRNota Fiscal Saida - Simples Remessa                                                                 
+00150NFEBFNota Fiscal de Entrada - Mat. 3os para Beneficiamento                                               
+00151RQPBFRequisição para Produção de Mat. de 3os p/Beneficiamento                                            
+00152ERPBFEstorno de Requisicao para Produção de Mat. de 3os p/Beneficiamento                                 
+00153CIEB3Cancelamento NF interna de entrada Mat. 3os para Beneficiamento                                     
+00154PROD3Produção de Mat. de 3os (Beneficiamento)                                                            
+00155EPRD3Estorno de Produção de Mat. de 3os                                                                  
+00156NFSB3Nota Fiscal de Saida Mat. 3os Beneficiado                                                           
+00157CNFB3Cancelamento de Nota Fiscal de Saida Mat de 3os Beneficiado                                         
+00158NFD3BNota Fiscal de Saida - Devolução de Mat. de 3os para beneficiamento                                 
+00159CSD3BCancelamento Nota Fiscal de Saida Devolução de Mat. De 3os para beneficiamento                      
+00160NISRBNota Fiscal de Saída - Remessa para Beneficiamento                                                  
+00161EDSB Nota Fiscal de Entrada - Dev.Simb.Beneficiamento                                                    
+00162NFEDBNota Fiscal de Entrada - Dev.Beneficiamento (mat.não utilizado)                                     
+00163CNEBFCancelamento Nota Fiscal de Entrada - Mat. 3os para Beneficiamento                                  
+00164CNSB3Cancelamento Nota Fiscal de Saida Mat. 3os Beneficiado                                              
+00165CND3BCancelamento Nota Fiscal de Saida - Devolução de Mat. de 3os para beneficiamento                    
+00166CNSRBCancelamento Nota Fiscal de Saída - Remessa para Beneficiamento                                     
+00167CEDSBCancelamento Nota Fiscal de Entrada - Dev.Simb.Beneficiamento                                       
+00168CNEDBCancelamento Nota Fiscal de Entrada - Dev.Beneficiamento (mat.não utilizado)                        
+00169NSRB3Nota Fiscal Saida - Remessa Mat.Benef.3ºs                                                           
+00170CSRB3Cancelamento Nota Fiscal Saida - Remessa Mat.Benef.3ºs                                              
+00171NERB3Nota Fiscal de Entrada Remessa de Mat.Benef.p/3ºs                                                   
+00172CERB3Cancelamento Nota Fiscal de Entrada Remessa de Mat.Benef.p/3ºs                                      
+00173DIITLDescrescimo por Ajuste de Inventário Industrializacao para Terceiros  - Só Lote                     
+00174DIDTLDecrescimo por Ajuste de Inventário Demo 3os - Só Lote                                              
+00175DIDNLDecréscimo por Ajuste de Inventário Disponivel Nossa - Só Lote                                      
+00176AIDNLAcréscimo por Ajuste de Inventário Disponivel Nossa - Só Lote                                       
+00177AIDTLAcrescimo por Ajuste de Inventário Demo 3os - Só Lote                                               
+00178DIOTLDecrescimo por Ajuste de Inventário Outros 3os - Só Lote                                            
+00179AICTLAcrescimo por Ajuste de Inventário Conserto 3os - Só Lote                                           
+00180AIIOLAcrescimo por Ajuste de Inventário Indisponivel Outras - Só Lote                                    
+00181AIITLAcrescimo por Ajuste de Inventário Industrializacao para Terceiros - Só Lote                        
+00182DIIOLDecrescimo por Ajuste de Inventário Indisponivel Outras - Só Lote                                   
+00183AIOTLAcrescimo por Ajuste de Inventário Outros 3os - Só Lote                                             
+00184DAICLDecrescimo por Ajuste de Inventário Consig 3os - Só Lote                                            
+00185AIRILAcrescimo por Ajuste de Inventário Recebida e Indisponível - Só Lote                                
+00186DICTLDecrescimo por Ajuste de Inventário Conserto 3os - Só Lote                                          
+00187DAIDLDecrescimo por Ajuste de Inventário Defeituoso - Só Lote                                            
+00188AAIDLAcrescimo por Ajuste de Inventário Defeituoso - Só Lote                                             
+00189DIRILDecrescimo por Ajuste de Inventário Recebida e Indisponível - Só Lote                               
+00190AAICLAcrescimo por Ajuste de Inventário Consig 3os - Só Lote                                             
+00191DCNSPNota Fiscal Entrada - Devolução Cobrança Mat. Em Consignação                                        
+00192CDCSPCancelamento Nota Fiscal Entrada - Devolução Cobrança Mat. Em Consignação                           
+00193STBT Saida por Transferencia Beneficiamento de Terceiros                                                 
+00194ESTBTEstorno Saida por Transferencia Beneficiamento de Terceiros                                         
+00195ETDS4Entrada por Transferência Disponivel (Origem Benef 3)                                               
+00196NFVMBNota Fiscal de Venda de Material em de 3os em Benef                                                 
+00197NECPCcompl preco entrada consignacao                                                                     
+00198EECPCexclusao compl preco entrada consignacao                                                            
+00199STOT Saida por Transferencia Outros de Terceiros                                                         
+00200ETOT Entrada por Transferencia Outros de Terceiros                                                       
+00201NFCF Cupom Fiscal                                                                                        
+00202ENFCFEstorno Venda Cupom Fiscal                                                                          
+00203DEVB3Nota Fiscal Devolucao Mat. 3os Beneficiado                                                          
+00204CDVB3Cancelamento Nota Fiscal Devolucao Mat. 3os Beneficiado                                             
+00205CTBENCusto da Mat. Prima Material Beneficiado (Devol. Simbolica)                                         
+00206TRCCFTroca Venda Cupom Fiscal                                                                            
+00207NRVFENota Fiscal Remessa de Venda fora do estabelecimento                                                
+00208DESMSDesmembramento Saída                                                                                
+00209DESMEDesmembramento Entrada                                                                              
+00210NDVFENota Fiscal Dev. Rem. de Venda fora do estabelecimento                                              
+00212CNRVFCancelamento NFiscal Remessa de Venda fora do estabelecimento                                       
+00213CNDVFCancelam. NFiscal Dev. Rem. de Venda fora do estabelecimento                                        
+00214AAIDCAcréscimo por Ajuste de Inventário Disponivel Nossa - CI                                            
+00215DAIDCDecréscimo por Ajuste de Inventário Disponivel Nossa - CI                                           
+00216AAIRCAcrescimo por Ajuste de Inventário Recebida e Indisponível - CI                                     
+00217DAIRCDecrescimo por Ajuste de Inventário Recebida e Indisponível - CI                                    
+00218AAIFCAcrescimo por Ajuste de Inventário Defeituoso - CI                                                  
+00219DAIFCDecrescimo por Ajuste de Inventário Defeituoso - CI                                                 
+00220AAICCAcrescimo por Ajuste de Inventário Consig 3os - CI                                                  
+00221DAICCDecrescimo por Ajuste de Inventário Consig 3os - CI                                                 
+00222AAIICAcrescimo por Ajuste de Inventário Indisponivel Outras - CI                                         
+00223DAIICDecrescimo por Ajuste de Inventário Indisponivel Outras - CI                                        
+00224AIDNCAcréscimo por Ajuste de Inventário Disponivel Nossa - Só Lote - CI                                  
+00225DIDNCDecréscimo por Ajuste de Inventário Disponivel Nossa - Só Lote - CI                                 
+00226AIRICAcrescimo por Ajuste de Inventário Recebida e Indisponível - Só Lote - CI                           
+00227DIRICDecrescimo por Ajuste de Inventário Recebida e Indisponível - Só Lote - CI                          
+00228AAILCAcrescimo por Ajuste de Inventário Defeituoso - Só Lote - CI                                        
+00229DAILCDecrescimo por Ajuste de Inventário Defeituoso - Só Lote - CI                                       
+00230AAILLAcrescimo por Ajuste de Inventário Consig 3os - Só Lote - CI                                        
+00231DAILLDecrescimo por Ajuste de Inventário Consig 3os - Só Lote - CI                                       
+00232AIIOCAcrescimo por Ajuste de Inventário Indisponivel Outras - Só Lote - CI                               
+00233DIIOCDecrescimo por Ajuste de Inventário Indisponivel Outras - Só Lote - CI                              
+00234NFSC3Nota Fiscal Saida Remessa Conserto de Conserto 3os                                                  
+00235NFEC3Nota Fiscal Entrada Devolucao Conserto de Conserto 3os                                              
+00236NFSO3Nota Fiscal Saida Remessa Outros de Outros 3os                                                      
+00237NFEO3Nota Fiscal Entrada Devolucao Outros de Outros 3os                                                  
+00238CISC3Cancelamento Nota Fiscal Saida Remessa Conserto de Conserto 3os                                     
+00239CDEC3Cancelamento Nota Fiscal Entrada Devolucao Conserto de Conserto 3os                                 
+00250RP3O Requisição para Produção de Mat. de 3os - Outros                                                    
+00251ERP3OEstorno de Requisição para Produção de Mat. de 3os - Outros                                         
+00252PR3O Produção de material de 3os - Outros                                                                
+00253EPR3OEstorno de Produção de material de 3os - Outros                                                     
+00260ETBT Entrada por Transferência Benef de Terceiros                                                        
+00261EETBTEstorno Entrada por Transferência Benef de Terceiros                                                
+00262APSRVApontamento de Serviço                                                                              
+00263EASRVEstorno de Apontamento de Serviço                                                                   
+00264ECNSTEntrada para conserto de 3os                                                                        
+00265DCNSTDevolução de conserto de 3os                                                                        
+00266SCNS Saída para Conserto                                                                                 
+00267DCNS Devolução de Conserto                                                                               
+00304ECRTREstorno de Crédito Tributário                                                                       
+00496EOREQEstorno Outras Requisições                                                                          
+00497EODEVEstorno Outras Devoluções                                                                           
+00498OUDEVOutras Devoluções                                                                                   
+00499OUREQOutras Requisicoes                                                                                  

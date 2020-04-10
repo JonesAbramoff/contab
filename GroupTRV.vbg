@@ -1,0 +1,20 @@
+VBGROUP 5.0
+StartupProject=GlobaisAdmTRV.vbp
+Project=GlobaisCRFATTRV.vbp
+Project=GlobaisFATTRV.vbp
+Project=GlobaisTelasCPRTRV.vbp
+Project=GlobaisTelasFATTRV.vbp
+Project=BatchFATTrv.vbp
+Project=RelatoriosFATTrv.vbp
+Project=RotinasCPRTRV.vbp
+Project=RotinasCRFATTRV.vbp
+Project=RotinasFATTRV.vbp
+Project=TelasCprTRV.vbp
+Project=TelasFATTRV.vbp
+Project=GlobaisContabTRV.vbp
+Project=RotinasContabTRV.vbp
+Project=TelasCTBTRV.vbp
+Project=GlobaisTelasESTTRV.vbp
+Project=TelasESTTrv.vbp
+Project=RotinasAdmTRV.vbp
+Project=RotinasMATTRV.vbp

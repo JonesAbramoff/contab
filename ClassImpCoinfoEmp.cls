@@ -1,0 +1,100 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "ClassImpCoinfoEmp"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+Public lNumIntArq As Long
+Public lcodemp As Long
+Public snchave As String
+Public sNome As String
+Public sEndereco As String
+Public sBairro As String
+Public sCidade As String
+Public sUF As String
+Public sCEP As String
+Public sfone1 As String
+Public sfone2 As String
+Public sFax As String
+Public sCgc As String
+Public sie As String
+Public iNatureza As Integer
+Public sContato As String
+Public sCargo As String
+Public icob As Integer
+Public spraca As String
+Public sendercob As String
+Public dlimcred As Double
+Public dtdatacad As Date
+Public scidcob As String
+Public sufcob As String
+Public dtdataalt As Date
+Public icodpes As Integer
+Public dDesconto As Double
+Public sobs1 As String
+Public sobs2 As String
+Public sobs3 As String
+Public sobs4 As String
+Public sobs5 As String
+Public sobs6 As String
+Public lcodred As Long
+Public sUsuario As String
+Public itipoempr As Integer
+Public dtdatareg As Date
+Public ifaturado As Integer
+Public icondpag As Integer
+Public scpf As String
+Public sEmail As String
+Public smoecred As String
+Public icodprom As Integer
+Public sbairrcob As String
+Public scepcob As String
+Public iAtivo As Integer
+Public dtexpirlim As Date
+Public ifixapraz As Integer
+Public dredcomis As Double
+Public icliente As Integer
+Public icomissiona As Integer
+Public iExportado As Integer
+Public inumban As Integer
+Public dISS As Double
+Public lagenban As Long
+Public lnconta As Long
+Public stextcon1 As String
+Public stextcon2 As String
+Public stextcon3 As String
+Public ienvfat As Integer
+Public ienvnota As Integer
+Public ienvocor As Integer
+Public scodest As String
+Public sTexto1 As String
+Public sTexto2 As String
+Public sTexto3 As String
+Public sTexto4 As String
+Public sEmail2 As String
+Public scodgru As String
+Public lEmpPai As Long
+Public icorrent As Integer
+Public lempagt As Long
+Public dcomis As Double
+Public lcodrep As Long
+Public sSerie As String
+Public iaporte As Integer
+Public inf As Integer
+Public scodccm As String
+Public iusaccre As Integer
+Public isoprdexc As Integer
+Public llovouc As Long
+Public dtDataExp As Date
+
+Public dtNoCorporatorEm As Date
+

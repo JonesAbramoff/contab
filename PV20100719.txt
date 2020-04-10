@@ -1,0 +1,27 @@
+11429      200            CD Dental Ltda                     R Domingos de Morais, 1654                        Vila Mariana   São Paulo           SP0401020096388194000113        20100719M3S"** Imposto recolhido por substituição tributária conf. Art. 313G do RICMS" BASE ST R$ 248,58 - ICMS ST R$ 29,83                                                                                        KEEPERS LOG                   
+913775     1  1.921314                 CARIAX G.90G**      CX0000000004500000000000000175900               10001           
+913775     2  2.921414                 CARIAX DS.90G**     CX0000000004500000000000000162300               1001            
+913775     3  2.921444                 CARIAX DS 250ML**   CX0000000002400000000000000176200               10001           
+11430      200            CD Dental Ltda                     R Domingos de Morais, 1654                        Vila Mariana   São Paulo           SP0401020096388194000113        20100719M3S"Lei 12.221/06 - alíq. ICMS 12% dentifrício(A)-escovas(F)"                                                                                                                                              KEEPERS LOG                   
+913776     1  1.021375K                CX  PROF. 2L        CX0000000005000000000000000492100               9520            
+913776     2  1.021563                 PERIOKIN 36g*       CX0000000007200000000000000187400               10410           
+913776     3  1.021544                 PERIOKIN 250ML      CX0000000004800000000000000132900               8403            
+913776     4  1.022912                 KIN FORTE 90g*      CX0000000006000000000000000134400               9702            
+913776     5  1.022954                 KIN FORTE 500ML     CX0000000004000000000000000165900               9223            
+913776     5  1.022954                 KIN FORTE 500ML     CX0000000004000000000000000165900               9223            
+11431      7179           RNL Comércio de Prod. de Higiene   R Osvaldo Collino, 613                            Pres. Altino   Osasco              SP0621000804552729000121        20100719M3S"Lei 12.221/06 - alíq. ICMS 12% dentifrício(A)-escovas(F)"                                                                                                                                              KEEPERS LOG                   
+913777     1  1.021563                 PERIOKIN 36g*       CX0000000007200000000000000187400               10410           
+913777     2  1.021544                 PERIOKIN 250ML      CX0000000002400000000000000132900               8403            
+913777     3  1.022912                 KIN FORTE 90g*      CX0000000006000000000000000134400               9702            
+913777     4  1.022954                 KIN FORTE 500ML     CX0000000002000000000000000165900               9223            
+11432      390            Drogaria Onofre ltda               R Major Paladino, 128 - G6 BlA                    V.Ribeiro BarroSão Paulo           SP0530700061549259000180        20100719M3S"Lei 12.221/06 - alíq. ICMS 12% dentifrício(A)-escovas(F)"                                                                                                                                              KEEPERS LOG                   
+913791     1  2.921444                 CARIAX DS 250ML**   CX0000000002400000000000000167600               10001           
+11433      390            Drogaria Onofre ltda               R Major Paladino, 128 - G6 BlA                    V.Ribeiro BarroSão Paulo           SP0530700061549259000180        20100719M3S"Lei 12.221/06 - alíq. ICMS 12% dentifrício(A)-escovas(F)"                                                                                                                                              KEEPERS LOG                   
+913792     1  1.021563                 PERIOKIN 36g*       CX0000000007200000000000000172000               10410           
+913792     2  5.033025                 BLISTER ESC.EXSUAVE*CX0000000000200000000000000406800               SEM LOTE        
+913792     3  5.033024                 BLISTER ESC.SUAVE*  CX0000000000200000000000000349200               SEM LOTE        
+913792     4  3.023902                 ORTHONET 2X400ML    CX0000000001200000000000000212100               9003            
+913792     5  6.022144                 GINGIK B5 250ML     CX0000000002400000000000000125300               8039            
+913792     6  6.022014                 KIN BRANQ. 95G*     CX0000000002000000000000000154500               9207            
+11434      6469           A M Moliterno EPP                  AV Amazonas, 320 - Sala 04                        Caputera       Caraguatatuba       SP1166063067403154000103        20100719M3S"** Imposto recolhido por substituição tributária conf. Art. 313G do RICMS"                                                                                                                             KEEPERS LOG                   
+913790     1  1.921375K                CX  PROF. 1L**      CX0000000002000000000000000171400               10002           

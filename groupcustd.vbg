@@ -1,0 +1,6 @@
+VBGROUP 5.0
+StartupProject=TelasFATBeit.vbp
+Project=TelasFATPhar.vbp
+Project=RelatoriosFATAF.vbp
+Project=TelasFATWB.vbp
+Project=TelasFATAF.vbp

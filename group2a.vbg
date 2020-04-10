@@ -1,0 +1,7 @@
+VBGROUP 5.0
+StartupProject=admlib2.vbp
+Project=GlobaisCRFAT2.vbp
+Project=GlobaisCPR2.vbp
+Project=GlobaisMAT2.vbp
+Project=globaisadm2.vbp
+Project=globaiscontab2.vbp

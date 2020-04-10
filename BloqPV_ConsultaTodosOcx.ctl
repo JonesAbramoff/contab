@@ -1,0 +1,1201 @@
+VERSION 5.00
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.ocx"
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "MSMASK32.ocx"
+Begin VB.UserControl BloqPV_ConsultaTodosOcx 
+   ClientHeight    =   4890
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   9405
+   ScaleHeight     =   4890
+   ScaleWidth      =   9405
+   Begin VB.Frame Frame2 
+      Caption         =   "Bloqueios"
+      Height          =   3405
+      Left            =   105
+      TabIndex        =   12
+      Top             =   1350
+      Width           =   9165
+      Begin VB.TextBox SeqBloqueio 
+         BorderStyle     =   0  'None
+         Enabled         =   0   'False
+         Height          =   255
+         Left            =   1740
+         MaxLength       =   250
+         TabIndex        =   18
+         Top             =   1455
+         Width           =   675
+      End
+      Begin VB.TextBox ObservacaoBloqueio 
+         BorderStyle     =   0  'None
+         Enabled         =   0   'False
+         Height          =   255
+         Left            =   4365
+         MaxLength       =   250
+         TabIndex        =   17
+         Top             =   1005
+         Width           =   4245
+      End
+      Begin VB.ComboBox TipoBloqueio 
+         Enabled         =   0   'False
+         Height          =   315
+         ItemData        =   "BloqPV_ConsultaTodosOcx.ctx":0000
+         Left            =   300
+         List            =   "BloqPV_ConsultaTodosOcx.ctx":0002
+         TabIndex        =   14
+         Top             =   1005
+         Width           =   1605
+      End
+      Begin MSMask.MaskEdBox DataLiberacao 
+         Height          =   225
+         Left            =   3105
+         TabIndex        =   15
+         Top             =   1035
+         Width           =   1200
+         _ExtentX        =   2117
+         _ExtentY        =   397
+         _Version        =   393216
+         BorderStyle     =   0
+         Enabled         =   0   'False
+         MaxLength       =   8
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   "dd/mm/yyyy"
+         Mask            =   "##/##/##"
+         PromptChar      =   " "
+      End
+      Begin MSMask.MaskEdBox DataBloqueio 
+         Height          =   240
+         Left            =   1920
+         TabIndex        =   16
+         Top             =   1035
+         Width           =   1125
+         _ExtentX        =   1984
+         _ExtentY        =   423
+         _Version        =   393216
+         BorderStyle     =   0
+         Enabled         =   0   'False
+         MaxLength       =   8
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   "dd/mm/yyyy"
+         Mask            =   "##/##/##"
+         PromptChar      =   " "
+      End
+      Begin MSFlexGridLib.MSFlexGrid GridBloqueio 
+         Height          =   2010
+         Left            =   135
+         TabIndex        =   13
+         Top             =   270
+         Width           =   8910
+         _ExtentX        =   15716
+         _ExtentY        =   3545
+         _Version        =   393216
+      End
+   End
+   Begin VB.Frame Frame1 
+      Caption         =   "Identificação"
+      Height          =   1185
+      Left            =   105
+      TabIndex        =   3
+      Top             =   120
+      Width           =   7560
+      Begin VB.Label Valor 
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   4860
+         TabIndex        =   11
+         Top             =   765
+         Width           =   1200
+      End
+      Begin VB.Label Data 
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   4860
+         TabIndex        =   10
+         Top             =   300
+         Width           =   1200
+      End
+      Begin VB.Label Cliente 
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   1905
+         TabIndex        =   9
+         Top             =   765
+         Width           =   1950
+      End
+      Begin VB.Label Pedido 
+         BorderStyle     =   1  'Fixed Single
+         Height          =   300
+         Left            =   1905
+         TabIndex        =   8
+         Top             =   300
+         Width           =   1200
+      End
+      Begin VB.Label LabelValor 
+         Caption         =   "Valor:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Left            =   4080
+         TabIndex        =   7
+         Top             =   780
+         Width           =   810
+      End
+      Begin VB.Label LabelData 
+         Caption         =   "Data:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   165
+         Left            =   4065
+         TabIndex        =   6
+         Top             =   330
+         Width           =   630
+      End
+      Begin VB.Label LabelCliente 
+         Caption         =   "Cliente:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   195
+         Left            =   1050
+         TabIndex        =   5
+         Top             =   795
+         Width           =   705
+      End
+      Begin VB.Label LabelPedido 
+         Caption         =   "Pedido:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   225
+         Left            =   1035
+         TabIndex        =   4
+         Top             =   330
+         Width           =   630
+      End
+   End
+   Begin VB.PictureBox Picture1 
+      Height          =   510
+      Left            =   7995
+      ScaleHeight     =   450
+      ScaleWidth      =   1200
+      TabIndex        =   0
+      TabStop         =   0   'False
+      Top             =   210
+      Width           =   1260
+      Begin VB.CommandButton BotaoFechar 
+         Height          =   345
+         Left            =   675
+         Picture         =   "BloqPV_ConsultaTodosOcx.ctx":0004
+         Style           =   1  'Graphical
+         TabIndex        =   2
+         ToolTipText     =   "Fechar"
+         Top             =   60
+         Width           =   420
+      End
+      Begin VB.CommandButton BotaoGravar 
+         Height          =   345
+         Left            =   135
+         Picture         =   "BloqPV_ConsultaTodosOcx.ctx":0182
+         Style           =   1  'Graphical
+         TabIndex        =   1
+         ToolTipText     =   "Gravar"
+         Top             =   60
+         Width           =   420
+      End
+   End
+End
+Attribute VB_Name = "BloqPV_ConsultaTodosOcx"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+Const STRING_BLOQUEIOSPV_OBSERVACAO = 250
+
+'Grid Bloqueio:
+Dim objGridBloqueio As AdmGrid
+Dim iGrid_TipoBloqueio_Col As Integer
+Dim iGrid_DataBloqueio_Col As Integer
+Dim iGrid_DataLiberacao_Col As Integer
+Dim iGrid_Observacao_Col As Integer
+Dim iGrid_SeqBloqueio_Col As Integer
+
+'Property Variables:
+Dim m_Caption As String
+Event Unload()
+
+Dim iAlterado As Integer
+
+'*** FUNÇÕES DE INICIALIZAÇÃO DA TELA - INÍCIO ***
+Public Sub Form_Load()
+    
+Dim lErro As Long
+Dim iIndice As Integer
+
+On Error GoTo Erro_Form_Load
+    
+    Set objGridBloqueio = New AdmGrid
+    
+    'Executa a Inicialização do grid Bloqueio
+    lErro = Inicializa_Grid_Bloqueio(objGridBloqueio)
+    If lErro <> SUCESSO Then gError 125252
+    
+    'Carrega o Combo TipoBloqueio
+    lErro = Carrega_TipoBloqueio
+    If lErro <> SUCESSO Then gError 125253
+    
+    iAlterado = 0
+    
+    lErro_Chama_Tela = SUCESSO
+
+    Exit Sub
+
+Erro_Form_Load:
+
+    lErro_Chama_Tela = gErr
+
+    Select Case gErr
+
+        Case 125252 To 125254
+
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 143533)
+
+    End Select
+    
+    iAlterado = 0
+    
+    Exit Sub
+
+End Sub
+
+Function Trata_Parametros(Optional objPedidoDeVenda As ClassPedidoDeVenda) As Long
+
+Dim lErro As Long
+
+On Error GoTo Erro_Trata_Parametros
+
+    If Not (objPedidoDeVenda Is Nothing) Then
+    
+        'Chama a função que irá preencher a tela BloqPV_ConsultaTodos
+        lErro = Traz_BloqPV_ConsultaTodos_Tela(objPedidoDeVenda)
+        If lErro <> SUCESSO Then gError 125256
+
+    End If
+        
+    iAlterado = 0
+
+    Trata_Parametros = SUCESSO
+
+    Exit Function
+
+Erro_Trata_Parametros:
+
+    Trata_Parametros = gErr
+
+    Select Case gErr
+
+        Case 125255, 125256
+        
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 143534)
+
+    End Select
+    
+    iAlterado = 0
+
+    Exit Function
+
+End Function
+
+Private Function Inicializa_Grid_Bloqueio(objGridInt As AdmGrid) As Long
+'Executa a Inicialização do grid Bloqueio
+    
+    'tela em questão
+    Set objGridInt.objForm = Me
+
+    'titulos do grid
+    objGridInt.colColuna.Add ("  ")
+    objGridInt.colColuna.Add ("Tipo")
+    objGridInt.colColuna.Add ("Data")
+    objGridInt.colColuna.Add ("Data Liberação")
+    objGridInt.colColuna.Add ("Observação")
+    objGridInt.colColuna.Add ("Seq.")
+    
+   'campos de edição do grid
+    objGridInt.colCampo.Add (TipoBloqueio.Name)
+    objGridInt.colCampo.Add (DataBloqueio.Name)
+    objGridInt.colCampo.Add (DataLiberacao.Name)
+    objGridInt.colCampo.Add (ObservacaoBloqueio.Name)
+    objGridInt.colCampo.Add (SeqBloqueio.Name)
+    
+    iGrid_TipoBloqueio_Col = 1
+    iGrid_DataBloqueio_Col = 2
+    iGrid_DataLiberacao_Col = 3
+    iGrid_Observacao_Col = 4
+    iGrid_SeqBloqueio_Col = 5
+    
+    objGridInt.objGrid = GridBloqueio
+
+    'linhas visiveis do grid
+    objGridInt.iLinhasVisiveis = 7
+
+    'todas as linhas do grid
+    objGridInt.objGrid.Rows = 1000 + 1
+
+    'largura da primeira coluna
+    GridBloqueio.ColWidth(0) = 500
+
+    'largura total do grid
+    objGridInt.iGridLargAuto = GRID_LARGURA_MANUAL
+
+    objGridInt.iExecutaRotinaEnable = GRID_EXECUTAR_ROTINA_ENABLE
+    
+    'Não permite incluir novas linhas
+    objGridInt.iProibidoIncluir = GRID_PROIBIDO_INCLUIR
+    objGridInt.iProibidoExcluir = GRID_PROIBIDO_EXCLUIR
+    
+    'Chama rotina de Inicialização do Grid
+    Call Grid_Inicializa(objGridInt)
+
+    Exit Function
+
+End Function
+'*** FUNÇÕES DE INICIALIZAÇÃO DA TELA - FIM ***
+
+'*** FUNÇÕES DE APOIO A TELA - INÍCIO
+Public Function Saida_Celula(objGridInt As AdmGrid) As Long
+'Faz a critica da célula do grid que está deixando de ser a corrente
+
+Dim lErro As Long
+
+On Error GoTo Erro_Saida_Celula
+    
+    lErro = Grid_Inicializa_Saida_Celula(objGridInt)
+
+    If lErro = SUCESSO Then
+
+        'Verifica qual a Coluna em questão
+        Select Case GridBloqueio.Col
+
+            Case iGrid_TipoBloqueio_Col
+
+                lErro = Saida_Celula_TipoBloqueio(objGridInt)
+                If lErro <> SUCESSO Then gError 125257
+
+            Case iGrid_DataBloqueio_Col
+                
+                lErro = Saida_Celula_DataBloqueio(objGridInt)
+                If lErro <> SUCESSO Then gError 125258
+
+            Case iGrid_DataLiberacao_Col
+
+                lErro = Saida_Celula_DataLiberacao(objGridInt)
+                If lErro <> SUCESSO Then gError 125259
+
+            Case iGrid_Observacao_Col
+
+                lErro = Saida_Celula_Observacao(objGridInt)
+                If lErro <> SUCESSO Then gError 125260
+
+        End Select
+
+        lErro = Grid_Finaliza_Saida_Celula(objGridInt)
+        If lErro <> SUCESSO Then gError 125261
+    
+    End If
+
+    Saida_Celula = SUCESSO
+
+    Exit Function
+
+Erro_Saida_Celula:
+
+    Saida_Celula = gErr
+
+    Select Case gErr
+
+        Case 125257 To 125261
+
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error, 143535)
+
+    End Select
+
+    Exit Function
+
+End Function
+
+Private Function Saida_Celula_TipoBloqueio(objGridInt As AdmGrid) As Long
+'Faz a crítica da célula Tipo Bloqueio que está deixando de ser a corrente
+
+Dim lErro As Long
+Dim iCodigo As Integer
+Dim iIndice As Integer
+Dim objTipoDeBloqueio As New ClassTipoDeBloqueio
+
+On Error GoTo Erro_Saida_Celula_TipoBloqueio
+
+    Set objGridInt.objControle = TipoBloqueio
+
+    'Verifica se o Tipo foi preenchido
+    If Len(Trim(TipoBloqueio.Text)) > 0 Then
+
+        'Verifica se ele foi selecionado
+        If TipoBloqueio.Text <> TipoBloqueio.List(TipoBloqueio.ListIndex) Then
+
+            'Tenta selecioná-lo na combo
+            lErro = Combo_Seleciona_Grid(TipoBloqueio, iCodigo)
+            If lErro <> SUCESSO And lErro <> 25085 And lErro <> 25086 Then gError 125262
+
+            'Não foi encontrado
+            If lErro = 25085 Then gError 125263
+            If lErro = 25086 Then gError 125264
+
+        End If
+
+        'Acrescenta uma linha no Grid se for o caso
+        If GridBloqueio.Row - GridBloqueio.FixedRows = objGridInt.iLinhasExistentes Then objGridInt.iLinhasExistentes = objGridInt.iLinhasExistentes + 1
+
+    End If
+    
+    lErro = Grid_Abandona_Celula(objGridInt)
+    If lErro <> SUCESSO Then gError 125266
+
+    Saida_Celula_TipoBloqueio = SUCESSO
+
+    Exit Function
+
+Erro_Saida_Celula_TipoBloqueio:
+
+    Saida_Celula_TipoBloqueio = gErr
+
+    Select Case gErr
+
+        Case 125262, 125266
+            Call Grid_Trata_Erro_Saida_Celula(objGridInt)
+
+        Case 125263
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_TIPOBLOQUEIO_NAO_ENCONTRADO", gErr, iCodigo)
+            Call Grid_Trata_Erro_Saida_Celula(objGridInt)
+
+        Case 125264
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_TIPOBLOQUEIO_NAO_ENCONTRADO1", gErr, TipoBloqueio.Text)
+            Call Grid_Trata_Erro_Saida_Celula(objGridInt)
+
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error, 143536)
+
+    End Select
+
+    Exit Function
+
+End Function
+
+Private Function Saida_Celula_DataBloqueio(objGridInt As AdmGrid) As Long
+'Faz a crítica da célula DataBloqueio que está deixando de ser a corrente
+
+Dim lErro As Long
+
+On Error GoTo Erro_Saida_Celula_DataBloqueio
+
+    Set objGridInt.objControle = DataBloqueio
+    
+    'Critica a data preenchida
+    lErro = Data_Critica(DataBloqueio.Text)
+    If lErro <> SUCESSO Then gError 125267
+    
+    lErro = Grid_Abandona_Celula(objGridInt)
+    If lErro <> SUCESSO Then gError 125268
+   
+    Saida_Celula_DataBloqueio = SUCESSO
+    
+    Exit Function
+    
+Erro_Saida_Celula_DataBloqueio:
+
+    Saida_Celula_DataBloqueio = gErr
+    
+    Select Case gErr
+    
+        Case 125267, 125268
+            Call Grid_Trata_Erro_Saida_Celula(objGridInt)
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 143537)
+
+    End Select
+
+    Exit Function
+
+End Function
+
+Private Function Saida_Celula_DataLiberacao(objGridInt As AdmGrid) As Long
+'Faz a crítica da célula DataLiberacao que está deixando de ser a corrente
+
+Dim lErro As Long
+
+On Error GoTo Erro_Saida_Celula_DataLiberacao
+
+    Set objGridInt.objControle = DataLiberacao
+    
+    'Critica a Data informada
+    lErro = Data_Critica(DataLiberacao.Text)
+    If lErro <> SUCESSO Then gError 125269
+    
+    lErro = Grid_Abandona_Celula(objGridInt)
+    If lErro <> SUCESSO Then gError 125270
+   
+    Saida_Celula_DataLiberacao = SUCESSO
+    
+    Exit Function
+    
+Erro_Saida_Celula_DataLiberacao:
+
+    Saida_Celula_DataLiberacao = gErr
+    
+    Select Case gErr
+    
+        Case 125269, 125270
+            Call Grid_Trata_Erro_Saida_Celula(objGridInt)
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 143538)
+
+    End Select
+
+    Exit Function
+
+End Function
+
+Private Function Saida_Celula_Observacao(objGridInt As AdmGrid) As Long
+'Faz a crítica da célula Observação que está deixando de ser a corrente
+
+Dim lErro As Long
+
+On Error GoTo Erro_Saida_Celula_Observacao
+
+    Set objGridInt.objControle = ObservacaoBloqueio
+
+    lErro = Grid_Abandona_Celula(objGridInt)
+    If lErro <> SUCESSO Then gError 125271
+    
+    Saida_Celula_Observacao = SUCESSO
+    
+    Exit Function
+    
+Erro_Saida_Celula_Observacao:
+
+    Saida_Celula_Observacao = gErr
+    
+    Select Case gErr
+    
+        Case 125271
+            Call Grid_Trata_Erro_Saida_Celula(objGridInt)
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error$, 143539)
+
+    End Select
+
+    Exit Function
+
+End Function
+
+Public Sub Rotina_Grid_Enable(iLinha As Integer, objControl As Object, iChamada As Integer)
+
+On Error GoTo Erro_Rotina_Grid_Enable
+
+    'Pesquisa o controle da coluna em questão
+    Select Case objControl.Name
+
+'        Case TipoBloqueio.Name
+'
+'            'Verifica se o Pedido foi preenchido
+'            If Len(Trim(Pedido.Caption)) <> 0 Then
+'                TipoBloqueio.Enabled = True
+'            Else
+'                TipoBloqueio.Enabled = False
+'            End If
+'
+'        Case DataBloqueio.Name
+'
+'            'Verifica se o Tipo Bloqueio foi preenchido
+'            If Len(Trim(GridBloqueio.TextMatrix(GridBloqueio.Row, iGrid_TipoBloqueio_Col))) <> 0 Then
+'                DataBloqueio.Enabled = True
+'            Else
+'                DataBloqueio.Enabled = False
+'            End If
+'
+'        Case DataLiberacao.Name
+'
+'            'Verifica se o Tipo Bloqueio foi preenchido
+'            If Len(Trim(GridBloqueio.TextMatrix(GridBloqueio.Row, iGrid_TipoBloqueio_Col))) <> 0 Then
+'                DataLiberacao.Enabled = True
+'            Else
+'                DataLiberacao.Enabled = False
+'            End If
+        
+        Case ObservacaoBloqueio.Name
+
+            'Verifica se o Tipo Bloqueio foi preenchido
+            If Len(Trim(GridBloqueio.TextMatrix(GridBloqueio.Row, iGrid_TipoBloqueio_Col))) <> 0 Then
+                ObservacaoBloqueio.Enabled = True
+            Else
+                ObservacaoBloqueio.Enabled = False
+            End If
+
+    End Select
+        
+    Exit Sub
+
+Erro_Rotina_Grid_Enable:
+
+    Select Case Err
+
+        Case Else
+            Call Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", Err, Error$, 143540)
+
+    End Select
+
+    Exit Sub
+
+End Sub
+
+Private Function Carrega_TipoBloqueio() As Long
+'Carrega a Combo TipoBloqueio com as informações do BD
+
+Dim colCodigoDescricao As New AdmColCodigoNome
+Dim objCodDescricao As AdmCodigoNome
+Dim lErro As Long
+
+On Error GoTo Erro_Carrega_TipoBloqueio
+
+    'Lê o código e a descrição de todas as Tabelas de Preços
+    lErro = CF("Cod_Nomes_Le", "TiposDeBloqueio", "Codigo", "NomeReduzido", STRING_TIPO_BLOQUEIO_NOME_REDUZIDO, colCodigoDescricao)
+    If lErro <> SUCESSO Then gError 125272
+
+    For Each objCodDescricao In colCodigoDescricao
+
+        'Adiciona o item na Lista de Tabela de Preços
+        TipoBloqueio.AddItem CInt(objCodDescricao.iCodigo) & SEPARADOR & objCodDescricao.sNome
+        TipoBloqueio.ItemData(TipoBloqueio.NewIndex) = objCodDescricao.iCodigo
+        
+    Next
+
+    Carrega_TipoBloqueio = SUCESSO
+
+    Exit Function
+
+Erro_Carrega_TipoBloqueio:
+
+    Carrega_TipoBloqueio = gErr
+
+    Select Case gErr
+
+        Case 125272
+
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error, 143541)
+
+    End Select
+
+    Exit Function
+
+End Function
+
+Function Traz_BloqPV_ConsultaTodos_Tela(objPedidoVenda As ClassPedidoDeVenda) As Long
+'Coloca os dados do Tab de Bloqueio na tela
+
+Dim lErro As Long
+Dim iIndice As Integer
+Dim iIndice2 As Integer, objPedidoVendaAux As New ClassPedidoDeVenda
+Dim objBloqueioPV As New ClassBloqueioPV, objcliente As New ClassCliente
+Dim objTipoBloqueio As New ClassTipoDeBloqueio
+
+On Error GoTo Erro_Traz_BloqPV_ConsultaTodos_Tela
+
+    'Realiza a leitura dos BloqueioPV
+    objPedidoVendaAux.lCodigo = objPedidoVenda.lCodigo
+    objPedidoVendaAux.iFilialEmpresa = objPedidoVenda.iFilialEmpresa
+    lErro = CF("BloqueiosPV_Le", objPedidoVendaAux)
+    If lErro <> SUCESSO Then gError 125274
+
+    'Preenche a tela com as informações do BD
+    Pedido.Caption = objPedidoVenda.lCodigo
+    
+    objcliente.lCodigo = objPedidoVenda.lCliente
+    lErro = CF("Cliente_Le", objcliente)
+    If lErro <> SUCESSO And lErro <> 12293 Then gError 125274
+    
+    Cliente.Caption = objcliente.sNomeReduzido
+    
+    Data.Caption = Format(objPedidoVenda.dtDataEmissao, "dd/mm/yy")
+    Valor.Caption = Format(objPedidoVenda.dValorTotal, "Standard")
+
+    'Limpa o Grid de Bloqueios antes de preencher com os dados da coleção
+    Call Grid_Limpa(objGridBloqueio)
+
+    iIndice = 0
+
+    For Each objBloqueioPV In objPedidoVendaAux.colBloqueiosPV
+
+        iIndice = iIndice + 1
+
+        objTipoBloqueio.iCodigo = objBloqueioPV.iTipoDeBloqueio
+
+        'Lê o Tipo de bloqueio
+        lErro = CF("TipoDeBloqueio_Le", objTipoBloqueio)
+        If lErro <> SUCESSO And lErro <> 23666 Then gError 125275
+        If lErro = 23666 Then gError 125276
+        
+        'Coloca o bloqueio no Grid de bloqueios
+        GridBloqueio.TextMatrix(iIndice, iGrid_TipoBloqueio_Col) = objTipoBloqueio.iCodigo & SEPARADOR & objTipoBloqueio.sNomeReduzido
+        If objBloqueioPV.dtData <> DATA_NULA Then GridBloqueio.TextMatrix(iIndice, iGrid_DataBloqueio_Col) = Format(objBloqueioPV.dtData, "dd/mm/yy")
+        If objBloqueioPV.dtDataLib <> DATA_NULA Then GridBloqueio.TextMatrix(iIndice, iGrid_DataLiberacao_Col) = Format(objBloqueioPV.dtDataLib, "dd/mm/yy")
+        GridBloqueio.TextMatrix(iIndice, iGrid_Observacao_Col) = objBloqueioPV.sObservacao
+        GridBloqueio.TextMatrix(iIndice, iGrid_SeqBloqueio_Col) = CStr(objBloqueioPV.iSequencial)
+
+    Next
+    
+    objGridBloqueio.iLinhasExistentes = iIndice
+
+    Traz_BloqPV_ConsultaTodos_Tela = SUCESSO
+
+    Exit Function
+
+Erro_Traz_BloqPV_ConsultaTodos_Tela:
+
+    Traz_BloqPV_ConsultaTodos_Tela = gErr
+
+    Select Case gErr
+
+        Case 125273 To 125275
+        
+        Case 125276
+            Call Rotina_Erro(vbOKOnly, "ERRO_TIPODEBLOQUEIO_NAO_CADASTRADO", gErr, objTipoBloqueio.iCodigo)
+        
+        Case 125290
+            Call Rotina_Erro(vbOKOnly, "ERRO_PEDIDODEVENDA_INEXISTENTE", gErr, objPedidoVenda.lCodigo)
+        
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error, 143542)
+
+    End Select
+
+    Exit Function
+
+End Function
+
+Public Function Gravar_Registro() As Long
+'Realiza a Gravação da informações no banco de dados
+
+Dim lErro As Long
+Dim iIndice As Integer
+Dim objBloqueioPV As ClassBloqueioPV
+Dim objPedidoDeVenda As New ClassPedidoDeVenda
+
+On Error GoTo Erro_Gravar_Registro
+
+    'Preenche o objPedidoDeVenda
+    objPedidoDeVenda.lCodigo = Pedido.Caption
+    objPedidoDeVenda.iFilialEmpresa = giFilialEmpresa
+
+    For iIndice = 1 To objGridBloqueio.iLinhasExistentes
+
+        Set objBloqueioPV = New ClassBloqueioPV
+        
+        objBloqueioPV.sObservacao = GridBloqueio.TextMatrix(iIndice, iGrid_Observacao_Col)
+        objBloqueioPV.iSequencial = StrParaInt(GridBloqueio.TextMatrix(iIndice, iGrid_SeqBloqueio_Col))
+
+        'Adiciona o bloqueio na coleção de bloqueios
+        With objBloqueioPV
+            Call objPedidoDeVenda.colBloqueiosPV.Add(objPedidoDeVenda.iFilialEmpresa, objPedidoDeVenda.lCodigo, objBloqueioPV.iSequencial, .iTipoDeBloqueio, .sCodUsuario, .sResponsavel, .dtData, "", "", DATA_NULA, .sObservacao)
+        End With
+
+    Next
+    
+    lErro = CF("PedidoVenda_AtualizaObsBloq", objPedidoDeVenda)
+    If lErro <> SUCESSO Then gError 124135
+    
+    iAlterado = 0 'para evitar que pergunte se deseja salvar
+    
+    Gravar_Registro = SUCESSO
+
+    Exit Function
+
+Erro_Gravar_Registro:
+
+    Gravar_Registro = gErr
+    
+    Select Case gErr
+
+        Case 124135
+    
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error, 143543)
+
+    End Select
+
+    Exit Function
+
+End Function
+
+'*** FUNÇÕES DE APOIO A TELA - FIM ***
+
+'*** EVENTOS DO GRIDBLOQUEIO - INÍCIO ***
+Private Sub GridBloqueio_Click()
+
+Dim iExecutaEntradaCelula As Integer
+
+    Call Grid_Click(objGridBloqueio, iExecutaEntradaCelula)
+
+    If iExecutaEntradaCelula = 1 Then
+        Call Grid_Entrada_Celula(objGridBloqueio, iAlterado)
+    End If
+
+End Sub
+
+Private Sub GridBloqueio_GotFocus()
+
+    Call Grid_Recebe_Foco(objGridBloqueio)
+
+End Sub
+
+Private Sub GridBloqueio_EnterCell()
+
+    Call Grid_Entrada_Celula(objGridBloqueio, iAlterado)
+
+End Sub
+
+Private Sub GridBloqueio_LeaveCell()
+
+    Call Saida_Celula(objGridBloqueio)
+
+End Sub
+
+Private Sub GridBloqueio_KeyDown(KeyCode As Integer, Shift As Integer)
+
+    Call Grid_Trata_Tecla1(KeyCode, objGridBloqueio)
+
+End Sub
+
+Private Sub GridBloqueio_KeyPress(KeyAscii As Integer)
+
+Dim iExecutaEntradaCelula As Integer
+
+    Call Grid_Trata_Tecla(KeyAscii, objGridBloqueio, iExecutaEntradaCelula)
+
+    If iExecutaEntradaCelula = 1 Then
+        Call Grid_Entrada_Celula(objGridBloqueio, iAlterado)
+    End If
+
+End Sub
+
+Private Sub GridBloqueio_Validate(Cancel As Boolean)
+
+    Call Grid_Libera_Foco(objGridBloqueio)
+    
+End Sub
+
+Private Sub GridBloqueio_RowColChange()
+
+    Call Grid_RowColChange(objGridBloqueio)
+
+End Sub
+
+Private Sub GridBloqueio_Scroll()
+
+    Call Grid_Scroll(objGridBloqueio)
+
+End Sub
+'*** EVENTOS DO GRIDBLOQUEIO - FIM ***
+
+'*** EVENTOS DOS CONTROLES DO GRID - INÍCIO ***
+Private Sub TipoBloqueio_Change()
+
+    iAlterado = REGISTRO_ALTERADO
+
+End Sub
+
+Private Sub TipoBloqueio_GotFocus()
+
+    Call Grid_Campo_Recebe_Foco(objGridBloqueio)
+
+End Sub
+
+Private Sub TipoBloqueio_KeyPress(KeyAscii As Integer)
+
+    Call Grid_Trata_Tecla_Campo(KeyAscii, objGridBloqueio)
+
+End Sub
+
+Private Sub TipoBloqueio_Validate(Cancel As Boolean)
+
+Dim lErro As Long
+
+    Set objGridBloqueio.objControle = TipoBloqueio
+    lErro = Grid_Campo_Libera_Foco(objGridBloqueio)
+    If lErro <> SUCESSO Then Cancel = True
+
+End Sub
+
+Private Sub DataBloqueio_Change()
+
+    iAlterado = REGISTRO_ALTERADO
+
+End Sub
+
+Private Sub DataBloqueio_GotFocus()
+
+    Call Grid_Campo_Recebe_Foco(objGridBloqueio)
+
+End Sub
+
+Private Sub DataBloqueio_KeyPress(KeyAscii As Integer)
+
+    Call Grid_Trata_Tecla_Campo(KeyAscii, objGridBloqueio)
+
+End Sub
+
+Private Sub DataBloqueio_Validate(Cancel As Boolean)
+
+Dim lErro As Long
+
+    Set objGridBloqueio.objControle = DataBloqueio
+    lErro = Grid_Campo_Libera_Foco(objGridBloqueio)
+    If lErro <> SUCESSO Then Cancel = True
+
+End Sub
+
+Private Sub DataLiberacao_Change()
+
+    iAlterado = REGISTRO_ALTERADO
+
+End Sub
+
+Private Sub DataLiberacao_GotFocus()
+
+    Call Grid_Campo_Recebe_Foco(objGridBloqueio)
+
+End Sub
+
+Private Sub DataLiberacao_KeyPress(KeyAscii As Integer)
+
+    Call Grid_Trata_Tecla_Campo(KeyAscii, objGridBloqueio)
+
+End Sub
+
+Private Sub DataLiberacao_Validate(Cancel As Boolean)
+
+Dim lErro As Long
+
+    Set objGridBloqueio.objControle = DataLiberacao
+    lErro = Grid_Campo_Libera_Foco(objGridBloqueio)
+    If lErro <> SUCESSO Then Cancel = True
+
+End Sub
+
+Private Sub ObservacaoBloqueio_Change()
+
+    iAlterado = REGISTRO_ALTERADO
+
+End Sub
+
+Private Sub ObservacaoBloqueio_GotFocus()
+
+    Call Grid_Campo_Recebe_Foco(objGridBloqueio)
+
+End Sub
+
+Private Sub ObservacaoBloqueio_KeyPress(KeyAscii As Integer)
+
+    Call Grid_Trata_Tecla_Campo(KeyAscii, objGridBloqueio)
+
+End Sub
+
+Private Sub ObservacaoBloqueio_Validate(Cancel As Boolean)
+
+Dim lErro As Long
+
+    Set objGridBloqueio.objControle = ObservacaoBloqueio
+    lErro = Grid_Campo_Libera_Foco(objGridBloqueio)
+    If lErro <> SUCESSO Then Cancel = True
+
+End Sub
+'*** EVENTOS DOS CONTROLES DO GRID - FIM ***
+
+'*** EVENTOS CLICK DOS CONTROLES - INÍCIO ***
+Private Sub BotaoFechar_Click()
+
+    Unload Me
+
+End Sub
+
+Private Sub BotaoGravar_Click()
+
+Dim lErro As Long
+
+On Error GoTo Erro_BotaoGravar_Click
+
+    lErro = Gravar_Registro
+    If lErro <> SUCESSO Then gError 125279
+    
+    Unload Me
+    
+    Exit Sub
+    
+Erro_BotaoGravar_Click:
+ 
+    Select Case gErr
+    
+        Case 125282
+        
+        Case Else
+            lErro = Rotina_Erro(vbOKOnly, "ERRO_FORNECIDO_PELO_VB", gErr, Error, 143544)
+
+    End Select
+
+    Exit Sub
+    
+End Sub
+'*** EVENTOS CLICK DOS CONTROLES - FIM ***
+
+Public Sub Form_Unload(Cancel As Integer)
+    
+    Set objGridBloqueio = Nothing
+
+End Sub
+
+Public Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer, iTelaCorrenteAtiva As Integer)
+
+    Call Tela_QueryUnload(Me, iAlterado, Cancel, UnloadMode, iTelaCorrenteAtiva)
+
+End Sub
+
+'**** inicio do trecho a ser copiado *****
+Public Function Form_Load_Ocx() As Object
+
+    Parent.HelpContextID = IDH_EMPENHO
+    Set Form_Load_Ocx = Me
+    Caption = "Bloqueios do Pedido de Venda"
+    Call Form_Load
+
+End Function
+
+Public Function Name() As String
+
+    Name = "BloqPV_ConsultaTodos"
+
+End Function
+
+Public Sub Show()
+    Parent.Show
+    Parent.SetFocus
+End Sub
+
+'WARNING! DO NOT REMOVE OR MODIFY THE FOLLOWING COMMENTED LINES!
+'MappingInfo=UserControl,UserControl,-1,Controls
+Public Property Get Controls() As Object
+    Set Controls = UserControl.Controls
+End Property
+
+Public Property Get hWnd() As Long
+    hWnd = UserControl.hWnd
+End Property
+
+Public Property Get Height() As Long
+    Height = UserControl.Height
+End Property
+
+Public Property Get Width() As Long
+    Width = UserControl.Width
+End Property
+
+'WARNING! DO NOT REMOVE OR MODIFY THE FOLLOWING COMMENTED LINES!
+'MappingInfo=UserControl,UserControl,-1,ActiveControl
+Public Property Get ActiveControl() As Object
+    Set ActiveControl = UserControl.ActiveControl
+End Property
+
+'WARNING! DO NOT REMOVE OR MODIFY THE FOLLOWING COMMENTED LINES!
+'MappingInfo=UserControl,UserControl,-1,Enabled
+Public Property Get Enabled() As Boolean
+    Enabled = UserControl.Enabled
+End Property
+
+Public Property Let Enabled(ByVal New_Enabled As Boolean)
+    UserControl.Enabled() = New_Enabled
+    PropertyChanged "Enabled"
+End Property
+
+'Load property values from storage
+Private Sub UserControl_ReadProperties(PropBag As PropertyBag)
+
+    UserControl.Enabled = PropBag.ReadProperty("Enabled", True)
+End Sub
+
+'Write property values to storage
+Private Sub UserControl_WriteProperties(PropBag As PropertyBag)
+
+    Call PropBag.WriteProperty("Enabled", UserControl.Enabled, True)
+End Sub
+
+Private Sub Unload(objme As Object)
+
+   RaiseEvent Unload
+
+End Sub
+
+Public Property Get Caption() As String
+    Caption = m_Caption
+End Property
+
+Public Property Let Caption(ByVal New_Caption As String)
+    Parent.Caption = New_Caption
+    m_Caption = New_Caption
+End Property
+'**** fim do trecho a ser copiado *****
+

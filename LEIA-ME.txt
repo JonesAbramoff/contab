@@ -1,0 +1,3 @@
+1 - Não permite a exclusão do usuário supervisor ou que troque o grupo dele
+2 - Consulta de MovCaixa\Cupom Fiscal
+3 - Formatação da Classificação Fiscal

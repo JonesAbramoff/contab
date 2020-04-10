@@ -1,0 +1,5 @@
+VBGROUP 5.0
+StartupProject=SGEECF.vbp
+Project=RotinasECF.vbp
+Project=TelasECF.vbp
+Project=RotinasLoja.vbp

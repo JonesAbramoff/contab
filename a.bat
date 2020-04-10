@@ -1,0 +1,10 @@
+regsvr32 /s telasfatgov.ocx
+regsvr32 /s globaistelasfatgov.dll
+regsvr32 /s GlobaisTelasCPRGov.dll
+regsvr32 /s GlobaisTelasESTGov.dll
+regsvr32 /s RotinasCPRGov.dll
+regsvr32 /s RotinasESTGov.dll
+regsvr32 /s RotinasFATGov.dll
+regsvr32 /s RotinasTRBGov.dll
+regsvr32 /s TelasCprGov.ocx
+regsvr32 /s TelasESTGov.ocx

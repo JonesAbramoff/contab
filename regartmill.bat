@@ -1,0 +1,12 @@
+regsvr32  GlobaisAdmArtMill.dll
+regsvr32  GlobaisTelasESTArtmill.dll
+regsvr32  GlobaisTelasFATArtmill.dll
+regsvr32  RotinasAdmArtmill.dll
+regsvr32  RotinasCRFATArtmill.dll
+regsvr32  RotinasESTArtmill.dll
+regsvr32  RotinasFATArtmill.dll
+regsvr32  RotinasMATArtmill.dll
+regsvr32  RotinasPVArtmill.dll
+regsvr32  RotinasTRBArtmill.dll
+regsvr32  TelasESTArtmill.ocx
+regsvr32  TelasFATArtmill.ocx

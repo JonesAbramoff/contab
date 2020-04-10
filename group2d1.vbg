@@ -1,0 +1,18 @@
+VBGROUP 5.0
+Project=BatchCOM.vbp
+Project=BatchCPR2.vbp
+Project=BatchEST2.vbp
+Project=BatchFIS.vbp
+Project=contabbatch2.vbp
+Project=ContabOnLine2.vbp
+Project=GlobaisTelasCOM.vbp
+Project=GlobaisTelasCPR2.vbp
+Project=GlobaisTelasCTB2.vbp
+Project=GlobaisTelasEST2.vbp
+Project=GlobaisTelasFAT2.vbp
+StartupProject=Instalacao2.vbp
+Project=TelasAdm2.vbp
+Project=TelasTRB2.vbp
+Project=ADRelVB2.vbp
+Project=GlobaisTelasSRV.vbp
+Project=GlobaisTelasPRJ.vbp

@@ -1,0 +1,93 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "ClassImpCoinfoItemFat"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+Public lNumIntArq As Long
+Public lNumRegArqTexto As Long
+Public lCodEmp As Long
+Public dtData As Date
+Public lNumVou As Long
+Public sMoeda As String
+Public dValor As Double
+Public scodest As String
+Public lNumFat As Long
+Public dtdataven As Date
+Public lnumdoc As Long
+Public sUsuario As String
+Public dtdatareg As Date
+Public iMarca As Integer
+Public sTipoDoc As String
+Public lrecnsica As Long
+Public icondpag As Integer
+Public sSerie As String
+Public sTipVou As String
+Public scodgru As String
+Public sControle As String
+Public iCartao As Integer
+Public sCodPro As String
+Public sNumCCred As String
+Public sValidCC As String
+Public iQuantParc As Integer
+Public dVlCartao As Double
+'Public lNumAuto As Long
+Public sNumAuto As String
+Public sCiaCart As String
+Public iExportado As Integer
+Public iExcluido As Integer
+Public dtDataExp As Date
+Public lNumIntTitulo As Long
+Public iFilialEmpresa As Integer
+Public iQtdPax As Integer
+Public sGrupo As String
+Public idiasantc As Integer
+Public imaster As Integer
+Public lnummstr As Long
+Public lNumIntDoc As Long
+Public dComissao As Double
+Public lKit As Long
+
+Public dtDataRecepcao As Date
+Public lEmissor As Long
+Public sDestino As String
+Public dtdatainiciovigencia As Date
+Public dtdatafimvigencia As Date
+Public sIdioma As String
+Public sDestinoVou  As String
+Public dtarifamoeda As Double
+Public dCambio As Double
+Public dtarifareal As Double
+Public stitularcartao As String
+Public stitularcartaocpf As String
+Public spaxcartaofid As String
+Public spaxsobrenome As String
+Public spaxnome As String
+Public dtpaxdatanasc As Date
+Public spaxsexo As String
+Public spaxtipodoc As String
+Public spaxnumdoc As String
+Public spaxendereco As String
+Public spaxbairro As String
+Public spaxcidade As String
+Public spaxcep As String
+Public spaxuf As String
+Public spaxemail As String
+Public spaxcontato As String
+Public spaxtelefone1 As String
+Public spaxtelefone2 As String
+Public sConvenio As String
+Public lCodEmpVou As Long
+
+Public dTarifaUnitaria As Double
+Public dTarifaUNNormal As Double
+

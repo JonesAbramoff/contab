@@ -1,0 +1,164 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "ClassItemInventario"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Attribute VB_Ext_KEY = "SavedWithClassBuilder" ,"Yes"
+Attribute VB_Ext_KEY = "Top_Level" ,"Yes"
+Attribute VB_Ext_KEY = "SavedWithClassBuilder6" ,"Yes"
+Option Explicit
+
+Private mvarlNumIntDoc As Long
+Private mvarsProduto As String
+Private mvarsSiglaUM As String
+Private mvardQuantidade As Double
+Private mvardQuantEst As Double
+Private mvardCusto As Double
+Private mvariAlmoxarifado As Integer
+Private mvariTipo As Integer
+Private mvarsEtiqueta As String
+Private mvarsProdutoDesc As String
+Private mvarsAlmoxarifadoNomeRed As String
+Private mvarsContaContabilEst As String
+Private mvarsContaContabilInv As String
+Private mvarsLote As String
+Private mvariFilialOP As Integer
+Private mvariAtualizaSoLote As Integer
+
+Public Property Let iAtualizaSoLote(ByVal vData As Integer)
+    mvariAtualizaSoLote = vData
+End Property
+
+Public Property Get iAtualizaSoLote() As Integer
+    iAtualizaSoLote = mvariAtualizaSoLote
+End Property
+
+Public Property Let iFilialOP(ByVal vData As Integer)
+    mvariFilialOP = vData
+End Property
+
+Public Property Get iFilialOP() As Integer
+    iFilialOP = mvariFilialOP
+End Property
+
+Public Property Let sLote(ByVal vData As String)
+    mvarsLote = vData
+End Property
+
+Public Property Get sLote() As String
+    sLote = mvarsLote
+End Property
+
+Public Property Let sContaContabilInv(ByVal vData As String)
+    mvarsContaContabilInv = vData
+End Property
+
+Public Property Get sContaContabilInv() As String
+    sContaContabilInv = mvarsContaContabilInv
+End Property
+
+Public Property Let sContaContabilEst(ByVal vData As String)
+    mvarsContaContabilEst = vData
+End Property
+
+Public Property Get sContaContabilEst() As String
+    sContaContabilEst = mvarsContaContabilEst
+End Property
+
+Public Property Let sProdutoDesc(ByVal vData As String)
+    mvarsProdutoDesc = vData
+End Property
+
+Public Property Get sProdutoDesc() As String
+    sProdutoDesc = mvarsProdutoDesc
+End Property
+
+Public Property Let sAlmoxarifadoNomeRed(ByVal vData As String)
+    mvarsAlmoxarifadoNomeRed = vData
+End Property
+
+Public Property Get sAlmoxarifadoNomeRed() As String
+    sAlmoxarifadoNomeRed = mvarsAlmoxarifadoNomeRed
+End Property
+
+Public Property Let lNumIntDoc(ByVal vData As Long)
+    mvarlNumIntDoc = vData
+End Property
+
+Public Property Get lNumIntDoc() As Long
+    lNumIntDoc = mvarlNumIntDoc
+End Property
+
+Public Property Let sEtiqueta(ByVal vData As String)
+    mvarsEtiqueta = vData
+End Property
+
+Public Property Get sEtiqueta() As String
+    sEtiqueta = mvarsEtiqueta
+End Property
+
+Public Property Let iTipo(ByVal vData As Integer)
+    mvariTipo = vData
+End Property
+
+Public Property Get iTipo() As Integer
+    iTipo = mvariTipo
+End Property
+
+Public Property Let iAlmoxarifado(ByVal vData As Integer)
+    mvariAlmoxarifado = vData
+End Property
+
+Public Property Get iAlmoxarifado() As Integer
+    iAlmoxarifado = mvariAlmoxarifado
+End Property
+
+Public Property Let dCusto(ByVal vData As Double)
+    mvardCusto = vData
+End Property
+
+Public Property Get dCusto() As Double
+    dCusto = mvardCusto
+End Property
+
+Public Property Let dQuantEst(ByVal vData As Double)
+    mvardQuantEst = vData
+End Property
+
+Public Property Get dQuantEst() As Double
+    dQuantEst = mvardQuantEst
+End Property
+
+Public Property Let dQuantidade(ByVal vData As Double)
+    mvardQuantidade = vData
+End Property
+
+Public Property Get dQuantidade() As Double
+    dQuantidade = mvardQuantidade
+End Property
+
+Public Property Let sSiglaUM(ByVal vData As String)
+    mvarsSiglaUM = vData
+End Property
+
+Public Property Get sSiglaUM() As String
+    sSiglaUM = mvarsSiglaUM
+End Property
+
+Public Property Let sProduto(ByVal vData As String)
+    mvarsProduto = vData
+End Property
+
+Public Property Get sProduto() As String
+    sProduto = mvarsProduto
+End Property
+
+

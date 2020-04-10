@@ -1,0 +1,153 @@
+Attribute VB_Name = "SistGlobECF"
+'Variáveis criadas por Cyntia
+'Utilizadas em ClassECFConfig
+
+Public SistGlobECF_sCNPJ As String
+Public SistGlobECF_sInscricaoEstadual As String
+Public SistGlobECF_sInscricaoMunicipal As String
+Public SistGlobECF_sEndereco As String
+Public SistGlobECF_sCidade As String
+Public SistGlobECF_sUF As String
+Public SistGlobECF_sEnderecoComplemento As String
+Public SistGlobECF_lNumProxIdentificacao As Long
+Public SistGlobECF_iImpressoraCheque As Integer
+Public SistGlobECF_iImpressoraECF As Integer
+Public SistGlobECF_iPos As Integer
+Public SistGlobECF_sMensagemCupom As String
+Public SistGlobECF_dtDataAnterior As Date
+Public SistGlobECF_iTeclado As Integer
+Public SistGlobECF_dtUltimaReducao As Date
+Public SistGlobECF_lNumProxOrcamento As Long
+Public SistGlobECF_iTEF As Integer
+Public SistGlobECF_iBoletoManual As Integer
+Public SistGlobECF_sNomeCaixa As String
+Public SistGlobECF_dSaldoDinheiro As Double
+Public SistGlobECF_dSaldoCheques As Double
+Public SistGlobECF_dSaldoBoletos As Double
+Public SistGlobECF_dSaldoOutros As Double
+Public SistGlobECF_iCodECF As Integer
+Public SistGlobECF_iCodCaixa As Integer
+Public SistGlobECF_iStatusCaixa As Integer
+Public SistGlobECF_iStatusSessao As Integer
+Public SistGlobECF_iCodOperador As Integer
+Public SistGlobECF_lSeqTransacaoEncerrada As Long
+Public SistGlobECF_sNumSerie As String
+Public SistGlobECF_lSeqTransacaoAberta As Long
+Public SistGlobECF_colVendedores As New Collection
+Public SistGlobECF_colMarcas As New Collection
+'Public SistGlobECF_colCupons As New Collection
+Public SistGlobECF_colCheque As New Collection
+Public SistGlobECF_colCartao As New Collection
+Public SistGlobECF_colTicket As New Collection
+Public SistGlobECF_colOutros As New Collection
+Public SistGlobECF_aobjProdutosCodBarras As New ClassProdCodBarra
+Public SistGlobECF_aobjProdutosReferencia As New ClassProdReferencia
+Public SistGlobECF_aobjProdutosNome As New ClassProdNome
+Public SistGlobECF_aobjProdutosCodigo As New ClassProdCodigo
+Public SistGlobECF_colOperadores As New Collection
+Public SistGlobECF_colVendas As New Collection
+Public SistGlobECF_colOrcamentos As New Collection
+Public SistGlobECF_colMovimentosCaixa As New Collection
+Public SistGlobECF_colAdmMeioPagto As New Collection
+Public SistGlobECF_colTeclados As New Collection
+Public SistGlobECF_colRedes As New Collection
+Public SistGlobECF_objLojaECF As New ClassLojaECF
+Public SistGlobECF_colTiposMeiosPagtos As New Collection
+Public SistGlobECF_colCarne As New Collection
+Public SistGlobECF_colCliente As New Collection
+Public SistGlobECF_colTotalizadores As New Collection
+Public SistGlobECF_colAliquotasTotal As New Collection
+Public SistGlobECF_lNumProxTransfCaixa As Long
+Public SistGlobECF_lNumProxMovto As Long
+Public SistGlobECF_iCodEmpresa As Integer
+
+Public SistGlobECF_sIntegracaoTipo As String
+Public SistGlobECF_iIntegracaoTipo As Integer
+Public SistGlobECF_sNTKToken As String
+Public SistGlobECF_sNTKMerchantId As String
+Public SistGlobECF_sNTKURLServidor As String
+
+Public SistGlobECF_sPPAmbiente As String
+Public SistGlobECF_sPPVersao As String
+Public SistGlobECF_sPPEmailLojista As String
+Public SistGlobECF_sPPSenhaLojista As String
+Public SistGlobECF_lPPCodLoja As Long
+
+Public SistGlobECF_sCEP As String
+Public SistGlobECF_sCNAE As String
+Public SistGlobECF_sEndLogradouro As String
+Public SistGlobECF_sEndNumero As String
+Public SistGlobECF_sEndComplemento As String
+Public SistGlobECF_sBairro As String
+Public SistGlobECF_sNomeReduzido As String
+
+'indica os meios de pagamento que estao ativos
+Public SistGlobECF_iCupomFiscal As Integer
+Public SistGlobECF_iRemoveOrc As Integer
+Public SistGlobECF_iOrcamentoECF As Integer
+Public SistGlobECF_iDinheiroAtivo As Integer
+Public SistGlobECF_iChequeAtivo As Integer
+Public SistGlobECF_iCartaoCreditoAtivo As Integer
+Public SistGlobECF_iCartaoDebitoAtivo As Integer
+Public SistGlobECF_iTicketAtivo As Integer
+Public SistGlobECF_iOutrosAtivo As Integer
+Public SistGlobECF_iCarneAtivo As Integer
+Public SistGlobECF_iTrocaAtivo As Integer
+Public SistGlobECF_objClienteNome As New ClassClienteNome
+Public SistGlobECF_objClienteCPF As New ClassClienteCPF
+Public SistGlobECF_sCodBarrasPorta As String
+Public SistGlobECF_iCodModeloECF As Integer
+Public SistGlobECF_iCodModeloECFConfig As Integer
+Public SistGlobECF_sDirMVTEF As String
+Public SistGlobECF_sBalancaPorta As String
+Public SistGlobECF_iBalancaModelo As Integer
+Public SistGlobECF_iTipoTEF As Integer
+
+Public SistGlobECF_iPreVenda As Integer
+Public SistGlobECF_iUsaImpressoraFiscal As Integer
+Public SistGlobECF_iDAV As Integer
+
+Public SistGlobECF_colECF As New Collection
+Public SistGlobECF_sTipoECF As String
+Public SistGlobECF_sModeloECF As String
+Public SistGlobECF_sMarcaECF As String
+
+Public SistGlobECF_sChavePublica As String
+Public SistGlobECF_sChavePrivada As String
+
+Public SistGlobECF_dtDataAtualizacaoDadosCCC As Date
+
+Public SistGlobECF_sCNPJDesenv As String
+Public SistGlobECF_sInscricaoMunicipalDesenv As String
+Public SistGlobECF_sInscricaoEstadualDesenv As String
+Public SistGlobECF_sNomeDesenv As String
+Public SistGlobECF_sNomePAFECF As String
+Public SistGlobECF_sVersaoPAFECF As String
+Public SistGlobECF_sMD5PAFECF As String
+Public SistGlobECF_sVersaoEspecPAFECF As String
+Public SistGlobECF_sLaudo As String
+Public SistGlobECF_sEnderecoDesenv As String
+Public SistGlobECF_sContatoDesenv As String
+Public SistGlobECF_sTelefoneDesenv As String
+Public SistGlobECF_sNomePrincArqExec As String
+Public SistGlobECF_sMD5PrincArqExec As String
+Public SistGlobECF_iBloqueioReqXXII As Integer
+Public SistGlobECF_sMFAdicional As String
+Public SistGlobECF_iDebug As Integer
+Public SistGlobECF_lConexaoPAFECF As Long
+Public SistGlobECF_lConexaoOrcPAF As Long
+Public SistGlobECF_lTransacaoPAFECF As Long
+Public SistGlobECF_lTransacaoOrcPAFECF As Long
+
+Public SistGlobECF_dtDataHoraFimPapel As Date
+Public SistGlobECF_iIntervaloPapelAcabando As Integer
+Public SistGlobECF_sBalancaNome As String
+Public SistGlobECF_iTotalizador_Sangria As Integer
+Public SistGlobECF_iTotalizador_Suprimento As Integer
+Public SistGlobECF_iTotalizador_Orcamento As Integer
+
+Public SistGlobECF_iTEFImpressoraFolhaDupla As Integer
+Public SistGlobECF_dtDataSWBasico As Date
+Public SistGlobECF_sHoraSWBasico As String
+
+

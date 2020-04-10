@@ -1,0 +1,6 @@
+VBGROUP 5.0
+StartupProject=GlobaisTelasCPRTRV.vbp
+Project=GlobaisTelasESTTRV.vbp
+Project=GlobaisTelasFATTRV.vbp
+Project=globaistelasestartmill.vbp
+Project=GlobaisTelasFATArtmill.vbp

@@ -1,0 +1,10 @@
+regsvr32 /s telasfatEver.ocx
+regsvr32 /s globaistelasfatEver.dll
+regsvr32 /s GlobaisTelasCPREver.dll
+regsvr32 /s GlobaisTelasESTEver.dll
+regsvr32 /s RotinasCPREver.dll
+regsvr32 /s RotinasESTEver.dll
+regsvr32 /s RotinasFATEver.dll
+regsvr32 /s RotinasTRBEver.dll
+regsvr32 /s TelasCprEver.ocx
+regsvr32 /s TelasESTEver.ocx

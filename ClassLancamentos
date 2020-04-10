@@ -1,0 +1,151 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "ClassLancamentos"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Attribute VB_Ext_KEY = "SavedWithClassBuilder" ,"Yes"
+Attribute VB_Ext_KEY = "Top_Level" ,"Yes"
+Option Explicit
+
+Private mvarsConta As String
+Private mvarsCcl As String
+Private mvardCredito As Double
+Private mvardDebito As Double
+Private mvarsHistorico As String
+Private mvarsProduto As String
+Private mvariAglutina As Integer
+Private mvarlContaSimples As Long
+Private mvariSeqContraPartida As Integer
+Private mvariEscaninho_Custo As Integer
+Private mvariGerencial As Integer
+Private mvarsUsuario As String
+Private mvardtDataRegistro As Date
+Private mvardHoraRegistro As Double
+
+Public Property Let dHoraRegistro(ByVal vData As Double)
+    mvardHoraRegistro = vData
+End Property
+
+Public Property Get dHoraRegistro() As Double
+    dHoraRegistro = mvardHoraRegistro
+End Property
+
+Public Property Let dtDataRegistro(ByVal vData As Date)
+    mvardtDataRegistro = vData
+End Property
+
+Public Property Get dtDataRegistro() As Date
+    dtDataRegistro = mvardtDataRegistro
+End Property
+
+Public Property Let sUsuario(ByVal vData As String)
+    mvarsUsuario = vData
+End Property
+
+Public Property Get sUsuario() As String
+    sUsuario = mvarsUsuario
+End Property
+
+Public Property Let iGerencial(ByVal vData As Integer)
+    mvariGerencial = vData
+End Property
+
+Public Property Get iGerencial() As Integer
+    iGerencial = mvariGerencial
+End Property
+
+Public Property Let iEscaninho_Custo(ByVal vData As Integer)
+    mvariEscaninho_Custo = vData
+End Property
+
+Public Property Get iEscaninho_Custo() As Integer
+    iEscaninho_Custo = mvariEscaninho_Custo
+End Property
+
+Public Property Let iSeqContraPartida(ByVal vData As Integer)
+    mvariSeqContraPartida = vData
+End Property
+
+Public Property Get iSeqContraPartida() As Integer
+    iSeqContraPartida = mvariSeqContraPartida
+End Property
+
+Public Property Let lContaSimples(ByVal vData As Long)
+Attribute lContaSimples.VB_Description = "Conta Simplificada."
+    mvarlContaSimples = vData
+End Property
+
+Public Property Get lContaSimples() As Long
+    lContaSimples = mvarlContaSimples
+End Property
+
+Public Property Let iAglutina(ByVal vData As Integer)
+    mvariAglutina = vData
+End Property
+
+Public Property Get iAglutina() As Integer
+    iAglutina = mvariAglutina
+End Property
+
+Public Property Let sProduto(ByVal vData As String)
+    mvarsProduto = vData
+End Property
+
+Public Property Get sProduto() As String
+    sProduto = mvarsProduto
+End Property
+
+Public Property Let sHistorico(ByVal vData As String)
+Attribute sHistorico.VB_Description = "Historico"
+    mvarsHistorico = vData
+End Property
+
+Public Property Get sHistorico() As String
+    sHistorico = mvarsHistorico
+End Property
+
+Public Property Let dCredito(ByVal vData As Double)
+Attribute dCredito.VB_Description = "Valor do lancamento contábil"
+    mvardCredito = vData
+End Property
+
+Public Property Get dCredito() As Double
+    dCredito = mvardCredito
+End Property
+
+Public Property Let dDebito(ByVal vData As Double)
+    mvardDebito = vData
+End Property
+
+Public Property Get dDebito() As Double
+    dDebito = mvardDebito
+End Property
+
+Public Property Let sCcl(ByVal vData As String)
+Attribute sCcl.VB_Description = "Centro de Custo/Lucro"
+    mvarsCcl = vData
+End Property
+
+Public Property Get sCcl() As String
+    sCcl = mvarsCcl
+End Property
+
+Public Property Let sConta(ByVal vData As String)
+Attribute sConta.VB_Description = "Conta Contabil"
+    mvarsConta = vData
+End Property
+
+Public Property Get sConta() As String
+    sConta = mvarsConta
+End Property
+
+
+

@@ -1,0 +1,33 @@
+E17384148800015384949868      01611720      Forprint Informática                                                                                                               20130708101647
+E2738414880001530001001       Parafuso                                          KG    +001000000
+E2738414880001530001002       InpalSoft MF                                      KG    +002000000
+E2738414880001530001003       InpalSanfor                                       KG    +000023000
+E2738414880001530001005       InpalLene MFS                                     KG    +000965000
+E2738414880001530001010       Grama                                             un    +000000000
+E2738414880001530001013       Resistor 300kg                                    un    +001000000
+E2738414880001530001014       Resistor 40Kg                                     un    +001000000
+E2738414880001530001015       Resistor 50Kg                                     un    +001000000
+E2738414880001530001016       Resistor 60Kg                                     un    +001000000
+E2738414880001530001017       Resistor 70Kg                                     un    +001000000
+E2738414880001530001018       Resistor 80Kg                                     un    +001000000
+E2738414880001530001019       Resistor 90Kg                                     un    +100000000
+E2738414880001530001888       prestação de serviço                              un    +000002000
+E2738414880001530001889       prestação de serviço                              un    +000002000
+E2738414880001530001989       prestação de cobrança                             un    +000002000
+E2738414880001530002124       Agenda Escolar Roxy                               un    +000100000
+E2738414880001530002145       Agenda Permanente                                 un    +100000000
+E2738414880001530009001       Sapato Social Bico Fino Preto n.40                un    +012000000
+E2738414880001530009002       Sapato Bico fino Marrom 40                        un    +000500000
+E2738414880001530009003       Sapato Social Bico Fino Preto n.38                un    +000100000
+E2738414880001530012003       Prestação de Serviço                              un    +000000000
+E2738414880001530012015       Prestação de Serviço                              un    +000000000
+E2738414880001530012016       Prestação de Serviço                              un    +000000000
+E2738414880001530012017       Prestação de Serviço                              un    +000000000
+E2738414880001530012018       Prestação de Serviço                              un    +000000000
+E2738414880001530014003       GOL 4 PORTAS CLASSICO                             un    +000010000
+E2738414880001530018001       copo 12                                           un    +000010000
+E2738414880001533000001       GRADE VERDE PEQUENO                               un    +000000000
+E2738414880001533000002       GRADE VERDE MEDIO                                 un    +000000000
+E2738414880001533000003       GRADE VERDE GRANDE                                un    +000000000
+E97384148800015384949868      000030
+EAD36AD01B9607D36FC2CDA82B980B0E0F4513D168139CAC8BF4F8AB16659CDC6F3105EF890CB21934294FE8BDE793A7024B6483223019664913B52F98841B96C76D5487C66E5DACDB42795F7DF04E241AA64DA139C2BA9D1D6DA4D9EA374D88996D48B4FB62F02E91B43684E4FB61317DCD78BE52F38F71C054D29AFF1F099CE13

@@ -1,0 +1,12 @@
+300620055933  Prestação de serviços                        
+300620051933  prestação de serviços                        
+060920055949  Devolução de Locação                         
+011120056933  Prestação de serviços                        
+041120055901  Rem p/ indust encomenda                      
+030120065124  Industr./Retorno Material Ind.               
+150220065949  Outras Saídas                                
+300820075124  Industr.efet. p/outra empresa                
+290120092933  prestação de serviços                        
+310820091604  Crédito Ativo Imobilizado                    
+230820101651  Entr combi,lub,p/induatrializa               
+03112010913   Ret Mercad/Bem p/ Export/Feira               

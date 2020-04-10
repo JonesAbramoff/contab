@@ -1,0 +1,200 @@
+--BROWSE CRIADO AUTOMATICAMENTE PELA TELA BROWSECRIA
+--ARQUIVO 
+INSERT INTO Arquivos (Nome, Descricao, Tipo) 
+VALUES ('BordCobrRetArqs','Arquivos de retorno de cobrança',4)
+GO
+
+--TELAS 
+INSERT INTO Telas (Nome, Projeto_Original, Classe_Original, FilialEmpresa, Descricao) 
+VALUES ('BordCobrRetArqsLista','TelasCPR','ClassTelasCPR',1,'Arquivos de retorno de cobrança')
+GO
+
+--GRUPOTELAS 
+INSERT INTO GrupoTela (CodGrupo, NomeTela, TipoDeAcesso) 
+VALUES ('supervisor', 'BordCobrRetArqsLista', 1)
+GO
+
+--TELASMODULO
+INSERT INTO TelasModulo (SiglaModulo, NomeTela) 
+VALUES ('CR', 'BordCobrRetArqsLista')
+GO
+
+--BROWSEARQUIVOS
+INSERT INTO BrowseArquivo (NomeTela, NomeArq, SelecaoSQL, Projeto, Classe, TituloBrowser, BotaoSeleciona, BotaoEdita, BotaoConsulta, ProjetoObjeto, ClasseObjeto, BancoDados, NomeTelaEdita, NomeTelaConsulta) 
+VALUES ('BordCobrRetArqsLista', 'BordCobrRetArqs', '', 'RotinasCPR', 'ClassCPRFormata', 'Lista de Arquivos de retorno de cobrança', 1, 0, 0, 'GlobaisCPR', 'ClassBorderoRetCobr', 0, 'BordCobrRetArqs', '')
+GO
+
+--CAMPOS 
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'NumIntBordero', 'NumIntBordero',1,0,1,2,4,10,10,0, 'NumIntBordero', 'NumIntBordero', 1,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'Cobrador', 'Cobrador',1,0,1,1,2,5,5,0, 'Cobrador', 'Cobrador', 2,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'NomeCobrador', 'Nome do Cobrador',1,0,1,4,20,0,0,0, 'Nome do Cobrador', 'Nome do Cobrador', 3,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'NumBorderoRet', 'Núm.Borderê Ret.',1,0,1,2,4,10,10,0, 'Núm.Borderê Ret.', 'Núm.Borderê Ret.', 4,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'NomeArq', 'Nome do Arquivo',1,0,1,4,80,0,0,0, 'Nome do Arquivo', 'Nome do Arquivo', 5,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'DataRecepcao', 'Data da Recepção',1,0,1,6,8,23,23,0, 'Data da Recepção', 'Data da Recepção', 6,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'CodCCI', 'Cód.Conta',1,0,1,1,2,5,5,0, 'Cód.Conta', 'Cód.Conta', 7,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'NomeCCI', 'Nome da Conta',1,0,1,4,15,0,0,0, 'Nome da Conta', 'Nome da Conta', 8,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'CodBanco', 'Cód.Banco',1,0,1,1,2,5,5,0, 'Cód.Banco', 'Cód.Banco', 9,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'Banco', 'Banco',1,0,1,4,15,0,0,0, 'Banco', 'Banco', 10,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'Agencia', 'Agência',1,0,1,4,5,0,0,0, 'Agência', 'Agência', 11,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'DVAgencia', 'DV AG',1,0,1,4,1,0,0,0, 'DV AG', 'DV AG', 12,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'NumConta', 'Núm.Conta',1,0,1,4,12,0,0,0, 'Núm.Conta', 'Núm.Conta', 13,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'DVNumConta', 'DV CTA',1,0,1,4,1,0,0,0, 'DV CTA', 'DV CTA', 14,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'DVAgConta', 'DV AG CTA',1,0,1,4,1,0,0,0, 'DV AG CTA', 'DV AG CTA', 15,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'Contato', 'Contato',1,0,1,4,50,0,0,0, 'Contato', 'Contato', 16,0,0)
+GO
+INSERT INTO Campos(NomeArq,Nome,Descricao,Obrigatorio,Imexivel, Ativo, Tipo, Tamanho, Precisao, Decimais, TamExibicao, TituloEntradaDados, TituloGrid, Ordinal,Alinhamento, SubTipo ) 
+VALUES ('BordCobrRetArqs', 'Telefone', 'Telefone',1,0,1,4,18,0,0,0, 'Telefone', 'Telefone', 17,0,0)
+GO
+
+--BROWSECAMPO 
+INSERT INTO BrowseCampo(NomeTela,NomeCampo,Nome)
+VALUES ('BordCobrRetArqsLista', 'NumIntBordero', 'lNumIntBordero')
+GO
+INSERT INTO BrowseCampo(NomeTela,NomeCampo,Nome)
+VALUES ('BordCobrRetArqsLista', 'Cobrador', 'iCobrador')
+GO
+INSERT INTO BrowseCampo(NomeTela,NomeCampo,Nome)
+VALUES ('BordCobrRetArqsLista', 'NumBorderoRet', 'lNumBorderoRet')
+GO
+INSERT INTO BrowseCampo(NomeTela,NomeCampo,Nome)
+VALUES ('BordCobrRetArqsLista', 'NomeArq', 'sNomeArq')
+GO
+INSERT INTO BrowseCampo(NomeTela,NomeCampo,Nome)
+VALUES ('BordCobrRetArqsLista', 'DataRecepcao', 'dtDataRecepcao')
+GO
+
+--BROWSEUSUARIOCAMPO 
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'Cobrador', 1, 'Cobrador', 1120)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'NomeCobrador', 2, 'Nome do Cobrador', 1300)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'NumBorderoRet', 3, 'Núm.Borderê Ret.', 1140)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'NomeArq', 4, 'Nome do Arquivo', 3600)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'DataRecepcao', 5, 'Data da Recepção', 1180)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'CodCCI', 6, 'Cód.Conta', 1120)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'NomeCCI', 7, 'Nome da Conta', 1250)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'CodBanco', 8, 'Cód.Banco', 1120)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'Banco', 9, 'Banco', 1250)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'Agencia', 10, 'Agência', 1150)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'DVAgencia', 11, 'DV AG', 1110)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'NumConta', 12, 'Núm.Conta', 1220)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'DVNumConta', 13, 'DV CTA', 1110)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'DVAgConta', 14, 'DV AG CTA', 1110)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'Contato', 15, 'Contato', 1600)
+GO
+INSERT INTO BrowseUsuarioCampo (NomeTela, CodUsuario, NomeArq, Nome, PosicaoTela, Titulo, Largura)
+VALUES ('BordCobrRetArqsLista','supervisor', 'BordCobrRetArqs', 'Telefone', 16, 'Telefone', 1280)
+GO
+
+--GRUPOBROWSECAMPO 
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'Cobrador')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'NomeCobrador')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'NumBorderoRet')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'NomeArq')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'DataRecepcao')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'CodCCI')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'NomeCCI')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'CodBanco')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'Banco')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'Agencia')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'DVAgencia')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'NumConta')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'DVNumConta')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'DVAgConta')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'Contato')
+GO
+INSERT INTO GrupoBrowseCampo (CodGrupo, NomeTela, NomeArq, Nome)
+VALUES ('supervisor', 'BordCobrRetArqsLista', 'BordCobrRetArqs', 'Telefone')
+GO
+
+--BROWSEINDICE 
+INSERT INTO BrowseIndice (NomeTela, Indice, NomeIndice, OrdenacaoSQL, SelecaoSQL) 
+VALUES ('BordCobrRetArqsLista',1, 'Data da Recepção', 'DataRecepcao', 'DataRecepcao < ?')
+GO

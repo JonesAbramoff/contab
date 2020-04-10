@@ -1,0 +1,9 @@
+VBGROUP 5.0
+Project=DicPrincipal2.vbp
+Project=SGEPrinc2.vbp
+StartupProject=Telas2.vbp
+Project=telasEST2.vbp
+Project=TelasFAT2.vbp
+Project=TelasLoja.vbp
+Project=graficosloja.vbp
+Project=TelasPRJ.vbp

@@ -1,0 +1,8 @@
+VBGROUP 5.0
+StartupProject=RelatoriosFATTrv.vbp
+Project=RelatoriosFATTA.vbp
+Project=RotinasFATTA.vbp
+Project=GlobaisPVTA.vbp
+Project=RotinasPVTA.vbp
+Project=GlobaisTelasFATTA.vbp
+Project=TelasFATTA.vbp

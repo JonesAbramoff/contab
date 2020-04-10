@@ -1,0 +1,10 @@
+VBGROUP 5.0
+Project=RotinasFISDet.vbp
+Project=RotinasESTPar.vbp
+Project=RotinasCPRDan.vbp
+Project=RotinasFATPro.vbp
+Project=RotinasFATBeit.vbp
+Project=RotinasPVPhar.vbp
+StartupProject=RotinasFATPhar.vbp
+Project=RotinasPVWB.vbp
+Project=RotinasFATAF.vbp
